@@ -71,7 +71,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `sophie`.`evenement` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `titre` VARCHAR(150) NULL,
-  `date` TIMESTAMP NOT NULL,
+  `date` TIMESTAMP NULL,
   `descrition` TEXT NULL,
   `lieu` TEXT NULL,
   PRIMARY KEY (`id`))
