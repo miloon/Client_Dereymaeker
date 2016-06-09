@@ -27,9 +27,7 @@ elseif(!isset($_GET['section'])) {
         case "contact":
             include 'contact.php';
             break;
-        case "admin":
-            include 'admin.php';
-            break;
+
 
         default :
             include 'accueil.php';

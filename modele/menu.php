@@ -8,7 +8,6 @@
         <a href="?section=creation">Création</a>
         <a href="?section=peinture">Peinture</a>
         <a href="?section=contact">Contact</a>
-        <a href="?section=admin">Admin</a>
 
 </nav>
 
