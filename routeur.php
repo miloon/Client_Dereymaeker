@@ -4,9 +4,13 @@
 if(isset($_GET['deco'])){
     require_once "deco.php";
 
+}elseif($_GET['connect']){
+    require_once "connect";
 }
 
-if(!isset($_GET['section'])) {
+
+
+elseif(!isset($_GET['section'])) {
     include 'accueil.php';
 }else{
     $section = $_GET['section'];
@@ -30,6 +34,7 @@ if(!isset($_GET['section'])) {
         default :
             include 'accueil.php';
     }
+
 }
 
 
