@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="css.css"/>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
 
 
     <title>Site Client : Accueil</title>
@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php
-include ("menu.php");
+include ("modele/menu.php");
 ?>
 
 <article>

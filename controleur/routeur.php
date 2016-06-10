@@ -4,9 +4,9 @@
 if(isset($_GET['deco'])){
     require_once "modele/deco.php";
 
-}elseif($_GET['connect']){
-    require_once "modele/connect";
-    require_once "vue/connect";
+}elseif(isset($_GET['connect'])){
+    require_once "modele/connect.php";
+    require_once "vue/connect.php";
 
 }
 
@@ -18,9 +18,9 @@ elseif(!isset($_GET['section'])) {
 }else{
     $section = $_GET['section'];
     switch($section){
-        case "conseillere_en_image":
-            include 'modele/conseillere_en_image.php';
-            include 'vue/conseillere_en_image.php';
+        case "conseil":
+            include 'modele/conseil.php';
+            include 'vue/conseil.php';
 
             break;
         case "creation":
@@ -33,11 +33,7 @@ elseif(!isset($_GET['section'])) {
             include 'vue/peinture.php';
 
             break;
-        case "contact":
-            include 'modele/contact.php';
-            include 'vue/contact.php';
 
-            break;
 
 
         default :

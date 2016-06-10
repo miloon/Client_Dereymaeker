@@ -101,10 +101,10 @@
                         <div class="nav-collapse collapse navbar-responsive-collapse">
                             <ul class="nav">
                                 <li class="active"><a href="index.html">Accueil</a></li>
-                                <li><a href="conseils.html">Conseillère en image</a></li>
-                                <li><a href="creation.html">Créations & Customisations</a></li>
-                                <li><a href="peintures.html">Peintures</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="conseil.php">Conseillère en image</a></li>
+                                <li><a href="creation.php">Créations & Customisations</a></li>
+                                <li><a href="peinture.php">Peintures</a></li>
+                                <li><a href="contact.php">Contact</a></li>
 
                             </ul>
                         </div>
