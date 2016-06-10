@@ -1,3 +1,14 @@
+<?php
+
+$requete = $dbh->prepare("SELECT * FROM peinture;");
+$requete->execute();
+
+$affiche_creation = $requete->fetch(PDO::FETCH_ASSOC);
+
+
+$titre = $affiche_creation['nom'];
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -181,25 +192,26 @@
 
 		<!-- Indicators -->
 		<ol class='carousel-indicators mCustomScrollbar'>
-			<li data-target='#carousel-custom' data-slide-to='0' class='active'><img width="90" src='img/peinture/img01.jpg' alt=''/>
-			</li>
-			<li data-target='#carousel-custom' data-slide-to='1'><img width="90" src='vue/img/peinture/img02.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='2'><img width="90" src='vue/img/peinture/img03.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='3'><img width="90" src='vue/img/peinture/img04.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='4'><img width="90" src='vue/img/peinture/img05.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='5'><img width="90" src='vue/img/peinture/img02.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='6'><img width="90" src='vue/img/peinture/img03.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='7'><img width="90" src='vue/img/peinture/img04.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='8'><img width="90" src='vue/img/peinture/img05.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='1'><img width="90" src='vue/img/peinture/img02.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='2'><img width="90" src='vue/img/peinture/img03.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='3'><img width="90" src='vue/img/peinture/img04.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='4'><img width="90" src='vue/img/peinture/img05.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='5'><img width="90" src='vue/img/peinture/img02.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='6'><img width="90" src='vue/img/peinture/img03.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='7'><img width="90" src='vue/img/peinture/img04.jpg' alt=''/></li>
-			<li data-target='#carousel-custom' data-slide-to='8'><img width="90" src='vue/img/peinture/img05.jpg' alt=''/></li>
+			<?php
+
+			// Test de boucle pour l'affichage des miniatures
+			while ($affiche_creation = $requete->fetch(PDO::FETCH_ASSOC)) {
+				$idfoto = $affiche_creation['id'] -1;
+				?>
+
+				<li data-target='#carousel-custom' data-slide-to='<?=$idfoto?>' class='active'><img width="90" src='<?= $affiche_creation['imgsrc']?>' alt=''/>
+				</li>
+
+				<?php
+			}
+			?>
 		</ol>
+
+
+
+
+
+
 	</div>
 
 </div>
