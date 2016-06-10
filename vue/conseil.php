@@ -47,16 +47,7 @@
               <div class="span9">
                 <div class="navbar  pull-right">
                   <div class="navbar-inner">
-                    <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-                    <div class="nav-collapse collapse navbar-responsive-collapse">
-                    <ul class="nav">
-						<li><a href="index.html">Accueil</a></li>
-						<li class="active"><a href="conseil.php">Conseillère en image</a></li>
-						<li><a href="creation.php">Créations & Customisations</a></li>
-						<li><a href="peinture.php">Peintures</a></li>
-						<li><a href="contact.php">Contact</a></li>
-                 
-                    </ul>
+					  <?php include 'vue/menu.php' ?>
                   </div>
 
                   </div>
