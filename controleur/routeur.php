@@ -4,9 +4,13 @@
 if(isset($_GET['deco'])){
     require_once "deco.php";
 
+}elseif($_GET['connect']){
+    require_once "connect";
 }
 
-if(!isset($_GET['section'])) {
+
+
+elseif(!isset($_GET['section'])) {
     include 'accueil.php';
 }else{
     $section = $_GET['section'];
@@ -23,13 +27,12 @@ if(!isset($_GET['section'])) {
         case "contact":
             include 'contact.php';
             break;
-        case "admin":
-            include 'admin.php';
-            break;
+
 
         default :
             include 'accueil.php';
     }
+
 }
 
 
