@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php
-include ("modele/menu.php");
+include ("vue/menu.php");
 ?>
 
 <article>
