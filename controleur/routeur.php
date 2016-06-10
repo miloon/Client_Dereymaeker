@@ -21,7 +21,7 @@ elseif(!isset($_GET['section'])) {
         case "conseil":
             include 'modele/conseil.php';
             include 'vue/conseil.php';
-            
+
 
             break;
         case "creation":
