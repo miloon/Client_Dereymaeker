@@ -135,7 +135,7 @@
             <!-- Wrapper for slides -->
             <div class='carousel-inner'>
                 <div class='item active'>
-                    <img src='img01.jpg' alt=''/>
+                    <img src='img/peinture/img01.jpg' alt=''/>
                     <h3>Titre</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -143,14 +143,14 @@
                 </div>
 
                 <div class='item'>
-                    <img src='img02.jpg' alt=''/>
+                    <img src='img/peinture/img02.jpg' alt=''/>
                     <h3>Titre</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div class='item'>
-                    <img src='img03.jpg' alt=''/>
+                    <img src='img/peinture/img03.jpg' alt=''/>
                     <h3>TitreTitre</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                         totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -159,48 +159,27 @@
                 </div>
 
                 <div class='item'>
-                    <img src='img04.jpg' alt=''/>
+                    <img src='img/peinture/img04.jpg' alt=''/>
                     <h3>Titre</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div class='item'>
-                    <img src='img05.jpg' alt=''/>
+                    <img src='img/peinture/img05.jpg' alt=''/>
                     <h3>Titre</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div class='item'>
-                    <img src='img02.jpg' alt=''/>
-                    <h3>Titre</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class='item'>
-                    <img src='img03.jpg' alt=''/>
+                    <img src='img/peinture/img02.jpg' alt=''/>
                     <h3>Titre</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                         laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
 
-                <div class='item'>
-                    <img src='img04.jpg' alt=''/>
-                    <h3>Titre</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-                <div class='item'>
-                    <img src='img05.jpg' alt=''/>
-                    <h3>Titre</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
             </div>
 
             <!-- Controls -->
@@ -214,24 +193,24 @@
 
         <!-- Indicators -->
         <ol class='carousel-indicators mCustomScrollbar'>
-            <li data-target='#carousel-custom' data-slide-to='0' class='active'><img width="90" src='img01.jpg' alt=''/>
+            <li data-target='#carousel-custom' data-slide-to='0' class='active'><img width="90" src='img/peinture/img01.jpg' alt=''/>
             </li>
-            <li data-target='#carousel-custom' data-slide-to='1'><img width="90" src='img02.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='2'><img width="90" src='img03.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='3'><img width="90" src='img04.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='4'><img width="90" src='img05.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='5'><img width="90" src='img02.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='6'><img width="90" src='img03.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='7'><img width="90" src='img04.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='8'><img width="90" src='img05.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='1'><img width="90" src='img02.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='2'><img width="90" src='img03.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='3'><img width="90" src='img04.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='4'><img width="90" src='img05.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='5'><img width="90" src='img02.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='6'><img width="90" src='img03.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='7'><img width="90" src='img04.jpg' alt=''/></li>
-            <li data-target='#carousel-custom' data-slide-to='8'><img width="90" src='img05.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='1'><img width="90" src='img/peinture/img02.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='2'><img width="90" src='img/peinture/img03.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='3'><img width="90" src='img/peinture/img04.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='4'><img width="90" src='img/peinture/img05.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='5'><img width="90" src='img/peinture/img02.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='6'><img width="90" src='img/peinture/img03.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='7'><img width="90" src='img/peinture/img04.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='8'><img width="90" src='img/peinture/img05.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='1'><img width="90" src='img/peinture/img02.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='2'><img width="90" src='img/peinture/img03.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='3'><img width="90" src='img/peinture/img04.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='4'><img width="90" src='img/peinture/img05.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='5'><img width="90" src='img/peinture/img02.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='6'><img width="90" src='img/peinture/img03.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='7'><img width="90" src='img/peinture/img04.jpg' alt=''/></li>
+            <li data-target='#carousel-custom' data-slide-to='8'><img width="90" src='img/peinture/img05.jpg' alt=''/></li>
         </ol>
     </div>
 
