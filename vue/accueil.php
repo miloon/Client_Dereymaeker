@@ -14,9 +14,9 @@ include ("vue/menu.php");
 ?>
 
 <article>
-         <a href="conseillere_en_image.php" class="classname">Conseillère en image</a>
-        <a href="creation.php" class="classname">Créations : bijoux & accessoires</a>
-         <a href="peinture.php" class="classname">Peintures</a>
+         <a href="?section=conseil" class="classname">Conseillère en image</a>
+        <a href="?section=creation" class="classname">Créations : bijoux & accessoires</a>
+         <a href="?section=peinture" class="classname">Peintures</a>
 </article>
 
 
