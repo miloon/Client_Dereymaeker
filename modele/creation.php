@@ -1,6 +1,6 @@
 <?php
 
-$requete = $dbh->prepare("SELECT * FROM peinture;");
+$requete = $dbh->prepare("SELECT * FROM creation;");
 $requete->execute();
 
 

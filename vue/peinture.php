@@ -120,17 +120,17 @@
 
 						<?php
 						$i = 1;
-						foreach ($affiche_creation as $recbig) {
+						foreach ($affiche_peinture as $recbig) {
 							?>
 							<?php if ($i == 1): ?>
 								<div class='item active'>
-									<img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+									<img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
 									<h3><?= $recbig->nom ?></h3>
 									<p><?= $recbig->description ?></p>
 								</div>
 							<?php else: ?>
 								<div class='item'>
-									<img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+									<img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
 									<h3><?= $recbig->nom ?></h3>
 									<p><?= $recbig->description ?></p>
 								</div>
@@ -158,7 +158,7 @@
 
 					$i = 1;
 					$y = 0;
-					foreach ($affiche_creation as $rec) {
+					foreach ($affiche_peinture as $rec) {
 
 						// pour le bom numéro de slide, ça commence à 0 donc je prends l'id de la photo -1.
 
@@ -167,14 +167,14 @@
 							<li data-target='#carousel-custom'
 								data-slide-to='<?= $y ?>'
 								class='active'>
-								<img src='<?= $rec->imgsrc ?>'
+								<img src='vue/img/peinture/<?= $rec->imgsrc ?>'
 									 alt='<?= $rec->nom ?>'
 								/>
 							</li>
 						<?php else: ?>
 							<li data-target='#carousel-custom'
 								data-slide-to='<?= $y ?>'>
-								<img src='<?= $rec->imgsrc ?>'
+								<img src='vue/img/peinture/<?= $rec->imgsrc ?>'
 									 alt='<?= $rec->nom ?>'/>
 							</li>
 						<?php endif; ?>

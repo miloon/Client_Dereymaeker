@@ -124,13 +124,13 @@
                             ?>
                             <?php if ($i == 1): ?>
                                 <div class='item active'>
-                                    <img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+                                    <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?></h3>
                                     <p><?= $recbig->description ?></p>
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
-                                    <img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+                                    <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?></h3>
                                     <p><?= $recbig->description ?></p>
                                 </div>
@@ -167,14 +167,14 @@
                             <li data-target='#carousel-custom'
                                 data-slide-to='<?= $y ?>'
                                 class='active'>
-                                <img src='<?= $rec->imgsrc ?>'
+                                <img src='vue/img/creation/<?= $rec->imgsrc ?>'
                                      alt='<?= $rec->nom ?>'
                                 />
                             </li>
                         <?php else: ?>
                             <li data-target='#carousel-custom'
                                 data-slide-to='<?= $y ?>'>
-                                <img src='<?= $rec->imgsrc ?>'
+                                <img src='vue/img/creation/<?= $rec->imgsrc ?>'
                                      alt='<?= $rec->nom ?>'/>
                             </li>
                         <?php endif; ?>
