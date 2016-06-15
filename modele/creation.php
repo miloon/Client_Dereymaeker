@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Stagiaire
- * Date: 10/06/2016
- * Time: 09:53
- */
+
+$requete = $dbh->prepare("SELECT * FROM creation;");
+$requete->execute();
+
+
+$affiche_creation = $requete->fetchAll(PDO::FETCH_OBJ);
+

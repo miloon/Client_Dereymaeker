@@ -5988,12 +5988,15 @@ a.badge:focus {
      -moz-transition: 0.6s ease-in-out left;
        -o-transition: 0.6s ease-in-out left;
           transition: 0.6s ease-in-out left;
+
 }
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
   line-height: 1;
+  height:500px;
+  margin: 0 auto;
 }
 
 .carousel-inner > .active,
@@ -6078,7 +6081,7 @@ a.badge:focus {
 }
 
 .carousel-indicators li {
-  display: block;
+  display: inline-block;
   float: left;
   width: 10px;
   height: 10px;
@@ -6185,7 +6188,9 @@ a.badge:focus {
 }
 .glyphicon-chevron-left:before {
   content: "\e079";
+  color:#555;
 }
 .glyphicon-chevron-right:before {
   content: "\e080";
+  color:#555;
 }
