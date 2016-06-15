@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Stagiaire
- * Date: 10/06/2016
- * Time: 09:54
- */
+
+$requete = $dbh->prepare("SELECT * FROM peinture;");
+$requete->execute();
+
+
+$affiche_peinture = $requete->fetchAll(PDO::FETCH_OBJ);
+
