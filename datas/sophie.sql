@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 15 Juin 2016 à 10:25
+-- Généré le :  Mer 15 Juin 2016 à 14:26
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -80,11 +80,20 @@ INSERT INTO `creation` (`id`, `nom`, `description`, `imghref`, `imgsrc`) VALUES
 CREATE TABLE IF NOT EXISTS `evenement` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `titre` varchar(150) DEFAULT NULL,
-  `date` timestamp NULL DEFAULT NULL,
-  `descrition` text,
+  `ladate` timestamp NULL DEFAULT NULL,
+  `description` text,
   `lieu` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `evenement`
+--
+
+INSERT INTO `evenement` (`id`, `titre`, `ladate`, `description`, `lieu`) VALUES
+(1, 'Odio dignissimos ducimus', '2016-06-14 22:00:00', 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.', 'Chaussée de Charleroi 144, 1080 Bruxelles'),
+(2, 'Morbi faucibus nibh odio', '2016-06-23 22:00:00', 'Duis in venenatis quam. Nulla tristique vel sem et semper. Nam facilisis, quam at faucibus ullamcorper, libero eros pulvinar neque, vitae commodo lectus lacus id mauris. Aliquam erat volutpat. Donec at lacus vitae odio efficitur commodo bibendum ac diam. ', 'Chaussée d''Ixelles 15, 1050 Ixelles'),
+(3, 'Sed tempor pulvinar', '2016-05-31 22:00:00', 'Etiam ligula metus, aliquam at maximus vitae, pharetra a odio. In lobortis tincidunt nisi eget auctor. Phasellus et justo massa. Etiam non mi sit amet diam blandit elementum at eu lacus. Etiam odio urna, fringilla at tempus in, suscipit et nunc. Sed eros arcu, laoreet et dapibus quis, varius eu turpis. ', 'Rue de l''Eglise 15, 1520 Ville');
 
 -- --------------------------------------------------------
 
