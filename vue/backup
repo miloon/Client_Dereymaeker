@@ -112,29 +112,32 @@
     <!--Carousel
     ==================================================-->
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-8 col-md-offset-2">
             <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
                 <div class='carousel-outer'>
                     <!-- Wrapper for slides -->
                     <div class='carousel-inner'>
 
                         <?php
+                        /* if ($affiche_creation['id'] = 1) {
+                             $active = " active";
+                         } else {
+                             $active = "";
+                         }*/
+
                         $i = 1;
                         foreach ($affiche_creation as $recbig) {
                             ?>
-                            <?php if ($i == 1): ?>
+                            <?php if($i ==1): ?>
                                 <div class='item active'>
                                     <img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?></h3>
-                                    <p><?= $recbig->description ?></p>
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
                                     <img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?></h3>
-                                    <p><?= $recbig->description ?></p>
                                 </div>
-                            <?php endif; ?>
+                            <?php endif;?>
+
 
                             <?php
                             $i++;
@@ -156,34 +159,34 @@
                 <ol class='carousel-indicators mCustomScrollbar'>
                     <?php
 
-                    $i = 1;
-                    $y = 0;
-                    foreach ($affiche_creation as $rec) {
+                    // la première image doit être "active"
+                    if (!$affiche_creation['id'] = 1) {
+                        $active = "";
+                    } else {
+                        $active = "active";
+                    }
 
-                        // pour le bom numéro de slide, ça commence à 0 donc je prends l'id de la photo -1.
+                    $i = 1;$total = count($affiche_creation);?>
 
-                        ?>
-                        <?php if ($i == 1): ?>
+                    <?php for($n=0;$n<($total-1);$n++) : ?>
+                        <?php if ($i ==1):?>
                             <li data-target='#carousel-custom'
-                                data-slide-to='<?= $y ?>'
+                                data-slide-to='<?= $n; ?>'
                                 class='active'>
-                                <img src='<?= $rec->imgsrc ?>'
-                                     alt='<?= $rec->nom ?>'
+                                <img src='<?= $rec->imgsrc; ?>'
+                                     alt='<?= $rec->nom; ?>'
                                 />
                             </li>
                         <?php else: ?>
                             <li data-target='#carousel-custom'
-                                data-slide-to='<?= $y ?>'>
-                                <img src='<?= $rec->imgsrc ?>'
-                                     alt='<?= $rec->nom ?>'/>
+                                data-slide-to='<?= $n; ?>'>
+                                <img src='<?= $rec->imgsrc; ?>'
+                                     alt='<?= $rec->nom; ?>'
+                                />
                             </li>
-                        <?php endif; ?>
+                        <?php endif;?>
 
-                        <?php
-                        $i++;
-                        $y++;
-                    }
-                    ?>
+                        <?php $i++;endfor;?>
 
                 </ol>
             </div>

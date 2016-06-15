@@ -1,14 +1,3 @@
-<?php
-
-$requete = $dbh->prepare("SELECT * FROM peinture;");
-$requete->execute();
-
-$affiche_creation = $requete->fetch(PDO::FETCH_ASSOC);
-
-
-$titre = $affiche_creation['nom'];
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,11 +30,6 @@ $titre = $affiche_creation['nom'];
 
 	<style>
 		/* http://jsfiddle.net/ivanarvizu/JS6JV/16/ */
-		#carousel-example-generic {
-			margin: 20px auto;
-			width: 400px;
-		}
-
 		#carousel-custom {
 			margin: 20px auto;
 			width: 80%;
@@ -73,6 +57,7 @@ $titre = $affiche_creation['nom'];
 		#carousel-custom .carousel-indicators li img {
 			display: block;
 			opacity: 0.5;
+			height: 90px;
 		}
 
 		#carousel-custom .carousel-indicators li.active img {
@@ -93,9 +78,6 @@ $titre = $affiche_creation['nom'];
     ============================================================-->
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="vue/js/bootstrap.min.js"></script>
-	<script>$(document).ready(function () {
-			$(".mCustomScrollbar").mCustomScrollbar({axis: "x"});
-		});</script>
 
 </head>
 <body>
@@ -129,239 +111,240 @@ $titre = $affiche_creation['nom'];
 
 	<!--Carousel
     ==================================================-->
-	<div id='carousel-custom' class='carousel slide' data-ride='carousel'>
-		<div class='carousel-outer'>
-			<!-- Wrapper for slides -->
-			<div class='carousel-inner'>
-				<div class='item active'>
-					<img src='vue/img/peinture/img01.jpg' alt=''/>
-					<h3>Titre</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-
-				<div class='item'>
-					<img src='vue/img/peinture/img02.jpg' alt=''/>
-					<h3>Titre</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-				<div class='item'>
-					<img src='vue/img/peinture/img03.jpg' alt=''/>
-					<h3>TitreTitre</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-						totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-						dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-						fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-				</div>
-
-				<div class='item'>
-					<img src='vue/img/peinture/img04.jpg' alt=''/>
-					<h3>Titre</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-				<div class='item'>
-					<img src='vue/img/peinture/img05.jpg' alt=''/>
-					<h3>Titre</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-				<div class='item'>
-					<img src='vue/img/peinture/img02.jpg' alt=''/>
-					<h3>Titre</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-
-			</div>
-
-			<!-- Controls -->
-			<a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
-				<span class='glyphicon glyphicon-chevron-left'></span>
-			</a>
-			<a class='right carousel-control' href='#carousel-custom' data-slide='next'>
-				<span class='glyphicon glyphicon-chevron-right'></span>
-			</a>
-		</div>
-
-		<!-- Indicators -->
-		<ol class='carousel-indicators mCustomScrollbar'>
-			<?php
-
-			// Test de boucle pour l'affichage des miniatures
-			while ($affiche_creation = $requete->fetch(PDO::FETCH_ASSOC)) {
-				$idfoto = $affiche_creation['id'] -1;
-				?>
-
-				<li data-target='#carousel-custom' data-slide-to='<?=$idfoto?>' class='active'><img width="90" src='<?= $affiche_creation['imgsrc']?>' alt=''/>
-				</li>
-
-				<?php
-			}
-			?>
-		</ol>
-
-
-
-
-
-
-	</div>
-
-</div>
-<!-- /Carousel -->
-<!--PAGE TITLE-->
-
-<div class="container">
-
-	<div class="page-header">
-		<h1>
-			Journal d'évènements
-		</h1>
-
-	</div>
-</div>
-
-<!-- /. PAGE TITLE-->
-
-
-<div class="container">
 	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<div id='carousel-custom' class='carousel slide' data-ride='carousel'>
+				<div class='carousel-outer'>
+					<!-- Wrapper for slides -->
+					<div class='carousel-inner'>
 
-		<div class="span9">
-			<!--Blog Post-->
-			<div class="blog-post">
-				<h2>15/06/2016 - Evènements à venir</h2>
-				<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-					Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
-					their exact original form, accompanied by English versions from the 1914 translation by H.
-					Rackham.</p>
-				<div class="postmetadata">
-					<ul>
-						<li>
-							<i class="icon-bookmark"></i> <a href="#">Endroit</a>
-						</li>
+						<?php
+						$i = 1;
+						foreach ($affiche_creation as $recbig) {
+							?>
+							<?php if ($i == 1): ?>
+								<div class='item active'>
+									<img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+									<h3><?= $recbig->nom ?></h3>
+									<p><?= $recbig->description ?></p>
+								</div>
+							<?php else: ?>
+								<div class='item'>
+									<img src='<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+									<h3><?= $recbig->nom ?></h3>
+									<p><?= $recbig->description ?></p>
+								</div>
+							<?php endif; ?>
 
-					</ul>
+							<?php
+							$i++;
+						}
+						?>
+
+					</div>
+
+					<!-- Controls -->
+					<a class='left carousel-control' href='#carousel-custom' data-slide='prev'>
+						<span class='glyphicon glyphicon-chevron-left'></span>
+					</a>
+					<a class='right carousel-control' href='#carousel-custom' data-slide='next'>
+						<span class='glyphicon glyphicon-chevron-right'></span>
+					</a>
 				</div>
+
+				<!-- Indicators -->
+				<ol class='carousel-indicators mCustomScrollbar'>
+					<?php
+
+					$i = 1;
+					$y = 0;
+					foreach ($affiche_creation as $rec) {
+
+						// pour le bom numéro de slide, ça commence à 0 donc je prends l'id de la photo -1.
+
+						?>
+						<?php if ($i == 1): ?>
+							<li data-target='#carousel-custom'
+								data-slide-to='<?= $y ?>'
+								class='active'>
+								<img src='<?= $rec->imgsrc ?>'
+									 alt='<?= $rec->nom ?>'
+								/>
+							</li>
+						<?php else: ?>
+							<li data-target='#carousel-custom'
+								data-slide-to='<?= $y ?>'>
+								<img src='<?= $rec->imgsrc ?>'
+									 alt='<?= $rec->nom ?>'/>
+							</li>
+						<?php endif; ?>
+
+						<?php
+						$i++;
+						$y++;
+					}
+					?>
+
+				</ol>
 			</div>
-
-
-			<!--===============-->
-
-			<div class="blog-post">
-				<h2>15/06/2016 - Evènements à venir</h2>
-				<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-					Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
-					their exact original form, accompanied by English versions from the 1914 translation by H.
-					Rackham.</p>
-				<div class="postmetadata">
-					<ul>
-						<li>
-							<i class="icon-bookmark"></i> <a href="#">Endroit</a>
-						</li>
-
-					</ul>
-				</div>
-			</div>
-
-
-			<!--/.Blog Post-->
-
-			<!--Pagination-->
-			<div class="pagination">
-				<ul>
-					<li>
-						<a href="#">Prev</a>
-					</li>
-					<li>
-						<a href="#">1</a>
-					</li>
-					<li>
-						<a href="#">2</a>
-					</li>
-					<li>
-						<a href="#">3</a>
-					</li>
-					<li>
-						<a href="#">4</a>
-					</li>
-					<li>
-						<a href="#">5</a>
-					</li>
-					<li>
-						<a href="#">Next</a>
-					</li>
-				</ul>
-			</div>
-
-			<!--/.Pagination-->
 		</div>
-
-
-		<div class="span3">
-			<div class="side-bar">
-				<h3>Evènements passés</h3>
-
-				<ul class="recent-post">
-					<li><a href=""><strong>Titre</strong></a>
-						<small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i class="icon-calendar"></i>15/06/2016
-						</small>
-					</li>
-
-					<li><a href=""><strong>Titre</strong></a>
-						<small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i class="icon-calendar"></i>15/06/2016
-						</small>
-					</li>
-
-					<li><a href=""><strong>Titre</strong></a>
-						<small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i class="icon-calendar"></i>15/06/2016
-						</small>
-					</li>
-
-
-				</ul>
-
-
-			</div>
-
-
-		</div>
-
-
-		<!--==================-->
 	</div>
-</div>
+	<!-- /Carousel -->
+	<!--PAGE TITLE-->
+
+	<div class="container">
+
+		<div class="page-header">
+			<h1>
+				Journal d' évènements
+			</h1>
+
+		</div>
+	</div>
+
+	<!-- /. PAGE TITLE-->
 
 
-<!--Footer
-==========================-->
-
-<footer>
 	<div class="container">
 		<div class="row">
-			<div class="span6">Sophie Dereymaeker<br>
-				<small>Créatrice de styles</small>
+
+			<div class="span9">
+				<!--Blog Post-->
+				<div class="blog-post">
+					<h2>15/06/2016 - Evènements à venir</h2>
+					<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+						interested.
+						Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+						reproduced
+						in
+						their exact original form, accompanied by English versions from the 1914 translation by H.
+						Rackham.</p>
+					<div class="postmetadata">
+						<ul>
+							<li>
+								<i class="icon-bookmark"></i> <a href="#">Endroit</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+
+				<!--===============-->
+
+				<div class="blog-post">
+					<h2>15/06/2016 - Evènements à venir</h2>
+					<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+						interested.
+						Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+						reproduced
+						in
+						their exact original form, accompanied by English versions from the 1914 translation by H.
+						Rackham.</p>
+					<div class="postmetadata">
+						<ul>
+							<li>
+								<i class="icon-bookmark"></i> <a href="#">Endroit</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+
+				<!--/.Blog Post-->
+
+				<!--Pagination-->
+				<div class="pagination">
+					<ul>
+						<li>
+							<a href="#">Prev</a>
+						</li>
+						<li>
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">Next</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--/.Pagination-->
 			</div>
-			<div class="span6">
-				<div class="social pull-right">
-					<a href="#"><img src="vue/img/social/dribbble.png" alt=""></a>
-					<a href="#"><img src="vue/img/social/twitter.png" alt=""></a>
-					<a href="#"><img src="vue/img/social/dribbble.png" alt=""></a>
-					<a href="#"><img src="vue/img/social/rss.png" alt=""></a>
+
+
+			<div class="span3">
+				<div class="side-bar">
+					<h3>Evènements passés</h3>
+
+					<ul class="recent-post">
+						<li><a href=""><strong>Titre</strong></a>
+							<small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i
+									class="icon-calendar"></i>15/06/2016
+							</small>
+						</li>
+
+						<li><a href=""><strong>Titre</strong></a>
+							<small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i
+									class="icon-calendar"></i>15/06/2016
+							</small>
+						</li>
+
+						<li><a href=""><strong>Titre</strong></a>
+							<small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i
+									class="icon-calendar"></i>15/06/2016
+							</small>
+						</li>
+
+
+					</ul>
+
+
+				</div>
+
+
+			</div>
+
+
+			<!--==================-->
+		</div>
+	</div>
+
+
+	<!--Footer
+    ==========================-->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="span6">Sophie Dereymaeker<br>
+					<small>Créatrice de styles</small>
+				</div>
+				<div class="span6">
+					<div class="social pull-right">
+						<a href="#"><img src="vue/img/social/dribbble.png" alt=""></a>
+						<a href="#"><img src="vue/img/social/twitter.png" alt=""></a>
+						<a href="#"><img src="vue/img/social/dribbble.png" alt=""></a>
+						<a href="#"><img src="vue/img/social/rss.png" alt=""></a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
+	</footer>
 
-<!--/.Footer-->
+	<!--/.Footer-->
 
 </body>
 </html>
