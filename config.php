@@ -10,5 +10,9 @@ try {
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
+
+define("LOG","web");
+define("PWT","dev");
+
 ?>
 
