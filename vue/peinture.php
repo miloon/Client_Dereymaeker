@@ -185,6 +185,7 @@
                     ?>
 
                 </ol>
+
             </div>
         </div>
     </div>
@@ -209,6 +210,7 @@
 
             <div class="span9">
                 <!--Blog Post-->
+
                 <?php
 
                 foreach ($affiche_event as $rec) {
@@ -237,31 +239,7 @@
                 <!--/.Blog Post-->
 
                 <!--Pagination-->
-                <div class="pagination">
-                    <ul>
-                        <li>
-                            <a href="#"> Prev</a>
-                        </li>
-                        <li>
-                            <a href="#"> 1</a>
-                        </li>
-                        <li>
-                            <a href="#"> 2</a>
-                        </li>
-                        <li>
-                            <a href="#"> 3</a>
-                        </li>
-                        <li>
-                            <a href="#"> 4</a>
-                        </li>
-                        <li>
-                            <a href="#"> 5</a>
-                        </li>
-                        <li>
-                            <a href="#"> Next</a>
-                        </li>
-                    </ul>
-                </div>
+
 
                 <!--/.Pagination-->
             </div>
@@ -270,17 +248,18 @@
             <div class="span3">
                 <div class="side-bar">
                     <h3> Evènements passés </h3>
-                    <?php
-                    foreach ($affiche_event as $rec) {
-                    if (($rec->ladate) < $date) { ?>
                     <ul class="recent-post">
-                        <li><a href=""><strong><?= $rec->titre ?></strong></a>
-                            <small><i class="icon-bookmark"></i> <a href="#"><?= $rec->lieu ?></a><br/><i
-                                    class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
-                            </small>
-                        </li>
                         <?php
-                        }
+                        foreach ($affiche_event as $rec) {
+                            if (($rec->ladate) < $date) { ?>
+
+                                <li><a href=""><strong><?= $rec->titre ?></strong></a>
+                                    <small><i class="icon-bookmark"></i> <a href="#"><?= $rec->lieu ?></a><br/><i
+                                            class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
+                                    </small>
+                                </li>
+                                <?php
+                            }
                         }
                         ?>
 

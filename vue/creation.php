@@ -74,7 +74,7 @@
     </style>
 
 
-    <!-- SCRIPT 
+    <!-- SCRIPT
     ============================================================-->
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="vue/js/bootstrap.min.js"></script>
@@ -210,48 +210,31 @@
 
             <div class="span9">
                 <!--Blog Post-->
-                <div class="blog-post">
-                    <h2>15/06/2016 - Evènements à venir</h2>
-                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                        interested.
-                        Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                        reproduced
-                        in
-                        their exact original form, accompanied by English versions from the 1914 translation by H.
-                        Rackham.</p>
-                    <div class="postmetadata">
-                        <ul>
-                            <li>
-                                <i class="icon-bookmark"></i> <a href="#">Endroit</a>
-                            </li>
+                <?php
 
-                        </ul>
-                    </div>
-                </div>
+                foreach ($affiche_event as $rec) {
 
+                    if (($rec->ladate) > $date) {
 
-                <!--===============-->
+                        ?>
 
-                <div class="blog-post">
-                    <h2>15/06/2016 - Evènements à venir</h2>
-                    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                        interested.
-                        Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                        reproduced
-                        in
-                        their exact original form, accompanied by English versions from the 1914 translation by H.
-                        Rackham.</p>
-                    <div class="postmetadata">
-                        <ul>
-                            <li>
-                                <i class="icon-bookmark"></i> <a href="#">Endroit</a>
-                            </li>
+                        <div class="blog-post">
+                            <h2> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
+                                - <?= $rec->titre ?> </h2>
+                            <p> <?= nl2br($rec->description) ?></p>
+                            <div class="postmetadata">
+                                <ul>
+                                    <li>
+                                        <i class="icon-bookmark"></i> <a href="#"> <?= $rec->lieu ?></a>
+                                    </li>
 
-                        </ul>
-                    </div>
-                </div>
-
-
+                                </ul>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
+                ?>
                 <!--/.Blog Post-->
 
                 <!--Pagination-->
@@ -287,26 +270,21 @@
 
             <div class="span3">
                 <div class="side-bar">
-                    <h3>Evènements passés</h3>
-
+                    <h3> Evènements passés </h3>
                     <ul class="recent-post">
-                        <li><a href=""><strong>Titre</strong></a>
-                            <small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i
-                                    class="icon-calendar"></i>15/06/2016
-                            </small>
-                        </li>
+                        <?php
+                        foreach ($affiche_event as $rec) {
+                            if (($rec->ladate) < $date) { ?>
 
-                        <li><a href=""><strong>Titre</strong></a>
-                            <small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i
-                                    class="icon-calendar"></i>15/06/2016
-                            </small>
-                        </li>
-
-                        <li><a href=""><strong>Titre</strong></a>
-                            <small><i class="icon-bookmark"></i> <a href="#">lieux</a>, <i
-                                    class="icon-calendar"></i>15/06/2016
-                            </small>
-                        </li>
+                                <li><a href=""><strong><?= $rec->titre ?></strong></a>
+                                    <small><i class="icon-bookmark"></i> <a href="#"><?= $rec->lieu ?></a><br/><i
+                                            class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
+                                    </small>
+                                </li>
+                                <?php
+                            }
+                        }
+                        ?>
 
 
                     </ul>
