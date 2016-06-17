@@ -226,7 +226,7 @@
                             <div class="postmetadata">
                                 <ul>
                                     <li>
-                                        <i class="icon-bookmark"></i> <a href="#"> <?= $rec->lieu ?></a>
+                                        <i class="icon-bookmark"></i><?= $rec->lieu ?>
                                     </li>
 
                                 </ul>
@@ -254,7 +254,7 @@
                             if (($rec->ladate) < $date) { ?>
 
                                 <li><a href=""><strong><?= $rec->titre ?></strong></a>
-                                    <small><i class="icon-bookmark"></i> <a href="#"><?= $rec->lieu ?></a><br/><i
+                                    <small><i class="icon-bookmark"></i><?= $rec->lieu ?><br/><i
                                             class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
                                     </small>
                                 </li>

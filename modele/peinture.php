@@ -10,14 +10,14 @@ $affiche_peinture = $requete->fetchAll(PDO::FETCH_OBJ);
 /*
  * PARTIE PAGINATION
  * */
-$requete2 = $dbh->query("SELECT COUNT(id) as nbArt FROM evenement");
+$requete2 = $dbh->query("SELECT COUNT(id) as nbart FROM evenement");
 
-$data = $requete2->fetchAll(PDO::FETCH_OBJ);
-print_r( $data['nbArt']);
-$nbArt = $data['nbArt'];
+$data = $requete2->fetch(PDO::FETCH_ASSOC);
+
+$nbart = $data['nbart'];
 // par page
-$perPage = 4;
-$nbPage = ceil($nbArt / $perPage);
+$perPage = 2;
+$nbPage = ceil($nbart / $perPage);
 
 if (isset($_GET['p']) && $_GET['p'] > 0 && $_GET['p'] <= $nbPage) {
     $cPage = $_GET['p'];
