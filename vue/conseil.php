@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>ShapeBootstrap Clean Template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<meta charset="utf-8">
+	<title>Sophie Dereymaeker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Bootstrap -->
+	<link href="vue/css/bootstrap.css" rel="stylesheet">
+	<link href="vue/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="vue/css/style.css" rel="stylesheet">
 
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<!--Font-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet'
+		  type='text/css'>
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-	<script src="../modele/js/html5shiv.js"></script>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
-  
-
+	<!-- Fav and touch icons -->
+	<link rel="shortcut icon" href="ico/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
     <!-- SCRIPT 
     ============================================================-->  
@@ -33,31 +35,9 @@
 </head>
 
 <body>
-
-
-  <!--HEADER ROW-->
-  <div id="header-row">
-    <div class="container">
-      <div class="row">
-              <!--LOGO-->
-              <div class="span3"><a class="brand" href="#"><img src="img/logo.png"/></a></div>
-              <!-- /LOGO -->
-
-            <!-- MAIN NAVIGATION -->  
-              <div class="span9">
-                <div class="navbar  pull-right">
-                  <div class="navbar-inner">
-					  <?php include 'vue/menu.php' ?>
-                  </div>
-
-                  </div>
-                </div>
-              </div>
-            <!-- MAIN NAVIGATION -->  
-      </div>
-    </div>
-  </div>
-  <!-- /HEADER ROW -->
+<!--HEADER ROW-->
+<?php include 'vue/menu.php' ?>
+<!-- /HEADER ROW -->
 
 
 

@@ -34,7 +34,8 @@ HEADER ROW STYLE
 #header-row{
 	background: #f5f5f5;
 	border-bottom:1px solid #eee;
-	padding: 15px 0;
+	/*padding: 15px 0; - sophie*/
+	padding:0px 0px 5px 0px;
 }
 
 #header-row .navbar{margin:10px 0 0 0;}

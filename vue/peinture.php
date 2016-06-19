@@ -82,21 +82,7 @@
 </head>
 <body>
 <!--HEADER ROW-->
-<div id="header-row">
-    <div class="container">
-        <div class="row">
-            <!-- MAIN NAVIGATION -->
-            <div class="span12">
-                <div class="navbar">
-                    <div class="navbar-inner">
                         <?php include 'vue/menu.php' ?>
-                    </div>
-                </div>
-            </div>
-            <!-- MAIN NAVIGATION -->
-        </div>
-    </div>
-</div>
 <!-- /HEADER ROW -->
 
 
@@ -190,92 +176,10 @@
         </div>
     </div>
     <!-- /Carousel -->
-    <!--PAGE TITLE-->
-
-    <div class="container">
-
-        <div class="page-header">
-            <h1>
-                Journal d' évènements
-            </h1>
-
-        </div>
-    </div>
-
-    <!-- /. PAGE TITLE-->
 
 
-    <div class="container">
-        <div class="row">
-
-            <div class="span9">
-                <!--Blog Post-->
-
-                <?php
-
-                foreach ($affiche_event as $rec) {
-
-                    if (($rec->ladate) > $date) {
-
-                        ?>
-
-                        <div class="blog-post">
-                            <h2> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
-                                - <?= $rec->titre ?> </h2>
-                            <p> <?= nl2br($rec->description) ?></p>
-                            <div class="postmetadata">
-                                <ul>
-                                    <li>
-                                        <i class="icon-bookmark"></i><?= $rec->lieu ?>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                }
-                ?>
-                <!--/.Blog Post-->
-
-                <!--Pagination-->
 
 
-                <!--/.Pagination-->
-            </div>
-
-
-            <div class="span3">
-                <div class="side-bar">
-                    <h3> Evènements passés </h3>
-                    <ul class="recent-post">
-                        <?php
-                        foreach ($affiche_event as $rec) {
-                            if (($rec->ladate) < $date) { ?>
-
-                                <li><a href=""><strong><?= $rec->titre ?></strong></a>
-                                    <small><i class="icon-bookmark"></i><?= $rec->lieu ?><br/><i
-                                            class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
-                                    </small>
-                                </li>
-                                <?php
-                            }
-                        }
-                        ?>
-
-
-                    </ul>
-
-
-                </div>
-
-
-            </div>
-
-
-            <!--==================-->
-        </div>
-    </div>
 
 
     <!--Footer
