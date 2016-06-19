@@ -2,9 +2,9 @@
 /*
 * PARTIE PAGINATION
 * */
-$requete2 = $dbh->query("SELECT COUNT(id) as nbart FROM evenement");
+$requetepagination = $dbh->query("SELECT COUNT(id) as nbart FROM evenement");
 
-$data = $requete2->fetch(PDO::FETCH_ASSOC);
+$data = $requetepagination->fetch(PDO::FETCH_ASSOC);
 
 $nbart = $data['nbart'];
 // par page
@@ -31,9 +31,16 @@ echo "<a href='?section=peinture?p=$i'>$i</a>";
 * PARTIE EVENEMENTS
 * */
 
-$requete1 = $dbh->prepare("SELECT ladate, titre, description, lieu, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde FROM evenement ORDER BY ladate DESC LIMIT " . (($cPage - 1) * $perPage) . ",$perPage;");
-$requete1->execute();
+/*$requetefuture = $dbh->prepare("SELECT ladate, titre, description, lieu, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde FROM evenement ORDER BY ladate DESC LIMIT " . (($cPage - 1) * $perPage) . ",$perPage;");*/
+$requetefuture = $dbh->prepare("SELECT ladate, titre, description, lieu, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde FROM evenement ORDER BY ladate ASC");
+$requetefuture->execute();
+$affiche_eventf = $requetefuture->fetchAll(PDO::FETCH_OBJ);
 
-$affiche_event = $requete1->fetchAll(PDO::FETCH_OBJ);
+
+$requetepasse = $dbh->prepare("SELECT ladate, titre, description, lieu, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde FROM evenement ORDER BY ladate DESC");
+$requetepasse->execute();
+$affiche_eventp = $requetepasse->fetchAll(PDO::FETCH_OBJ);
+
+
 $date = date("Y-m-d H:i:s", time());
 

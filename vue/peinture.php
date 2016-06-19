@@ -28,51 +28,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
-    <style>
-        /* http://jsfiddle.net/ivanarvizu/JS6JV/16/ */
-        #carousel-custom {
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        #carousel-custom .carousel-indicators {
-            margin: 10px 0 0;
-            overflow: auto;
-            position: static;
-            text-align: left;
-            white-space: nowrap;
-            width: 100%;
-        }
-
-        #carousel-custom .carousel-indicators li {
-            background-color: transparent;
-            -webkit-border-radius: 0;
-            border-radius: 0;
-            display: inline-block;
-            height: auto;
-            margin: 0 !important;
-            width: auto;
-        }
-
-        #carousel-custom .carousel-indicators li img {
-            display: block;
-            opacity: 0.5;
-            height: 90px;
-        }
-
-        #carousel-custom .carousel-indicators li.active img {
-            opacity: 1;
-        }
-
-        #carousel-custom .carousel-indicators li:hover img {
-            opacity: 0.75;
-        }
-
-        #carousel-custom .carousel-outer {
-            position: relative;
-        }
-    </style>
-
 
     <!-- SCRIPT
     ============================================================-->
@@ -90,7 +45,7 @@
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>Peintures</h1>
+                <h1>Artiste peintre</h1>
             </div>
         </div>
     </div>

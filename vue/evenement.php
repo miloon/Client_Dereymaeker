@@ -44,7 +44,7 @@
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>Journal d' évènements</h1>
+                <h1>Journal d'évènements</h1>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
 
                 <?php
 
-                foreach ($affiche_event as $rec) {
+                foreach ($affiche_eventf as $rec) {
 
                     if (($rec->ladate) > $date) {
 
@@ -95,7 +95,7 @@
                     <h3> Evènements passés </h3>
                     <ul class="recent-post">
                         <?php
-                        foreach ($affiche_event as $rec) {
+                        foreach ($affiche_eventp as $rec) {
                             if (($rec->ladate) < $date) { ?>
 
                                 <li><a href=""><strong><?= $rec->titre ?></strong></a>
