@@ -21,22 +21,19 @@ elseif(!isset($_GET['section'])) {
         case "conseil":
             include 'modele/conseil.php';
             include 'vue/conseil.php';
-
-
             break;
         case "creation":
             include 'modele/creation.php';
             include 'vue/creation.php';
-
+            break;
+        case "evenement":
+            include 'modele/evenement.php';
+            include 'vue/evenement.php';
             break;
         case "peinture":
             include 'modele/peinture.php';
             include 'vue/peinture.php';
-
             break;
-
-
-
         default :
             include 'modele/accueil.php';
             include 'vue/accueil.php';

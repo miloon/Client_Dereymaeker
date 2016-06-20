@@ -28,51 +28,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
-    <style>
-        /* http://jsfiddle.net/ivanarvizu/JS6JV/16/ */
-        #carousel-custom {
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        #carousel-custom .carousel-indicators {
-            margin: 10px 0 0;
-            overflow: auto;
-            position: static;
-            text-align: left;
-            white-space: nowrap;
-            width: 100%;
-        }
-
-        #carousel-custom .carousel-indicators li {
-            background-color: transparent;
-            -webkit-border-radius: 0;
-            border-radius: 0;
-            display: inline-block;
-            height: auto;
-            margin: 0 !important;
-            width: auto;
-        }
-
-        #carousel-custom .carousel-indicators li img {
-            display: block;
-            opacity: 0.5;
-            height: 90px;
-        }
-
-        #carousel-custom .carousel-indicators li.active img {
-            opacity: 1;
-        }
-
-        #carousel-custom .carousel-indicators li:hover img {
-            opacity: 0.75;
-        }
-
-        #carousel-custom .carousel-outer {
-            position: relative;
-        }
-    </style>
-
 
     <!-- SCRIPT
     ============================================================-->
@@ -82,21 +37,7 @@
 </head>
 <body>
 <!--HEADER ROW-->
-<div id="header-row">
-    <div class="container">
-        <div class="row">
-            <!-- MAIN NAVIGATION -->
-            <div class="span12">
-                <div class="navbar">
-                    <div class="navbar-inner">
                         <?php include 'vue/menu.php' ?>
-                    </div>
-                </div>
-            </div>
-            <!-- MAIN NAVIGATION -->
-        </div>
-    </div>
-</div>
 <!-- /HEADER ROW -->
 
 
@@ -104,7 +45,7 @@
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>Peintures</h1>
+                <h1>Artiste peintre</h1>
             </div>
         </div>
     </div>
@@ -185,118 +126,15 @@
                     ?>
 
                 </ol>
+
             </div>
         </div>
     </div>
     <!-- /Carousel -->
-    <!--PAGE TITLE-->
-
-    <div class="container">
-
-        <div class="page-header">
-            <h1>
-                Journal d' évènements
-            </h1>
-
-        </div>
-    </div>
-
-    <!-- /. PAGE TITLE-->
 
 
-    <div class="container">
-        <div class="row">
-
-            <div class="span9">
-                <!--Blog Post-->
-                <?php
-
-                foreach ($affiche_event as $rec) {
-
-                    if (($rec->ladate) > $date) {
-
-                        ?>
-
-                        <div class="blog-post">
-                            <h2> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
-                                - <?= $rec->titre ?> </h2>
-                            <p> <?= nl2br($rec->description) ?></p>
-                            <div class="postmetadata">
-                                <ul>
-                                    <li>
-                                        <i class="icon-bookmark"></i> <a href="#"> <?= $rec->lieu ?></a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                }
-                ?>
-                <!--/.Blog Post-->
-
-                <!--Pagination-->
-                <div class="pagination">
-                    <ul>
-                        <li>
-                            <a href="#"> Prev</a>
-                        </li>
-                        <li>
-                            <a href="#"> 1</a>
-                        </li>
-                        <li>
-                            <a href="#"> 2</a>
-                        </li>
-                        <li>
-                            <a href="#"> 3</a>
-                        </li>
-                        <li>
-                            <a href="#"> 4</a>
-                        </li>
-                        <li>
-                            <a href="#"> 5</a>
-                        </li>
-                        <li>
-                            <a href="#"> Next</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!--/.Pagination-->
-            </div>
 
 
-            <div class="span3">
-                <div class="side-bar">
-                    <h3> Evènements passés </h3>
-                    <?php
-                    foreach ($affiche_event as $rec) {
-                    if (($rec->ladate) < $date) { ?>
-                    <ul class="recent-post">
-                        <li><a href=""><strong><?= $rec->titre ?></strong></a>
-                            <small><i class="icon-bookmark"></i> <a href="#"><?= $rec->lieu ?></a><br/><i
-                                    class="icon-calendar"></i> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
-                            </small>
-                        </li>
-                        <?php
-                        }
-                        }
-                        ?>
-
-
-                    </ul>
-
-
-                </div>
-
-
-            </div>
-
-
-            <!--==================-->
-        </div>
-    </div>
 
 
     <!--Footer
