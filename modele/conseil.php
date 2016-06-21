@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Stagiaire
- * Date: 10/06/2016
- * Time: 09:53
- */
+
+$requete = $dbh->prepare("SELECT * FROM temoignage;");
+$requete->execute();
+
+
+$affiche_temoignage = $requete->fetchAll(PDO::FETCH_OBJ);
