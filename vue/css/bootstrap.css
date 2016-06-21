@@ -6194,3 +6194,9 @@ a.badge:focus {
   content: "\e080";
   color:#555;
 }
+.glyphicon-backward:before {
+  content: "\e071";
+}
+.glyphicon-forward:before {
+  content: "\e075";
+}
