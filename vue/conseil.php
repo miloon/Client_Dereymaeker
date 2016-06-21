@@ -28,7 +28,6 @@
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 
-<<<<<<< HEAD
 	<style>
 		/* http://jsfiddle.net/ivanarvizu/JS6JV/16/ */
 		#carousel-custom {
@@ -79,15 +78,13 @@
     ============================================================-->
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="vue/js/bootstrap.min.js"></script>
-=======
+
     <!-- SCRIPT 
     ============================================================-->  
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="../modele/js/bootstrap.min.js"></script>
->>>>>>> 221e8a76434b5c78f83bff5098be543392261891
 </head>
 <body>
-<<<<<<< HEAD
 
 <!--HEADER ROW-->
 <div id="header-row">
@@ -102,10 +99,6 @@
 				</div>
 			</div>
 			<!-- MAIN NAVIGATION -->
-=======
-<!--HEADER ROW-->
-<?php include 'vue/menu.php' ?>
-<!-- /HEADER ROW -->
 
 
 
@@ -120,7 +113,6 @@
 				Services
 			</h1>
 		</div>
->>>>>>> 221e8a76434b5c78f83bff5098be543392261891
 		</div>
 	</div>
 </div>
