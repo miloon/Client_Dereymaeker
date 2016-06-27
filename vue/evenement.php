@@ -57,7 +57,9 @@
                 <!--Blog Post-->
 
                 <?php
-
+if (isset($message)){
+    echo "<p>".$message."</p>";
+}
                 foreach ($affiche_eventf as $rec) {
 
                     if (($rec->ladate) > $date) {
@@ -84,7 +86,31 @@
                 <!--/.Blog Post-->
 
                 <!--Pagination-->
-
+                <div class="pagination">
+                    <ul>
+                        <li>
+                            <a href="#">Prev</a>
+                        </li>
+                        <li>
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#">Next</a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!--/.Pagination-->
             </div>
@@ -92,9 +118,12 @@
 
             <div class="span3">
                 <div class="side-bar">
-                    <h3> Evènements passés </h3>
+                    <h3>Evènements passés </h3>
                     <ul class="recent-post">
                         <?php
+                        if (isset($messagep)){
+                            echo "<p>".$messagep."</p>";
+                        }
                         foreach ($affiche_eventp as $rec) {
                             if (($rec->ladate) < $date) { ?>
 
