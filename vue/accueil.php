@@ -65,6 +65,10 @@
             text-align: center;
         }
 
+        #header-row{
+            z-index: 100;
+        }
+
     </style>
     <!--Font-->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet'
@@ -124,10 +128,15 @@
                     felis. Pellentesque dictum libero non nisl vestibulum fermentum. Cras tempus sollicitudin nisi, vel
                     mollis est facilisis ac.
 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 </p></div>
         </div>
     </div>
-</div>
 
 <!--Footer
 ==========================-->
