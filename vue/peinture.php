@@ -63,17 +63,24 @@
                         // on fait une variable égale à 1 pour pouvoir afficher la class "active" uniquement à la première image du carousel, sinon, le carousel fait de la merde et y'a plus rien qui marche.
                         $i = 1;
                         foreach ($affiche_peinture as $recbig) {
+
+                            if($recbig->vendu){
+                                $vendu = " <small>[vendu !]</small>";
+                            }else{
+                                $vendu ="";
+                            }
+
                             ?>
                             <?php if ($i == 1): ?>
                                 <div class='item active'>
                                     <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?></h3>
+                                    <h3><?= $recbig->nom ?><?=$vendu?></h3>
                                     <p><?= $recbig->description ?></p>
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
                                     <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?></h3>
+                                    <h3><?= $recbig->nom ?><?=$vendu?></h3>
                                     <p><?= $recbig->description ?></p>
                                 </div>
                             <?php endif; ?>
