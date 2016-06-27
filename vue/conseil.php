@@ -31,7 +31,7 @@
 	<style>
 		/* http://jsfiddle.net/ivanarvizu/JS6JV/16/ */
 		#carousel-custom {
-			margin: 20px auto;
+			margin: 80px auto;
 			width: 80%;
 		}
 
@@ -70,6 +70,12 @@
 
 		#carousel-custom .carousel-outer {
 			position: relative;
+		}
+		p{
+			text-align: center}
+
+		h3{
+			text-align: center;
 		}
 	</style>
 
@@ -193,7 +199,7 @@
 								<div class='item active'>
 									<h3><?= $recbig->nom ?></h3>
 									<p><?= $recbig->texte ?></p>
-									<h3><? $recbig->email ?></h3>
+
 									<p><?= $recbig->profession ?></p>
 									<p><?= $recbig->age ?></p>
 								</div>
@@ -201,7 +207,7 @@
 								<div class='item'>
 									<h3><?= $recbig->nom ?></h3>
 									<p><?= $recbig->texte ?></p>
-									<h3><? $recbig->email ?></h3>
+
 									<p><?= $recbig->profession ?></p>
 									<p><?= $recbig->age ?></p>
 								</div>
@@ -232,6 +238,12 @@
 			</div>
 		</div>
 	</div>
+
+	</body>
+ <footer>
+	 <h2>Partenaires</h2>
+	<a href="http://www.souriredenfant.fr/"> sourire d'enfant</a>
+ </footer>
 
 
 
