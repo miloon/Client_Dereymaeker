@@ -80,7 +80,6 @@
 
     <div class="container">
         <div class="row">
-
             <div class="span12">
                 <div class="media">
                     <img class="img-responsive pull-left media-object" src="vue/img/presentation/sophie1.jpg"/>
@@ -111,7 +110,6 @@
             </div>
         </div>
     </div>
-</div>
 
 <!--Footer
 ==========================-->
