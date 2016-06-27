@@ -5533,6 +5533,11 @@ input[type="submit"].btn.btn-mini {
   *zoom: 1;
 }
 
+#accueil{
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
 .thumbnails:before,
 .thumbnails:after {
   display: table;
