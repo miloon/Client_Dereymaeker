@@ -34,6 +34,10 @@ elseif(!isset($_GET['section'])) {
             include 'modele/peinture.php';
             include 'vue/peinture.php';
             break;
+        case "contact":
+            include 'modele/contact.php';
+            include 'vue/contact.php';
+            break;
         default :
             include 'modele/accueil.php';
             include 'vue/accueil.php';
