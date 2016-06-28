@@ -5534,8 +5534,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 #accueil{
-  margin-top: 150px;
-  margin-bottom: 50px;
+  margin-top: 70px;
+  margin-bottom: 30px;
 }
 
 .thumbnails:before,
@@ -5562,6 +5562,7 @@ input[type="submit"].btn.btn-mini {
 .thumbnail {
   display: block;
   padding: 4px;
+  margin: 30px;
   line-height: 20px;
   border: 1px solid #ddd;
   -webkit-border-radius: 4px;
