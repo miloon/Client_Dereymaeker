@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 28 Juin 2016 à 14:52
+-- Généré le :  Mar 28 Juin 2016 à 15:51
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `partenaire` (
 --
 
 INSERT INTO `partenaire` (`id`, `nom`, `logohref`, `logosrc`) VALUES
-(1, 'CF2m', 'http://www.cf2m.be/', 'http://dev.pixelandco.be/cf2m/wp-content/uploads/2016/01/redlogoblanc.png'),
+(1, 'CF2m', 'http://www.cf2m.be/', 'http://www.aid-com.be/sites/default/files/upload/Logos/logo_cf2m.png'),
 (2, 'Bruxelles Formation', 'http://www.bruxellesformation.be/', 'http://www.bruxellesformation.be/uploads/images/la%20formation%20a%20bruxelles/logos/nouveau_logo/avec_slogan/logo_bf_300dpi_blue.png');
 
 -- --------------------------------------------------------
