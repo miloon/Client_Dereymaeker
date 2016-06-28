@@ -183,15 +183,20 @@
 			</div>
 		</div>
 	</div>
+	<footer>
+		<h2>Partenaires</h2>
+		<?php
+		foreach ($affiche_partenaire as $recbig){
+			?>
+				<div class='partenaire'>
+				<?php if($recbig->logosrc) {?>
+					<img src='vue/img/partenaire/<?=$recbig->logosrc?>'alt='<?=$recbig->nom 			?>'/><?php
+				}?>
 
+					<a href="<?=$recbig->logohref?>"><?=$recbig->nom ?></a>
+
+				</div>
+		<?php }
+		?>
+	</footer>
 	</body>
- <footer>
-	 <h2>Partenaires</h2>
-	<a href="http://www.souriredenfant.fr/"> sourire d'enfant</a>
- </footer>
-
-
-
-
-
-
