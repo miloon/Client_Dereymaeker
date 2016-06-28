@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 27 Juin 2016 à 10:45
+-- Généré le :  Mar 28 Juin 2016 à 15:51
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -31,7 +31,17 @@ CREATE TABLE IF NOT EXISTS `citation` (
   `texte` varchar(150) DEFAULT NULL,
   `auteur` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `citation`
+--
+
+INSERT INTO `citation` (`id`, `texte`, `auteur`) VALUES
+(1, '"Si une femme est mal habillée, on remarque sa robe, mais si elle est impeccablement vêtue, c''est elle que l''on remarque"', 'Coco Chanel'),
+(2, '"Personne n''est jeune après quarante ans, mais on peut être irrésistible à tout âge"', 'Coco Chanel'),
+(3, '"La beauté apparaît lorsque vous décidez d''être vous même"', 'Coco Chanel'),
+(4, '"La mode se démode, le style jamais"', 'Coco Chanel');
 
 -- --------------------------------------------------------
 
@@ -103,6 +113,28 @@ INSERT INTO `evenement` (`id`, `titre`, `ladate`, `description`, `lieu`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `partenaire`
+--
+
+CREATE TABLE IF NOT EXISTS `partenaire` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` text NOT NULL,
+  `logohref` text NOT NULL,
+  `logosrc` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `partenaire`
+--
+
+INSERT INTO `partenaire` (`id`, `nom`, `logohref`, `logosrc`) VALUES
+(1, 'CF2m', 'http://www.cf2m.be/', 'http://www.aid-com.be/sites/default/files/upload/Logos/logo_cf2m.png'),
+(2, 'Bruxelles Formation', 'http://www.bruxellesformation.be/', 'http://www.bruxellesformation.be/uploads/images/la%20formation%20a%20bruxelles/logos/nouveau_logo/avec_slogan/logo_bf_300dpi_blue.png');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `peinture`
 --
 
@@ -144,7 +176,18 @@ CREATE TABLE IF NOT EXISTS `temoignage` (
   `age` varchar(150) DEFAULT NULL,
   `texte` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `temoignage`
+--
+
+INSERT INTO `temoignage` (`id`, `nom`, `email`, `profession`, `age`, `texte`) VALUES
+(1, 'Isabelle', NULL, NULL, NULL, 'Quand j&#39;ai rencontré Sophie pour la première fois, je venais d&#39;avoir mon troisième enfant, quelques kilos de trop, les cheveux un peu ternes et une terrible envie de renouer avec une séduction toute féminine.\r\n\r\nLes premiers conseils de Sophie ont porté sur une analyse couleur.  A l&#39;aide d&#39;étoffes et d&#39;un miroir, elle m&#39;a fait prendre conscience des tons qui me flattent et de ceux à éviter.  Ensuite, je suis passée à l&#39;analyse morphologique. Munie de deux énormes bâtons, Sophie m&#39;a expliqué les atouts de ma silhouette, les formes de vêtements à privilégier et les coupes que je ne dois pas choisir. Pour terminer cette phase de conseil, Sophie m&#39;a aidée à trier ma garde-robe:\r\n\r\nmettre en avant les tenues dont les couleurs et les formes me vont le mieux.  Et nous avons terminé par une virée shopping, très sympa où j&#39;ai découvert des magasins, des marques et fait quelques très chouettes achats.\r\n\r\nLes premiers mois, je manquais de confiance dans mes choix.  Fallait-il acheter ce xème pull noir, si rassurant mais dont la couleur ne me convient pas du tout (je suis de type été)?  Est-ce que je devais donner ma confiance à une vendeuse très sympa mais qui me vantait une tenue dont la coupe ne convenait pas à ma morphologie? Ou écouter ma petite voix intérieur, les conseils de Sophie?  Il m&#39;a fallu un peu de temps pour donner à l&#39;approche de Sophie la place \r\nqu&#39;elle méritait dans ma vie.\r\n\r\nTrois ans plus tard, que me reste-t- il de cette expérience?  Un nuancier au fond de mon sac qui me permet, en cas de doute, de vérifier que la couleur de ce nouveau vêtement me convient. \r\n\r\nUne garde-robe où toutes les pièces me plaisent et s&#39;accordent les unes avec les autres. Un budget vêtements nettement revu à la baisse car je ne fais (presque) plus d&#39;erreurs quand j&#39;achète.\r\n\r\nMes fameux kilos de grossesse (mais plus personne ne les voit maintenant que je choisis bien les coupes de mes vêtements). Et régulièrement des compliments sur ma bonne mine (ca, c&#39;est le bon choix des couleurs) et mon style.'),
+(2, 'Elisabeth P.', NULL, NULL, NULL, 'Lorsque les différents foulards de couleurs se sont posés sur moi, j’ai pu constater la lumière qui se dégageait de mes yeux, que certains tons révélaient un regard pétillant et lumineux, et d’autres couleurs au contraire, me donnaient un teint fade et triste.\r\n\r\nJe n’avais pas conscience que jouer avec les couleurs et le choix des tenues peuvent mettre en avant la beauté d’une personne et lui permettre de se sentir mieux.\r\n\r\nMerci à toi ma belle Sophie pour tes conseils si précieux qui font de moi une jolie « printemps » pétillante et rayonnante !'),
+(3, 'Amélie J.', NULL, NULL, NULL, 'Un tout grand merci à vous, Sophie, pour votre professionnalisme, votre bienveillance et, surtout, vos précieux conseils ! À présent, je ne perds plus de temps dans les magasins, car je repère rapidement les couleurs qui me vont et celles que je dois éviter à tout prix ! Cela me permet aussi de ne plus faire de « mauvais achats », de ceux qui traînent dans nos garde-robes sans jamais être portés. Et puis, pour le maquillage, c’est pareil, je connais maintenant les tons qui mettent mon visage en valeur et surtout, je sais comment procéder ! Lunettes, coiffure, boucles d’oreilles et autres accessoires, idem ! Résultat : je m’aime un peu plus et je me sens plus sûre de moi. Une expérience que je recommande donc vivement !'),
+(4, 'Véronique V.', NULL, NULL, NULL, 'J &#39;ai eu la chance de rencontrer Sophie et d&#39;avoir pu bénéficier d&#39;une séance de conseil en image.\r\n\r\nC&#39;était la première fois que je tentais cette expérience et ce fut, grâce au talent et à la personnalité dynamique et attentive de Sophie, un moment de détente et de bien-être au cours duquel j&#39;ai appris plusieurs choses.\r\n\r\nEtant dans la mode j&#39;avais bien sûr des notions de base concernant les couleurs qui me convenaient mais il était intéressant de voir comment ces couleurs se regroupaient et créaient très nettement une saison. Le test de personnalité a achevé de déterminer clairement à quelle saison j&#39;appartenais.\r\n\r\nDes conseils de maquillage ont complété son analyse.\r\n\r\nLe conseil en image convient aussi bien aux hommes.\r\n\r\nDans un monde où notre apparence est primordiale professionnellement et socialement , cela nous permet de nous présenter aux autres de la manière la plus positive qui soit car les couleurs qui nous conviennent ont le pouvoir de nous faire paraître plus frais, plus dynamique, plus jeune, plus beau et de rayonner. \r\n\r\nJe ne saurais que conseiller cette expérience.'),
+(5, 'Virginie P.', NULL, NULL, NULL, 'Merci Sophie pour le super relooking!\r\n\r\nLes différentes étapes étaient toutes à la hauteur de mes espérances...\r\n\r\nD&#39;abord la séance analyse couleurs qui m&#39;aide souvent dans mes achats vestimentaires ... Le petit nuancier &quot;été&quot; reste toujours dans mon sac à main !\r\n\r\nTes conseils lors de la séance  coiffure et maquillage m&#39;ont donné de nouvelles idées ...\r\n\r\nEt puis le must pour moi c&#39;est la séance morphologie ... Tu as vraiment l&#39;œil, tu as un goût sûr et rien ne t&#39;échappe ... J&#39;ai changé de modèle de robe et de pantalon et j&#39;ai reçu de nombreux compliments ... Tes astuces pour allonger la silhouette sont bluffants !\r\n\r\nLa séance tri de garde robe était bien nécessaire !! Je redécouvre le plaisir de m&#39;habiller, de chercher les bonnes combinaisons et de trouver le petit détail qui fera toute la différence ! ..\r\n\r\nMerci pour ton écoute, ta ienveillance, ta patience, ton sourire sans quoi je n’aurais pas réussi à lâcher prise et à changer ...j’ai eu raison de te faire confiance car aujourd’hui, c’est en moi que j’ai confiance!!\r\n\r\nMerci !');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -8,7 +8,7 @@ include_once "header.php"
 <div class="container">
     <div class="row">
         <div class="span12">
-           <p id="logoaccueil"> <img  src="vue/img/presentation/logo1.jpg" alt="Sophie Dereymaeker" align="center"/></p>
+            <p id="logoaccueil"><img src="vue/img/presentation/logo1.jpg" alt="Sophie Dereymaeker" align="center"/></p>
             <ul id="accueil" class="thumbnails">
                 <li class="span4">
                     <div class="thumbnail">
@@ -20,7 +20,8 @@ include_once "header.php"
                 </li>
                 <li class="span4">
                     <div class="thumbnail">
-                        <a href="?section=creation"><img alt="300x200" src="vue/img/presentation/handmadecraft.jpg"/></a>
+                        <a href="?section=creation"><img alt="300x200"
+                                                         src="vue/img/presentation/handmadecraft.jpg"/></a>
                         <div class="caption">
                             <strong>Hand Made Craft</strong>
                         </div>
@@ -50,7 +51,7 @@ include_once "header.php"
 
     <div class="container">
         <div class="row">
-            <div class="span12">
+            <div class="col-lg-9 offset1">
                 <div class="media">
                     <img class="img-responsive pull-left media-object" src="vue/img/presentation/sophie1.jpg"/>
                     <div class="media-body">
@@ -60,7 +61,8 @@ include_once "header.php"
                             eu
                             accumsan enim erat et mi. Quisque sit amet tortor non nunc finibus ultrices. Phasellus et
                             ante
-                            libero. Nunc egestas quis turpis eget vestibulum. Proin vitae dictum enim. Mauris ornare,
+                            libero.</p>
+                        <p>Nunc egestas quis turpis eget vestibulum. Proin vitae dictum enim. Mauris ornare,
                             lorem
                             imperdiet semper auctor, ex sem tristique odio, vitae dapibus felis massa ut tortor.
                             Vestibulum a
@@ -68,7 +70,7 @@ include_once "header.php"
                             felis
                             consectetur quis. Integer eget neque ac tortor rutrum lacinia. Mauris ullamcorper nunc id
                             ultricies
-                            accumsan. Aliquam tincidunt magna turpis, vel maximus neque maximus commodo. Proin eget
+                            accumsan.</p> <p>Aliquam tincidunt magna turpis, vel maximus neque maximus commodo. Proin eget
                             condimentum
                             felis. Pellentesque dictum libero non nisl vestibulum fermentum. Cras tempus sollicitudin
                             nisi, vel
@@ -81,14 +83,14 @@ include_once "header.php"
         </div>
     </div>
 
-<!--Footer
-==========================-->
+    <!--Footer
+    ==========================-->
 
-<?php
-include_once "footer.php"
-?>
+    <?php
+    include_once "footer.php"
+    ?>
 
-<!--/.Footer-->
+    <!--/.Footer-->
 
 </body>
 </html>
