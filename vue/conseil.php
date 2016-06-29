@@ -143,15 +143,16 @@ include_once "header.php"
             </ol>
         </div>
     </div>
-	</div>
+</div>
 
 
-<div>
+<div id="">
 	<h2>Partenaires</h2>
+
 	<?php
 	foreach ($affiche_partenaire as $recbig){
 	?>
-	<div class='partenaire'>
+
 		<?php if ($recbig->logosrc) { ?>
 			<img src='vue/img/partenaire/<?= $recbig->logosrc ?>'alt='<?= $recbig->nom ?>'/><?php
 		} ?>
@@ -162,13 +163,16 @@ include_once "header.php"
 		}
 		?>
 	</div>
-	</div>
+</div>
+
+
 
 <?php
 include_once "footer.php";
 ?>
+
+
+
 	</body>
-
-
 </html>
 
