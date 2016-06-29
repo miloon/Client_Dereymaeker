@@ -14,7 +14,7 @@ include_once "header.php"
         <div class="span12">
             <div class="page-header">
                 <h1>
-                    Créatrice de Style
+                    Conseillère en image
                 </h1>
             </div>
         </div>
@@ -24,23 +24,24 @@ include_once "header.php"
         <div class="row">
             <div class="span12">
                 <!-- Citation statique -->
-                <h3>"Vous n'aurez pas deux fois l'occasion de faire une première impression"</h3>
+                <h3>"Vous n'aurez pas deux fois l'occasion de faire une première impression" - Coco Chanel</h3>
                 <div class="row">
                     <div class="span3" id="references">
 
                         <div class="btn-group-vertical btn-group-lg" role="group">
-                            <a class="btn btn-default" id="colorimétrie" href="javascript:;"
-                               onclick="a();">Colorimétrie</a>
-                            <a class="btn btn-default" id="analyse" href="javascript:;" onclick="b();">Analyse de
-                                style</a>
-                            <a class="btn btn-default" id="tri" href="javascript:;" onclick="c();">Tri garde-robe</a>
-                            <a class="btn btn-default" id="accompagnement" href="javascript:;"
-                               onclick="d();">Accompagnement shopping</a>
-                            <a class="btn btn-default" id="cours" href="javascript:;" onclick="e();">Cours
-                                auto-maquillage</a>
-                            <a class="btn btn-default" id="decoration" href="javascript:;" onclick="f();">Décoration</a>
-                            <a class="btn btn-default" id="morphologie" href="javascript:;"
-                               onclick="g();">Morphologie</a>
+                            <a class="btn btn-default" id="relooking" href="javascript:;"
+                               onclick="a();">Relooking</a>
+                            <a class="btn btn-default" id="colorimetrie" href="javascript:;" onclick="b();">Colorimétrie</a>
+                            <a class="btn btn-default" id="morphologie" href="javascript:;" onclick="c();">Morphologie</a>
+                            <a class="btn btn-default" id="style" href="javascript:;"
+                               onclick="d();">Style</a>
+                            <a class="btn btn-default" id="dressing" href="javascript:;" onclick="e();">Dressing optimisé</a>
+                            <a class="btn btn-default" id="customisation" href="javascript:;" onclick="f();">Customisation personnalisée</a>
+                            <a class="btn btn-default" id="shopping" href="javascript:;"
+                               onclick="g();">Accompagnement shopping</a>
+                            <a class="btn btn-default" id="automaquillage" href="javascript:;" onclick="h();">Auto-maquillage</a>
+                            <a class="btn btn-default" id="decoration" href="javascript:;"
+                               onclick="i();">Décoration</a>
 
                         </div>
                     </div>
@@ -70,6 +71,12 @@ include_once "header.php"
                                 document.getElementById('menu').innerHTML = 'In iaculis, risus eu pellentesque pharetra, neque dolor efficitur tellus, et lacinia urna ex et ligula. In euismod iaculis dolor ut ultrices. Praesent sit amet semper odio, vel efficitur lectus. Vivamus facilisis velit et lacus accumsan, eget eleifend ligula congue. ';
                             }
                             function g() {
+                                document.getElementById('menu').innerHTML = 'Proin eleifend semper porta. Donec leo tellus, egestas hendrerit pharetra a, imperdiet eu purus. In accumsan malesuada lacinia. Nulla porttitor, lectus id tincidunt commodo, lacus dui dignissim sem, at fermentum metus nisl et augue. Aenean eleifend arcu eu tempus blandit. Integer eleifend erat ac orci fringilla, ut hendrerit orci ullamcorper. Maecenas posuere posuere lorem ut rhoncus. ';
+                            }
+                            function h() {
+                                document.getElementById('menu').innerHTML = 'Proin eleifend semper porta. Donec leo tellus, egestas hendrerit pharetra a, imperdiet eu purus. In accumsan malesuada lacinia. Nulla porttitor, lectus id tincidunt commodo, lacus dui dignissim sem, at fermentum metus nisl et augue. Aenean eleifend arcu eu tempus blandit. Integer eleifend erat ac orci fringilla, ut hendrerit orci ullamcorper. Maecenas posuere posuere lorem ut rhoncus. ';
+                            }
+                            function i() {
                                 document.getElementById('menu').innerHTML = 'Proin eleifend semper porta. Donec leo tellus, egestas hendrerit pharetra a, imperdiet eu purus. In accumsan malesuada lacinia. Nulla porttitor, lectus id tincidunt commodo, lacus dui dignissim sem, at fermentum metus nisl et augue. Aenean eleifend arcu eu tempus blandit. Integer eleifend erat ac orci fringilla, ut hendrerit orci ullamcorper. Maecenas posuere posuere lorem ut rhoncus. ';
                             }
 

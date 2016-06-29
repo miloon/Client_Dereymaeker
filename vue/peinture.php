@@ -41,7 +41,7 @@ include_once "header.php"
                                 <div class='item active'>
                                     <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?><?=$vendu?></h3>
-                                    <p><?= $recbig->description ?></p>
+
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
