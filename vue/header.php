@@ -10,10 +10,10 @@
     <link href="vue/css/bootstrap.css" rel="stylesheet">
     <link href="vue/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="vue/css/style.css" rel="stylesheet">
-
     <!--Font-->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet'
           type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
 
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
