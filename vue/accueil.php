@@ -23,7 +23,7 @@ include_once "header.php"
                         <a href="?section=creation"><img alt="300x200"
                                                          src="vue/img/presentation/handmadecraft.jpg"/></a>
                         <div class="caption">
-                            <strong>Hand Made Craft</strong>
+                            <strong>Créatrice</strong>
                         </div>
                     </div>
                 </li>
@@ -43,7 +43,7 @@ include_once "header.php"
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>Présentation de Sophie</h1>
+                <h1>Sophie Dereymaeker</h1>
             </div>
         </div>
     </div>

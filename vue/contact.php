@@ -43,12 +43,12 @@ include_once "header.php"
                         <div class="form-group">
                             <label for="lobjet">Veuillez choisir l'objet de votre message</label>
                             <select name="lobjet">
-                            <option value="conseillere en image">conseillère en image</option>
-                            <option value="peintures">peintures</option>
-                            <option value="bijoux et customisation">bijoux et customisation</option>
-                            <option value="devis">devis</option>
-                            <option value="apporter un temoignage">apporter un témoignage</option>
-                            <option value="autres">autres</option>
+                            <option value="conseillere en image">Conseils en image</option>
+                            <option value="peintures">Peintures</option>
+                            <option value="bijoux et customisation">Créations</option>
+                            <option value="devis">Devis</option>
+                            <option value="apporter un temoignage">Apporter un témoignage</option>
+                            <option value="autres">Autres</option>
                             </select></div>
                         <textarea name="letexte" class="form" placeholder="Votre message"></textarea><br/>
                         <input type="submit" value="Envoyer"/>
