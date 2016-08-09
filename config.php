@@ -13,7 +13,7 @@ try {
 }
 
 define("LOG","web");
-define("PWT","dev");
+define("PWD","dev");
 
 ?>
 

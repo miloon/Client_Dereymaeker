@@ -4,7 +4,7 @@ if(!empty($_POST)) {
     $lelogin = htmlspecialchars(strip_tags(trim($_POST['lelogin'])),ENT_QUOTES);
     $lepass = htmlspecialchars(strip_tags(trim($_POST['lepass'])),ENT_QUOTES);
 
-    if((LOG==$lelogin) and ($lepass==PWT) ){
+    if((LOG==$lelogin) and ($lepass==PWD) ){
 
 
         // création de session valide
@@ -13,7 +13,7 @@ if(!empty($_POST)) {
         // redirection
         header("Location: ./");
     }else{
-        $erreur = "Login et/ou mot de passe incorrecte(s)";
+        $erreur = "Login et/ou mot de passe incorrect(s)";
     }
 
 }
