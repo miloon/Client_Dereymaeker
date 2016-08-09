@@ -3,8 +3,8 @@
 
 // accueil de l'admin
 if(empty($_GET)){
-    require_once "modele/adm_accueil.php";
-    require_once "vue/adm_accueil.php";
+    require_once "modele/admin_accueil.php";
+    require_once "vue/admin_accueil.php";
 
 // déconnexion
 }elseif(isset($_GET['deco'])){
