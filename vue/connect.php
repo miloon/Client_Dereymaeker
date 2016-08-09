@@ -13,8 +13,8 @@ include ("vue/menu.php");
 <div>
 
   <form class="form" method="post" action="">
-    <input type="text" name="lelogin" placeholder="Longin" required >
-    <input type="password" name="lepass" placeholder="Mot de passe" required >
+    <input type="text" name="lelogin" placeholder="Mon identifiant" required >
+    <input type="password" name="lepass" placeholder="Mon mot de passe" required >
     <input type="submit" class="submit" value="Register">
   </form>
 
