@@ -1,18 +1,10 @@
-
 <?php
-
 if(isset($_GET['deco'])){
     require_once "modele/deco.php";
-
 }elseif(isset($_GET['connect'])){
     require_once "modele/connect.php";
     require_once "vue/connect.php";
-
-}
-
-
-
-elseif(!isset($_GET['section'])) {
+}elseif(!isset($_GET['section'])) {
     include 'modele/accueil.php';
     include 'vue/accueil.php';
 }else{

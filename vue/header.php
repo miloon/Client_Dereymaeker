@@ -5,7 +5,7 @@
     <title>Sophie Dereymaeker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Dalyome, Miloon, Hayat">
     <!-- Bootstrap -->
     <link href="vue/css/bootstrap.css" rel="stylesheet">
     <link href="vue/css/bootstrap-responsive.css" rel="stylesheet">

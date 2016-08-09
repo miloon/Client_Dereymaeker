@@ -7,14 +7,14 @@
             </a>
         </li>
         <hr/>
-        <li><a href="?dash_creation">Creations</a></li>
-        <li><a href="?dash_peinture">Peintures</a></li>
+        <li><a href="?creation">Creations</a></li>
+        <li><a href="?peinture">Peintures</a></li>
         <hr/>
-        <li><a href="?dash_evenement">Évènements</a></li>
-        <li><a href="?dash_temoignage">Témoignages</a></li>
+        <li><a href="?evenement">Évènements</a></li>
+        <li><a href="?temoignage">Témoignages</a></li>
         <hr/>
-        <li><a href="?dash_partner">Partenaires</a></li>
-        <li><a href="?dash_evenement">Citations</a></li>
+        <li><a href="?partner">Partenaires</a></li>
+        <li><a href="?evenement">Citations</a></li>
         <hr/>
         <li><a href="?deco">Déconnexion</a></li>
     </ul>
