@@ -2,7 +2,8 @@
 <html lang="fr">
 
 <?php include "admin_header.php"; ?>
-
+<!--je ferme la balise là ici au cas où vous souhaitier rajouter un truc (exemple : un fichier javascript) qui ne devrait pas être présent sur toutes les pages admin.-->
+</head>
 <body>
 
 <div id="wrapper">

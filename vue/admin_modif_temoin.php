@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <?php include "admin_header.php"; ?>
-
+</head>
 <body>
 
 <div id="wrapper">
