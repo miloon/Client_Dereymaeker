@@ -15,6 +15,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
+                    <p><a href="?nouveau_temoignage" type="button" class="btn btn-default">Nouveau témoignage à insérer</a></p>
                         <table class="table table-striped">
 <tr><th>Nom</th><th>Témoignage</th><th>Modifier</th><th>Supprimer</th></tr>
 
@@ -25,7 +26,7 @@
                                     <td><?= $tem->nom ?></td>
                                     <td><?= substr(nl2br($tem->texte),0,250) ?>...</td>
                                     <td><a href="?modif_temoignage=<?= $tem->id ?>"><img src="vue/img/modify.png"/></a></td>
-                                    <td><img src="vue/img/delete.png"/></td>
+                                    <td><a href="?delete_temoignage=<?= $tem->id ?>"><img src="vue/img/delete.png"/></a></td>
                                 </tr>
                                 <?php
                             }

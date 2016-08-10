@@ -15,7 +15,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                    <p>INSÉRER LES TRUCS ICI !!!</p>
                 </div>
             </div>
         </div>
