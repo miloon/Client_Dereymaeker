@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <?php include "admin_header.php"; ?>
-
+<script>
+    function confirmDelete(nom, id) {
+        var question = confirm("Voulez-vous vraiment supprimer le témoignage de « " + nom + " »");
+        if (question) {
+            document.location.href = "?delete_temoignage=" + id;
+        }
+    }
+</script>
+</head>
 <body>
-
 <div id="wrapper">
 
     <?php include "admin_menu.php"; ?>
@@ -15,22 +21,30 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                        <table class="table table-striped">
-<tr><th>Nom</th><th>Témoignage</th><th>Modifier</th><th>Supprimer</th></tr>
+                    <p><a href="?nouveau_temoignage" type="button" class="btn btn-default">Nouveau témoignage à
+                            insérer</a></p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Témoignage</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
+                        </tr>
 
-                            <?php
-                            foreach ($affiche_temoin as $tem) {
-                                ?>
-                                <tr>
-                                    <td><?= $tem->nom ?></td>
-                                    <td><?= substr(nl2br($tem->texte),0,250) ?>...</td>
-                                    <td><a href="?modif_temoignage=<?= $tem->id ?>"><img src="vue/img/modify.png"/></a></td>
-                                    <td><img src="vue/img/delete.png"/></td>
-                                </tr>
-                                <?php
-                            }
+                        <?php
+                        foreach ($affiche_temoin as $tem) {
                             ?>
-                        </table>
+                            <tr>
+                                <td><?= $tem->nom ?></td>
+                                <td><?= substr(nl2br($tem->texte), 0, 250) ?>...</td>
+                                <td><a href="?modif_temoignage=<?= $tem->id ?>"><img src="vue/img/modify.png"/></a></td>
+                                <td><img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $tem->nom ?>",<?= $tem->id ?>)' src="vue/img/delete.png"/>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                    </table>
                 </div>
             </div>
         </div>

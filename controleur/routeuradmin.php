@@ -8,6 +8,7 @@ if (empty($_GET)) {
     require_once 'vue/admin_accueil.php';
 } elseif (isset($_GET['deco'])) {
     require_once "modele/deco.php";
+
 } elseif (isset($_GET['evenement'])) {
     $titre = "Menu d'administration de mes évènements";
     require_once 'modele/admin_dash_event.php';
@@ -59,27 +60,27 @@ if (empty($_GET)) {
     require_once 'vue/admin_modif_temoin.php';
 
 } elseif (isset($_GET['nouvel_evenement'])) {
-    $titre = "Menu d'administration de mes évènements";
+    $titre = "Ajouter un nouvel évènement";
     require_once 'modele/admin_new_event.php';
     require_once 'vue/admin_new_event.php';
 } elseif (isset($_GET['nouvelle_citation'])) {
-    $titre = "Menu d'administration des citations";
+    $titre = "Ajouter une nouvelle citation";
     require_once 'modele/admin_new_citation.php';
     require_once 'vue/admin_new_citation.php';
 } elseif (isset($_GET['nouvelle_creation'])) {
-    $titre = "Menu d'administration de mes créations";
+    $titre = "Ajouter une nouvelle création";
     require_once 'modele/admin_new_creation.php';
     require_once 'vue/admin_new_creation.php';
 } elseif (isset($_GET['nouvelle_peinture'])) {
-    $titre = "Menu d'administration de mes peintures";
+    $titre = "Ajouter une nouvelle peinture";
     require_once 'modele/admin_new_peintre.php';
     require_once 'vue/admin_new_peintre.php';
 } elseif (isset($_GET['nouveau_partner'])) {
-    $titre = "Menu d'administration de mes partenaires";
+    $titre = "Ajouter un nouveau partenaire";
     require_once 'modele/admin_new_partner.php';
     require_once 'vue/admin_new_partner.php';
 } elseif (isset($_GET['nouveau_temoignage'])) {
-    $titre = "Menu d'administration des témoignages";
+    $titre = "Ajouter un nouveau témoignage";
     require_once 'modele/admin_new_temoin.php';
     require_once 'vue/admin_new_temoin.php';
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <?php include "admin_header.php"; ?>
-
+<!--je ferme la balise là ici au cas où vous souhaitier rajouter un truc (exemple : un fichier javascript) qui ne devrait pas être présent sur toutes les pages admin.-->
+</head>
 <body>
 
 <div id="wrapper">
@@ -15,7 +15,42 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                    <p>INSÉRER LES TRUCS ICI !!!</p>
+                    <?php if ($affiche_modif) {
+                        ?>
+                        <div class="row">
+                            <form name="edition" method="POST" action="" class="well">
+
+
+                                <div class="form-group"><label>Nom de l'évènement</label>
+                                    <input class="form-control" name="letitre" type="text"
+                                           value="<?= $affiche_event->titre ?>" required/></div>
+
+
+                                <div class="form-group"><label>Date</label>
+                                    <input type="text" id="datetimepicker" name="ladate" value="<?= $affiche_event->ladate ?>" required/>
+                                </div>
+
+                                <div class="form-group"><label>Description de l'évènement</label>
+                        <textarea class="form-control" name="ladesc" required><?= nl2br($affiche_event->description) ?>"</textarea></div>
+
+                                <div class="form-group"><label>Lieu de l'évènement</label>
+                                    <input class="form-control" type="text" name="lelieu" value="<?= $affiche_event->lieu ?>" required/>
+                                </div>
+
+
+                                <input type="submit" class="btn btn-success" name="edition"
+                                       value="Modifier l'évènement"/>
+                            </form>
+                        </div>
+                        <?php
+                    }
+
+                    if ($affiche_success) {
+                        ?>
+                        <h2>Félicitations ! L'évènement a bien été mis à jour !</h2>
+                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <?php
+                    } ?>
                 </div>
             </div>
         </div>
