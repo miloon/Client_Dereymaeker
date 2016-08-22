@@ -40,7 +40,7 @@ if (isset($message)){
                             <div class="postmetadata">
                                 <ul>
                                     <li>
-                                        <i class="icon-bookmark"></i><?= $rec->lieu ?>
+                                        <i class="icon-bookmark"></i><a target="_blank" href="https://www.google.be/maps/place/<?= $rec->lieu ?>"><?= $rec->lieu ?></a>
                                     </li>
 
                                 </ul>
@@ -52,34 +52,6 @@ if (isset($message)){
                 ?>
                 <!--/.Blog Post-->
 
-                <!--Pagination-->
-                <div class="pagination">
-                    <ul>
-                        <li>
-                            <a href="#">Prev</a>
-                        </li>
-                        <li>
-                            <a href="#">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li>
-                            <a href="#">4</a>
-                        </li>
-                        <li>
-                            <a href="#">5</a>
-                        </li>
-                        <li>
-                            <a href="#">Next</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!--/.Pagination-->
             </div>
 
 
@@ -103,30 +75,17 @@ if (isset($message)){
                             }
                         }
                         ?>
-
-
                     </ul>
-
-
                 </div>
-
-
             </div>
-
-
             <!--==================-->
         </div>
     </div>
-
-
     <!--Footer
     ==========================-->
-
     <?php
     include_once "footer.php"
     ?>
-
     <!--/.Footer-->
-
 </body>
 </html>
