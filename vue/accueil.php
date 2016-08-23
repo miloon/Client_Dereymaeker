@@ -8,7 +8,7 @@ include_once "header.php"
 <div class="container">
     <div class="row">
         <div class="span12">
-            <p id="logoaccueil"><img src="vue/img/presentation/logo.jpg" alt="Sophie Dereymaeker" align="center"/></p>
+            <p id="logoaccueil"><img src="vue/img/presentation/logo1.jpg" alt="Sophie Dereymaeker" align="center"/></p>
             <ul id="accueil" class="thumbnails">
                 <li class="span4">
                     <div class="thumbnail">
