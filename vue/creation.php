@@ -9,7 +9,7 @@ include_once "header.php"
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>Hand made craft</h1>
+                <h1>Créations</h1>
             </div>
         </div>
     </div>
@@ -39,13 +39,11 @@ include_once "header.php"
                                 <div class='item active'>
                                     <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?><?=$vendu?></h3>
-
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
                                     <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?><?=$vendu?></h3>
-                                    <p><?= $recbig->description ?></p>
                                 </div>
                             <?php endif; ?>
 
