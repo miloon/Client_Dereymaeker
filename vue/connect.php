@@ -1,23 +1,26 @@
 <?php
+include_once "header.php"
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Connexion</title>
-</head>
 <body>
-<?php
-include ("vue/menu.php");
-?>
-<div>
+<div class="container">
+    <!--HEADER ROW-->
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>Connexion au panneau d'administration du site !</h1>
+            </div>
+        </div>
+    </div>
+    <!-- /HEADER ROW -->
+    <div>
 
-  <form class="form" method="post" action="">
-    <input type="text" name="lelogin" placeholder="Longin" required >
-    <input type="password" name="lepass" placeholder="Mot de passe" required >
-    <input type="submit" class="submit" value="Register">
-  </form>
+        <form class="well" class="form" method="post" action="">
+            <input type="text" name="lelogin" placeholder="Mon identifiant" required><br/>
+            <input type="password" name="lepass" placeholder="Mon mot de passe" required><br/>
+            <input type="submit" class="submit" value="Se connecter">
+        </form>
 
+    </div>
 </div>
 </body>
 </html>
