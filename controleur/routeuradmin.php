@@ -9,5 +9,8 @@ if(empty($_GET)){
 // déconnexion
 }elseif(isset($_GET['deco'])){
     require_once "modele/deco.php";
+}elseif(isset($_GET['temoignage'])) {
+    require_once "vue/temoignage.php";
+    require_once "modele/temoignage.php";
 }
 
