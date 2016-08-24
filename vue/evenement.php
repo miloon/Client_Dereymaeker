@@ -34,8 +34,7 @@ if (isset($message)){
                         ?>
 
                         <div class="blog-post">
-                            <h2> <?= $rec->jour . "/" . strftime($rec->mois) . "/" . $rec->annee ?>
-                                - <?= $rec->titre ?> </h2>
+                            <h2><?= date("d/m/Y à H:i",strtotime($rec->ladate)) ?> - <?= $rec->titre ?></h2>
                             <p> <?= nl2br($rec->description) ?></p>
                             <div class="postmetadata">
                                 <ul>

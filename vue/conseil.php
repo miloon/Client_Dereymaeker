@@ -3,9 +3,9 @@ include_once "header.php"
 ?>
 
     <body>
-    <!--HEADER ROW-->
+<!--HEADER ROW-->
 <?php include 'vue/menu.php' ?>
-    <!-- /HEADER ROW -->
+<!-- /HEADER ROW -->
 
 
 <div class="container">
@@ -23,6 +23,7 @@ include_once "header.php"
     <div class="container">
         <div class="row">
             <div class="span12">
+                <h2>Services</h2>
                 <!-- Citation statique -->
                 <h3>"Vous n'aurez pas deux fois l'occasion de faire une première impression" - Coco Chanel</h3>
                 <div class="row">
@@ -31,12 +32,16 @@ include_once "header.php"
                         <div class="btn-group-vertical btn-group-lg" role="group">
                             <a class="btn btn-default" id="relooking" href="javascript:;"
                                onclick="a();">Relooking</a>
-                            <a class="btn btn-default" id="colorimetrie" href="javascript:;" onclick="b();">Colorimétrie</a>
-                            <a class="btn btn-default" id="morphologie" href="javascript:;" onclick="c();">Morphologie</a>
+                            <a class="btn btn-default" id="colorimetrie" href="javascript:;"
+                               onclick="b();">Colorimétrie</a>
+                            <a class="btn btn-default" id="morphologie" href="javascript:;"
+                               onclick="c();">Morphologie</a>
                             <a class="btn btn-default" id="style" href="javascript:;"
                                onclick="d();">Style</a>
-                            <a class="btn btn-default" id="dressing" href="javascript:;" onclick="e();">Dressing optimisé</a>
-                            <a class="btn btn-default" id="customisation" href="javascript:;" onclick="f();">Customisation personnalisée</a>
+                            <a class="btn btn-default" id="dressing" href="javascript:;" onclick="e();">Dressing
+                                optimisé</a>
+                            <a class="btn btn-default" id="customisation" href="javascript:;" onclick="f();">Customisation
+                                personnalisée</a>
                             <a class="btn btn-default" id="shopping" href="javascript:;"
                                onclick="g();">Accompagnement shopping</a>
                             <a class="btn btn-default" id="automaquillage" href="javascript:;" onclick="h();">Auto-maquillage</a>
@@ -91,102 +96,104 @@ include_once "header.php"
                 </div>
             </div>
 
-
-            <div class="row">
-
-                <div class="col-md-10 col-md-offset-1">
-                    <h2>Témoignages</h2>
-
-
-                    <!--Carousel
-          ==================================================-->
-
-                    <div id="myCarousel" class="carousel slide">
-                        <div class="carousel-inner">
-                            <?php
-                            $i = 1;
-                            foreach ($affiche_temoignage as $recbig) {
-                                ?>
-                                <?php if ($i == 1): ?>
-                                    <div class='item active'>
-                                        <div class="container">
-                                            <div class="row">
-
-                                                <div class="col-md-8 col-md-offset-1">
-                                                    <h3><?= $recbig->nom ?></h3>
-                                                    <p><?= nl2br($recbig->texte) ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php else: ?>
-                                    <div class='item'>
-                                        <div class="container">
-                                            <div class="row">
-
-                                                <div class="col-md-8 col-md-offset-1">
-                                                    <h3><?= $recbig->nom ?></h3>
-                                                    <p><?= nl2br($recbig->texte) ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php endif; ?>
-
-                                <?php
-                                $i++;
-                            }
-                            ?>
-
-                        </div>
-
-
-                    </div>
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left " href="#myCarousel" data-slide="prev"><i
-                            class="icon-chevron-left"></i></a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next"><i
-                            class="icon-chevron-right"></i></a>
-                    <!-- /.Carousel nav -->
-
-                </div>
-                <!-- /Carousel -->
-
-                <!-- Indicators -->
-
-                <p style="text-align: center;">
-                    <script type="text/javascript"
-                            src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-                </p>
-
-                </ol>
-            </div>
         </div>
     </div>
-
-
     <div class="container">
         <div class="row">
-            <div class="span12" id='partenaire'>
-                <h2>Partenaires</h2>
+            <div class="span12">
+                <h2>Témoignages</h2>
+                </div>
+            <div class="col-md-10 col-md-offset-1">
 
-                <?php
-                foreach ($affiche_partenaire as $recbig) {
-                    ?>
+                <!--Carousel
+      ==================================================-->
 
-                    <?php if ($recbig->logosrc) { ?>
-                        <img width="75px" class="img-responsive" src='<?= $recbig->logosrc ?>'
-                             alt='<?= $recbig->nom ?>'/><?php
-                    } ?>
+                <div id="myCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <?php
+                        $i = 1;
+                        foreach ($affiche_temoignage as $recbig) {
+                            ?>
+                            <?php if ($i == 1): ?>
+                                <div class='item active'>
+                                    <div class="container">
+                                        <div class="row">
 
-                    <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a>
+                                            <div class="col-md-8 col-md-offset-1">
+                                                <h3><?= $recbig->nom ?></h3>
+                                                <p><?= nl2br($recbig->texte) ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php else: ?>
+                                <div class='item'>
+                                    <div class="container">
+                                        <div class="row">
 
-                    <?php
-                }
-                ?>
+                                            <div class="col-md-8 col-md-offset-1">
+                                                <h3><?= $recbig->nom ?></h3>
+                                                <p><?= nl2br($recbig->texte) ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php
+                            $i++;
+                        }
+                        ?>
+
+                    </div>
+
+
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left " href="#myCarousel" data-slide="prev"><i
+                        class="icon-chevron-left"></i></a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next"><i
+                        class="icon-chevron-right"></i></a>
+                <!-- /.Carousel nav -->
+
             </div>
+            <!-- /Carousel -->
+
+            <!-- Indicators -->
+
+            <p style="text-align: center;">
+                <script type="text/javascript"
+                        src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            </p>
+
+            </ol>
         </div>
     </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="span12" id='partenaire'>
+            <h2>Partenaires</h2>
+
+            <?php
+            foreach ($affiche_partenaire as $recbig) {
+                ?>
+
+                <?php if ($recbig->logosrc) { ?>
+                    <img width="75px" class="img-responsive" src='<?= $recbig->logosrc ?>'
+                         alt='<?= $recbig->nom ?>'/><?php
+                } ?>
+
+                <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a>
+
+                <?php
+            }
+            ?>
+        </div>
+    </div>
+</div>
 
 <?php
 include_once "footer.php";

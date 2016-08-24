@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include "admin_header.php"; ?>
-<!--je ferme la balise là ici au cas où vous souhaitier rajouter un truc (exemple : un fichier javascript) qui ne devrait pas être présent sur toutes les pages admin.-->
+<link rel="stylesheet" type="text/css" href="vue/css/jquery.datetimepicker.css"/>
+<script src="vue/js/jquery.js"></script>
+<script src="vue/js/jquery.datetimepicker.full.min.js"></script>
 </head>
 <body>
 
@@ -59,7 +61,13 @@
 
 </div>
 <!-- /#wrapper -->
-
+<!-- Script pour les dates -->
+<script>
+    jQuery.datetimepicker.setLocale('fr');
+    jQuery('#datetimepicker').datetimepicker({
+        format: 'Y-m-d H:i:s'
+    });
+</script>
 <!-- jQuery -->
 <script src="vue/js/jquery.js"></script>
 

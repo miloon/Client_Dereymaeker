@@ -298,3 +298,6 @@ margin-top:40px;
 #references{
 	text-align: right;
 }
+textarea{
+	min-height: 400px;
+}
