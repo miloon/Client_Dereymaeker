@@ -27,7 +27,7 @@
 
                                 <div class="form-group"><label for="contenu">Témoignage</label>
                                     <textarea class="form-control" id="contenu" name="letexte"
-                                              required><?= nl2br($affiche_temoin->texte) ?></textarea></div>
+                                              required><?= $affiche_temoin->texte ?></textarea></div>
 
 
                                 <input type="submit" class="btn btn-success" name="edition"
