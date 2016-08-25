@@ -2,6 +2,15 @@
 <html lang="fr">
 
 <?php include "admin_header.php"; ?>
+
+<script>
+    function confirmDelete(nom, id) {
+        var question = confirm("Voulez-vous vraiment supprimer le témoignage de « " + nom + " »");
+        if (question) {
+            document.location.href = "?delete_partner=" + id;
+        }
+    }
+</script>
 <!--je ferme la balise là ici au cas où vous souhaitier rajouter un truc (exemple : un fichier javascript) qui ne devrait pas être présent sur toutes les pages admin.-->
 </head>
 <body>
@@ -16,7 +25,31 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                    <p>INSÉRER LES TRUCS ICI !!!</p>
+                    <p><a href="?nouveau_partner" type="button" class="btn btn-default">Nouveau partenaire à
+                            insérer</a></p>
+                    <table class="table table-striped">
+                        <tr>
+                            <th width="10%">Nom</th>
+                            <th>Lien</th>
+                            <th>Modifier</th>
+                            <th>Supprimer</th>
+                        </tr>
+
+                        <?php
+                        foreach ($affiche_partner as $part) {
+                            ?>
+                            <tr>
+                                <td><?= $part->nom ?></td>
+                                <td><?= substr(nl2br($part->logohref), 0, 50) ?>...</td>
+
+                                <td><a href="?modif_partner=<?= $part->id ?>"><img src="vue/img/modify.png" alt="modifier" title="modifier"/></a></td>
+                                <td><img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $part->nom ?>",<?= $part->id ?>)' alt="supprimer" title="supprimer" src="vue/img/delete.png"/>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                    </table>
                 </div>
             </div>
         </div>

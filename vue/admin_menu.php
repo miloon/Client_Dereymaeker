@@ -14,7 +14,7 @@
         <li><a href="?temoignage">Témoignages</a></li>
         <hr/>
         <li><a href="?partner">Partenaires</a></li>
-        <li><a href="?evenement">Citations</a></li>
+        <li><a href="?citation">Citations</a></li>
         <hr/>
         <li><a href="?deco">Déconnexion</a></li>
     </ul>

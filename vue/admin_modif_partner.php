@@ -15,7 +15,37 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                    <p>INSÉRER LES TRUCS ICI !!!</p>
+                    <?php if ($affiche_partner) {
+                        ?>
+                        <div class="row">
+                            <form name="edition" method="POST" action="" class="well">
+
+
+                                <div class="form-group"><label for="titre">Nom du partenaire</label>
+                                    <input class="form-control" id="titre" name="lenom" type="text"
+                                           value="<?= $affiche_partner->nom ?>" required/></div>
+
+
+                                <div class="form-group"><label for="titre">Url</label>
+                                    <input class="form-control" id="titre" name="url" type="text"
+                                           value="<?= $affiche_partner->logohref ?>" required/></div>
+
+
+
+
+                                <input type="submit" class="btn btn-success" name="edition"
+                                       value="Modifier le témoignage"/>
+                            </form>
+                        </div>
+                        <?php
+                    }
+
+                    if ($affiche_success) {
+                        ?>
+                        <h2>Félicitations ! Le partenaire a bien été mis à jour !</h2>
+                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <?php
+                    } ?>
                 </div>
             </div>
         </div>
