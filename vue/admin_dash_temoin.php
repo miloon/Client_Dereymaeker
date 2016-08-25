@@ -25,7 +25,7 @@
                             insérer</a></p>
                     <table class="table table-striped">
                         <tr>
-                            <th>Nom</th>
+                            <th width="10%">Nom</th>
                             <th>Témoignage</th>
                             <th>Modifier</th>
                             <th>Supprimer</th>
@@ -37,8 +37,8 @@
                             <tr>
                                 <td><?= $tem->nom ?></td>
                                 <td><?= substr(nl2br($tem->texte), 0, 250) ?>...</td>
-                                <td><a href="?modif_temoignage=<?= $tem->id ?>"><img src="vue/img/modify.png"/></a></td>
-                                <td><img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $tem->nom ?>",<?= $tem->id ?>)' src="vue/img/delete.png"/>
+                                <td><a href="?modif_temoignage=<?= $tem->id ?>"><img src="vue/img/modify.png" alt="modifier" title="modifier"/></a></td>
+                                <td><img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $tem->nom ?>",<?= $tem->id ?>)' alt="supprimer" title="supprimer" src="vue/img/delete.png"/>
                                 </td>
                             </tr>
                             <?php

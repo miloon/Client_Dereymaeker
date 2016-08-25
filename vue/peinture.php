@@ -39,15 +39,14 @@ include_once "header.php"
                             ?>
                             <?php if ($i == 1): ?>
                                 <div class='item active'>
-                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?><?=$vendu?></h3>
 
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
-                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'/>
+                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
                                     <h3><?= $recbig->nom ?><?=$vendu?></h3>
-                                    <p><?= $recbig->description ?></p>
                                 </div>
                             <?php endif; ?>
 
