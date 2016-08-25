@@ -33,7 +33,7 @@
                                 </div>
 
                                 <div class="form-group"><label>Description de l'évènement</label>
-                        <textarea class="form-control" name="ladesc" required><?= nl2br($affiche_event->description) ?>"</textarea></div>
+                        <textarea class="form-control" name="ladesc" required><?= $affiche_event->description ?>"</textarea></div>
 
                                 <div class="form-group"><label>Lieu de l'évènement</label>
                                     <input class="form-control" type="text" name="lelieu" value="<?= $affiche_event->lieu ?>" required/>
