@@ -8,13 +8,7 @@ if (empty($_GET)) {
     require_once 'vue/admin_accueil.php';
 } elseif (isset($_GET['deco'])) {
     require_once "modele/deco.php";
-<<<<<<< HEAD
-}elseif(isset($_GET['temoignage'])) {
-    require_once "vue/temoignage.php";
-    require_once "modele/temoignage.php";
-}
-=======
->>>>>>> 0bdd9a522454b0ff4e650a3c8260c9c45061f475
+
 
 } elseif (isset($_GET['evenement'])) {
     $titre = "Menu d'administration de mes évènements";
