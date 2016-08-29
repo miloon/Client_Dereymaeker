@@ -6208,3 +6208,5 @@ a.badge:focus {
 .glyphicon-forward:before {
   content: "\e075";
 }
+.glyphicon-phone:before{content:"\e145"}
+.glyphicon-phone-alt:before{content:"\e183"}
