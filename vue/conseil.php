@@ -25,8 +25,10 @@ include_once "header.php"
             <div class="span12">
                 <h2>Services</h2>
                 <!-- Citation statique -->
-                <h3>"Vous n'aurez pas deux fois l'occasion de faire une première impression" - Coco Chanel</h3>
+                <blockquote>« Vous n'aurez pas deux fois l'occasion de faire une première impression »<br/>- Coco Chanel
+                </blockquote>
                 <div class="row">
+                    <div class="col-lg-12"></div>
                     <div class="span3" id="references">
 
                         <div class="btn-group-vertical btn-group-lg" role="group">
@@ -102,7 +104,7 @@ include_once "header.php"
         <div class="row">
             <div class="span12">
                 <h2>Témoignages</h2>
-                </div>
+            </div>
             <div class="col-md-10 col-md-offset-1">
 
                 <!--Carousel
@@ -172,14 +174,13 @@ include_once "header.php"
 </div>
 
 
-
-    <div class="container">
-        <div class="row">
-            <div class="span12" id='partenaire'>
-                <h2>Partenaires</h2>
-                <?php
-                foreach ($affiche_partenaire as $recbig) {
-                    ?>
+<div class="container">
+    <div class="row">
+        <div class="span12" id='partenaire'>
+            <h2>Partenaires</h2>
+            <?php
+            foreach ($affiche_partenaire as $recbig) {
+                ?>
 
                 <?php if ($recbig->logosrc) { ?>
                     <img width="75px" class="img-responsive" src='<?= $recbig->logosrc ?>'
@@ -189,10 +190,9 @@ include_once "header.php"
                 <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a>
 
 
-
-                    <?php
-                }
-                ?>
+                <?php
+            }
+            ?>
 
         </div>
     </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Sophie Dereymaeker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="créatrice de bijoux, Sophie Dereymaeker, conseils, conseillère en image, peintre, peinture, Bruxelles, Brussel, Brussels, Belgique">
     <meta name="author" content="Dalyome, Miloon, Hayat">
     <!-- Bootstrap -->
     <link href="vue/css/bootstrap.css" rel="stylesheet">
