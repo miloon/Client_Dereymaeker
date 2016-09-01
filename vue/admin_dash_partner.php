@@ -5,7 +5,7 @@
 
 <script>
     function confirmDelete(nom, id) {
-        var question = confirm("Voulez-vous vraiment supprimer le témoignage de « " + nom + " »");
+        var question = confirm("Voulez-vous vraiment supprimer le partenaire « " + nom + " »");
         if (question) {
             document.location.href = "?delete_partner=" + id;
         }
