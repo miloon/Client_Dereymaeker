@@ -10,6 +10,17 @@ if(isset($_POST['img'])){
 <head>
   <meta charset="UTF-8">
   <title>titre</title>
+
+  <style>
+    .test{
+      box-shadow: #00CC00;
+      border:1em solid black:;
+
+    }
+
+
+  </style>
+
 </head>
 <body>
 <h1>Titre</h1>

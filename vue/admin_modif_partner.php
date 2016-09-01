@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                    <?php if ($affiche_partner) {
+                    <?php if ($affiche_modif) {
                         ?>
                         <div class="row">
                             <form name="edition" method="POST" action="" class="well">
