@@ -35,11 +35,33 @@
                             ?>
                          <div>
                              <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->nom ?>' title='<?= $creat->nom ?>' height="100" width="100"/>
-                             <a href="?modif_partner=<?= $creat->id ?>"><img src="vue/img/modify.png" alt="modifier" title="modifier"/></a>
+
 
                              <img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer" title="supprimer" src="vue/img/delete.png"/>
                          </div>
                             <?php
+
+
+                            $vendu=$creat->vendu;
+                            $vend="";
+                            echo $vendu;
+
+                            if($vendu == 1){
+
+                                $vend="checked";
+
+                            }elseif($vendu == 0){
+
+                                $vend="";
+
+                            }
+                            ?>
+                            <form>
+
+                                    <label>vendu</label><input type="checkbox" name="vendu" <?= $vend ?>/>
+
+                                </form>
+                    <?php
                         }
                         ?>
 
