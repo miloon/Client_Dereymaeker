@@ -1,3 +1,8 @@
+<?php
+var_dump($_POST);
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,7 +12,7 @@
     function confirmDelete(nom, id) {
         var question = confirm("Voulez-vous vraiment supprimer la photo « " + nom + " »");
         if (question) {
-            document.location.href = "?delete_partner=" + id;
+            document.location.href = "?delete_creation=" + id;
         }
     }
 </script>
@@ -33,7 +38,7 @@
                         foreach ($affiche_creation as $creat) {
                             ?>
                          <div>
-                             <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->nom ?>' title='<?= $creat->nom ?>' height="100" width="100"/>
+                             <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>' title='<?= $creat->nom ?>' height="100" width="100"/>
 
 
                              <img onmouseover="this.style.cursor='pointer';" onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer" title="supprimer" src="vue/img/delete.png"/>
@@ -54,17 +59,32 @@
                                 $vend="";
 
                             }
+
+
                             ?>
-                            <form>
+                   <form  method="post">
 
-                                    <label>vendu</label><input type="checkbox" name="vendu" <?= $vend ?>/>
+                                    <label>vendu</label><input type="checkbox" name="vendu[]"value=" <?= $creat->id ?>"
+                                    <?=
+                                $vend ?>/>
 
-                                </form>
                     <?php
                         }
+
                         ?>
 
-                    </table>
+                                <input type="submit" class="btn btn-success" name="creation"
+                                       value="Modifier la galerie"/>
+                            </form>
+                    <?php
+                    if ($affiche_success) {
+                    ?>
+                    <h2>Félicitations ! La galerie création a bien été mis à jour !</h2>
+                    <p><a href="javascript:history.go(-1)">Retour</a></p>
+                    <?php
+                    } ?>
+
+
                 </div>
             </div>
         </div>
