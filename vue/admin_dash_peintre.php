@@ -16,6 +16,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
+                    <p><a href="?nouvelle_peinture" type="button" class="btn btn-default">Nouvelle peinture à insérer</a></p>
                     <p>INSÉRER LES TRUCS ICI !!!</p>
                 </div>
             </div>

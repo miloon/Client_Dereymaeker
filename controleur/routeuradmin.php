@@ -14,10 +14,6 @@ if (empty($_GET)) {
     $titre = "Menu d'administration de mes évènements";
     require_once 'modele/admin_dash_event.php';
     require_once 'vue/admin_dash_event.php';
-} elseif (isset($_GET['citation'])) {
-    $titre = "Menu d'administration des citations";
-    require_once 'modele/admin_dash_citation.php';
-    require_once 'vue/admin_dash_citation.php';
 } elseif (isset($_GET['creation'])) {
     $titre = "Menu d'administration de mes créations";
     require_once 'modele/admin_dash_creation.php';
@@ -39,10 +35,6 @@ if (empty($_GET)) {
     $idevent = (int)$_GET['modif_evenement'];
     require_once 'modele/admin_modif_event.php';
     require_once 'vue/admin_modif_event.php';
-} elseif (isset($_GET['modif_citation'])) {
-    $idcitation = (int)$_GET['modif_citation'];
-    require_once 'modele/admin_modif_citation.php';
-    require_once 'vue/admin_modif_citation.php';
 } elseif (isset($_GET['modif_creation'])) {
     $idcreation = (int)$_GET['modif_creation'];
     require_once 'modele/admin_modif_creation.php';
@@ -64,10 +56,6 @@ if (empty($_GET)) {
     $titre = "Ajouter un nouvel évènement";
     require_once 'modele/admin_new_event.php';
     require_once 'vue/admin_new_event.php';
-} elseif (isset($_GET['nouvelle_citation'])) {
-    $titre = "Ajouter une nouvelle citation";
-    require_once 'modele/admin_new_citation.php';
-    require_once 'vue/admin_new_citation.php';
 } elseif (isset($_GET['nouvelle_creation'])) {
     $titre = "Ajouter une nouvelle création";
     require_once 'modele/admin_new_creation.php';
@@ -89,9 +77,6 @@ if (empty($_GET)) {
 } elseif (isset($_GET['delete_evenement']) && ctype_digit($_GET['delete_evenement'])) {
     $sup = (int)$_GET['delete_evenement'];
     require_once 'modele/admin_sup_event.php';
-} elseif (isset($_GET['delete_citation']) && ctype_digit($_GET['delete_citation'])) {
-    $sup = (int)$_GET['delete_citation'];
-    require_once 'modele/admin_sup_citation.php';
 } elseif (isset($_GET['delete_creation']) && ctype_digit($_GET['delete_creation'])) {
     $sup = (int)$_GET['delete_creation'];
     require_once 'modele/admin_sup_creation.php';

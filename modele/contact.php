@@ -6,11 +6,10 @@ define("MON_MAIL","");
 if(isset($_POST['lenom'])){
     // récupération des valeurs du formulaire dans des variables locales
     $lenom = $_POST['lenom'];
+    $lemail = $_POST['lemail'];
     $lobjet = $_POST['lobjet'];
     $letexte = $_POST['letexte'];
 
-    // création du titre
-    $letitre = "Vous avez reçu un message depuis votre site";
 
     // création de l'entête en y mettant le lien vers le mail de l'expéditeur
     $entete = "From: $lenom <$lemail> \r\n ".
@@ -18,7 +17,7 @@ if(isset($_POST['lenom'])){
         "X-Mailer: PHP/".phpversion();
 
     // on envoie le mail avec cette fonction simple, $verif_envoi contiendra true si le mail est envoyé, false s'il y a un problème
-    $verif_envoi = mail(MON_MAIL, $letitre, $letexte, $entete);
+    $verif_envoi = mail(MON_MAIL, $lobjet, $letexte, $entete);
 
     // si réussi
     if($verif_envoi){
