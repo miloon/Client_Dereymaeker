@@ -55,28 +55,19 @@ include_once "header.php"
                 <div class="media">
                     <img class="img-responsive pull-left media-object" src="vue/img/presentation/sophie1.jpg"/>
                     <div class="media-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus tortor augue, sed varius
-                            ante
-                            ornare eget. Morbi imperdiet, justo id placerat consectetur, nunc tellus ullamcorper turpis,
-                            eu
-                            accumsan enim erat et mi. Quisque sit amet tortor non nunc finibus ultrices. Phasellus et
-                            ante
-                            libero.</p>
-                        <p>Nunc egestas quis turpis eget vestibulum. Proin vitae dictum enim. Mauris ornare,
-                            lorem
-                            imperdiet semper auctor, ex sem tristique odio, vitae dapibus felis massa ut tortor.
-                            Vestibulum a
-                            dolor mauris. Cras ornare in odio ut vehicula. Aliquam tincidunt risus est, nec lobortis
-                            felis
-                            consectetur quis. Integer eget neque ac tortor rutrum lacinia. Mauris ullamcorper nunc id
-                            ultricies
-                            accumsan.</p> <p>Aliquam tincidunt magna turpis, vel maximus neque maximus commodo. Proin eget
-                            condimentum
-                            felis. Pellentesque dictum libero non nisl vestibulum fermentum. Cras tempus sollicitudin
-                            nisi, vel
-                            mollis est facilisis ac.
-
-                        </p>
+                        <p>Sophie commence à 18 ans à customiser et détourner ses vêtements et accessoires, dans le but
+                            de se démarquer de la norme sociale. Elle aurait aimé étudier le stylisme mais, ses parents
+                            s'y opposant, elle choisit de faire un Régendat en Arts Plastiques, et y consacre 10 années
+                            de sa vie professionnelle. À côté de ça, toujours attirée par les tissus, elle suit une
+                            formation de Décoration d'Intérieur en cours du soir. Malgré tout, la création lui manque et
+                            elle se lance dans la confection de sacs et de bijoux à usage privé.</p>
+                        <p>Par la suite, l'enseignement ne répondant plus à ses valeurs, elle accepte un poste de
+                            vendeuse dans une boutique de prêt-à-porter féminin de luxe. Et là, révélation, le conseil à
+                            la personne la séduit et elle décide d'obtenir un certificat de Conseillère en Image
+                            Personnelle et Professionnelle.</p>
+                        <p>Ses hobbies restent la peinture, la création de bijoux et d’accessoires et la
+                            customisation.</p>
+                        <p>En 2016, Sophie décide de faire de ses passions son activité professionnelle.</p>
                     </div>
                 </div>
             </div>

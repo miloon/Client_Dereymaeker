@@ -20,21 +20,14 @@ if (empty($_POST['inserer'])) {
 
 
     // on prend le dernier "." de la chaine comme séparateur, et on garde le contenu à droite du séparateur strrchr( $chaine, $separateur)
-    $ext_fichierp = strrchr($_FILES['photopetite']['name'], ".");
+    $ext_fichier = strrchr($_FILES['photo']['name'], ".");
     // on met l'extension en minuscule
-    $ext_fichierp = strtolower($ext_fichierp);
-    // on prend le dernier "." de la chaine comme séparateur, et on garde le contenu à droite du séparateur strrchr( $chaine, $separateur)
-    $ext_fichierg = strrchr($_FILES['photogrande']['name'], ".");
-    // on met l'extension en minuscule
-    $ext_fichierg = strtolower($ext_fichierg);
+    $ext_fichier = strtolower($ext_fichier);
 
+    $imghref = $imgsrc = strtolower($_FILES['photo']['name']);
+    $imgtitle = htmlspecialchars(strip_tags(trim($_POST['titrephoto'])), ENT_QUOTES);
 
-    $imgsrc = strtolower($_FILES['photogrande']['name']);
-    $imgtitle = htmlspecialchars(strip_tags(trim($_POST['nom'])), ENT_QUOTES);
-
-    list($cat_id, $catlurl) = explode("-", $_POST['data'], 2);
-    $chemingrande = "vue/img/peinture/";
-    $cheminpetite = "vue/img/peinture/";
+    $chemin = "vue/img/peinture/";
 
     $vendu = 0;
 
@@ -44,13 +37,12 @@ if (empty($_POST['inserer'])) {
 
 
         // on vérifie que l'extension soit valide grâce à notre tableau $ext (in_array(recherche, tableau)
-        if (in_array($ext_fichierp, $ext) && in_array($ext_fichierg, $ext)) {
+        if (in_array($ext_fichier, $ext) && in_array($ext_fichier, $ext)) {
             // création d'un nom et remise de l'extension
-            $nouveau_nomg = strtolower($_FILES['photogrande']['name']);
-            $nouveau_nomp = strtolower($_FILES['photopetite']['name']);
+            $nouveau_nomg = strtolower($_FILES['photo']['name']);
 
             // on envoie le fichier temp vers le dossier choisi avec le nouveau nom
-            if (@move_uploaded_file($_FILES['photogrande']['tmp_name'], $chemingrande . $nouveau_nomg) && @move_uploaded_file($_FILES['photopetite']['tmp_name'], $cheminpetite . $nouveau_nomp)) {
+            if (@move_uploaded_file($_FILES['photo']['tmp_name'], $chemin . $nouveau_nomg)) {
                 $message = "<h2>L'upload s'est bien passé !</h2></p>";
             } else {
                 $message = "Erreur lors de l'envoi de l'image";
@@ -65,28 +57,28 @@ if (empty($_POST['inserer'])) {
 
 
 
-        $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $connexion->beginTransaction();
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dbh->beginTransaction();
 
-        $prepare = $connexion->prepare("
-        INSERT INTO `peinture`( `nom`, `imghref`, `imgsrc`, `vendu`) VALUES (:nom,:description,:imghref,:imgsrc,:vendu)
+        $prepare = $dbh->prepare("
+        INSERT INTO `peinture`( `nom`, `imghref`, `imgsrc`, `vendu`) VALUES (:nom,:imghref,:imgsrc,:vendu)
         ");
 
         $prepare->bindValue(":nom", $imgtitle, PDO::PARAM_STR);
-        $prepare->bindValue(":imghref", $imgdesc, PDO::PARAM_STR);
-        $prepare->bindValue(":imgsrc", $imgdesc, PDO::PARAM_STR);
+        $prepare->bindValue(":imghref", $imghref, PDO::PARAM_STR);
+        $prepare->bindValue(":imgsrc", $imgsrc, PDO::PARAM_STR);
         $prepare->bindValue(":vendu", $vendu, PDO::PARAM_INT);
 
 
         $prepare->execute();
 
-        $connexion->commit();
+        $dbh->commit();
 
 
 
         $affiche_success = true;
     } catch (Exception $e) {
-        $connexion->rollBack();
+        $dbh->rollBack();
         echo "Erreur : " . $e->getMessage();
     }
 

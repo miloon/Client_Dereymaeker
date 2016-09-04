@@ -3,7 +3,7 @@ include_once "header.php"
 ?>
 <body>
 <!--HEADER ROW-->
-                        <?php include 'vue/menu.php' ?>
+<?php include 'vue/menu.php' ?>
 <!-- /HEADER ROW -->
 
 
@@ -12,6 +12,10 @@ include_once "header.php"
         <div class="span12">
             <div class="page-header">
                 <h1>Artiste peintre</h1>
+                <p>Durant ses études artistiques, Sophie DEREYMAEKER s'est fort intéressée à la fabrication du papier, pour sa fibre malléable et transparente ainsi que pour ses nombreuses applications. Elle est séduite par la solidité du matériau sec. Elle s'intéresse également au vitrail pour sa transparence et sa luminosité colorée.</p>
+                    <p>Dorénavant, la peinture est devenue une nécessité de vie pour Sophie.</p>
+                    <p>On retrouve dans ses peintures une recherche de matières créées par un mélange de différents matériaux collés en superposition à la toile. Des jeux de transparences et de nuances d'un même ton lui permettent d'évoquer force, apaisement et fragilité. Ses toiles nous emmènent dans un autre monde de quiétude et nous invitent à la rêverie.
+                    .</p>
             </div>
         </div>
     </div>
@@ -30,23 +34,25 @@ include_once "header.php"
                         $i = 1;
                         foreach ($affiche_peinture as $recbig) {
 
-                            if($recbig->vendu){
+                            if ($recbig->vendu) {
                                 $vendu = " <small>[vendu !]</small>";
-                            }else{
-                                $vendu ="";
+                            } else {
+                                $vendu = "";
                             }
 
                             ?>
                             <?php if ($i == 1): ?>
                                 <div class='item active'>
-                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?><?=$vendu?></h3>
+                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'
+                                         title='<?= $recbig->nom ?>'/>
+                                    <h3><?= $recbig->nom ?><?= $vendu ?></h3>
 
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
-                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?><?=$vendu?></h3>
+                                    <img src='vue/img/peinture/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'
+                                         title='<?= $recbig->nom ?>'/>
+                                    <h3><?= $recbig->nom ?><?= $vendu ?></h3>
                                 </div>
                             <?php endif; ?>
 
@@ -103,10 +109,6 @@ include_once "header.php"
         </div>
     </div>
     <!-- /Carousel -->
-
-
-
-
 
 
     <!--Footer

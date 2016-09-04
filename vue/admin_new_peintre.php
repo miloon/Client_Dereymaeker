@@ -20,11 +20,11 @@
                         <form class="well" enctype="multipart/form-data" action="" name="miam" method="POST">
 
                             <div class="form-group"><label>Titre</label>
-                                <input class="form-control" type="text" name="Titre de la peinture" placeholder="nom" required/>
+                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
                             </div>
                                       
 
-                            <div class="form-group"> <label>Pour uploader la version large :</label><input class="btn btn-default" type="FILE" name="photogrande"/></div>
+                            <div class="form-group"> <label>Pour uploader la version large :</label><input class="btn btn-default" type="FILE" name="photo"/></div>
 
                             
                             

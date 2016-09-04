@@ -10,6 +10,7 @@ include_once "header.php"
         <div class="span12">
             <div class="page-header">
                 <h1>Créations</h1>
+                <blockquote>Je ne crée pas la mode, je suis la mode – Coco Chanel</blockquote>
             </div>
         </div>
     </div>

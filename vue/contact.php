@@ -27,40 +27,44 @@ include_once "header.php"
                     } else {
                         ?>
 
-                        <form class="well" method=POST action="contact.php">
+                        <form class="well" method="POST" action="">
                             <div class="form-group">
-                                <label>Votre nom</label>
-                                <input name="lenom" type="text" placeholder="Votre nom" required/>
+                                <label for="lenom">Votre nom</label>
+                                <input id="lenom" class="form-control" name="lenom" type="text" placeholder="Votre nom" required/>
                             </div>
+
                             <div class="form-group">
-                                <label>Votre e-mail</label>
-                                <input name="lemail" type="text" placeholder="Votre email" required/>
+                                <label for="lemail">Votre e-mail</label>
+                                <input id="lemail" class="form-control" name="lemail" type="text" placeholder="Votre email"
+                                       required/>
                             </div>
-                            <div class="form-group">
-                                <label>Votre profession (optionnel)</label>
-                                <input name="profession" type="text" placeholder="Votre profession"/>
-                            </div>
+
                             <div class="form-group">
                                 <label for="lobjet">Veuillez choisir l'objet de votre message</label>
-                                <select name="lobjet">
+                                <select id="lobjet" name="lobjet">
                                     <option value="conseillere en image">Conseils en image</option>
                                     <option value="peintures">Peintures</option>
                                     <option value="bijoux et customisation">Créations</option>
                                     <option value="devis">Devis</option>
                                     <option value="apporter un temoignage">Apporter un témoignage</option>
                                     <option value="autres">Autres</option>
-                                </select></div>
-                            <textarea name="letexte" class="form" placeholder="Votre message"></textarea><br/>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" name="letexte" placeholder="Votre message"></textarea>
+                            </div>
+
                             <input type="submit" value="Envoyer"/>
                         </form>
-
                         <?php
                     }
                     ?>
                 </div>
                 <div class="span4">
                     <h2>Mes disponibilités</h2>
-                    <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>  +32 478 200 872<br/>Joignable du lundi au mercredi de 9h à 19h.</p>
+                    <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> +32 478 200 872<br/>Joignable
+                        du lundi au mercredi de 9h à 19h.</p>
                 </div>
             </div>
         </div>
