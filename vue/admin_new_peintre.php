@@ -20,13 +20,10 @@
                         <form class="well" enctype="multipart/form-data" action="" name="miam" method="POST">
 
                             <div class="form-group"><label>Titre</label>
-                                <input class="form-control" type="text" name="Titre de la peinture" placeholder="nom" required/>
+                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
                             </div>
-                                      
 
                             <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>
-
-                            
                             
                             <input class="btn btn-success" name="inserer" type="submit" value="Insérer"/><br/>
 

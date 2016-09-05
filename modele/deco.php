@@ -1,12 +1,6 @@
 <?php
-/**
- * Déconnexion
- */
-
-
 
 $_SESSION = array();
-
 
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
@@ -16,8 +10,7 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-
+// descrtuction de la session
 session_destroy();
-
 
 header("Location: ./");
