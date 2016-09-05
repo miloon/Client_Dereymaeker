@@ -24,7 +24,7 @@
                             </div>
                                       
 
-                            <div class="form-group"> <label>Pour uploader la version large :</label><input class="btn btn-default" type="FILE" name="photogrande"/></div>
+                            <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>
 
                             
                             
