@@ -1,8 +1,3 @@
-<?php
-var_dump($_POST);
-?>
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -30,56 +25,42 @@ var_dump($_POST);
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-
-                    <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
-                            insérer</a></p>
-
-
-                    <?php
-                    foreach ($affiche_creation as $creat) {
-                    ?>
-                    <div>
-                        <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>'
-                             title='<?= $creat->nom ?>' height="100" width="100"/>
-
-
-                        <img onmouseover="this.style.cursor='pointer';"
-                             onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer"
-                             title="supprimer" src="vue/img/delete.png"/>
-                    </div>
-                <?php
-
-
-                $vendu = $creat->vendu;
-                $vend = "";
-                echo $vendu;
-
-                if ($vendu == 1) {
-
-                    $vend = "checked";
-
-                } elseif ($vendu == 0) {
-
-                    $vend = "";
-
-                }
-
-
-                ?>
-                    <form method="post">
-
-                        <label>vendu</label>
-                        <input type="checkbox" name="vendu[]" value="<?= $creat->id ?>" <?= $vend ?>/>
-
-                        <?php
-                        }
-
+                    <?php if ($affiche_modif) {
                         ?>
+                        <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
+                                insérer</a></p>
+                        <?php
+                        foreach ($affiche_creation as $creat) {
+                            ?>
+                            <div>
+                                <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>'
+                                     title='<?= $creat->nom ?>' height="100" width="100"/>
+                                <img onmouseover="this.style.cursor='pointer';"
+                                     onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer"
+                                     title="supprimer" src="vue/img/delete.png"/>
+                            </div>
+                            <?php
+                            //on checke la case vendu de ceux qui le sont
+                            $vendu = $creat->vendu;
+                            $vend = "";
 
-                        <input type="submit" class="btn btn-success" name="creation"
+                            if ($vendu == 1) {
+                                $vend = "checked";
+                            } elseif ($vendu == 0) {
+                                $vend = "";
+                            }
+                            ?>
+                            <form method="post">
+                            <label>vendu</label>
+                            <input type="checkbox" name="vendu[]" value="<?= $creat->id ?>" <?= $vend ?>/>
+                            <?php
+                        }
+                        ?>
+                        <input type="submit" class="btn btn-success" name="edition"
                                value="Modifier la galerie"/>
-                    </form>
-                    <?php
+                        </form>
+                        <?php
+                    }
                     if ($affiche_success) {
                         ?>
                         <h2>Félicitations ! La galerie création a bien été mis à jour !</h2>
