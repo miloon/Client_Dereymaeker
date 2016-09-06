@@ -65,6 +65,7 @@ include_once "header.php"
                     <h2>Mes disponibilités</h2>
                     <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> +32 478 200 872<br/>Joignable
                         du lundi au mercredi de 9h à 19h.</p>
+                    <p>N° TVA : BE 0859.271.827</p>
                 </div>
             </div>
         </div>
