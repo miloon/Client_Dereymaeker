@@ -26,8 +26,11 @@
                                        required/>
                             </div>
 
-                            <div class="form-group"><label>Date</label>
+                            <div class="form-group"><label>Date de début</label>
                                 <input type="text" id="datetimepicker" name="ladate" required/>
+                            </div>
+                            <div class="form-group"><label>Date de fin (si nécessaire)</label>
+                                <input type="text" id="datetimepicker" name="ladatefin" />
                             </div>
 
                             <div class="form-group"><label>Description de l'évènement</label>

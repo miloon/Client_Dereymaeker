@@ -30,7 +30,12 @@ include_once "header.php"
                 foreach ($affiche_eventf as $rec) {
                     ?>
                     <div class="blog-post">
-                        <h2><?= date("d/m/Y à H:i", strtotime($rec->ladate)) ?> - <?= $rec->titre ?></h2>
+                        <h3><?php if (($rec->ladatefin) != NULL){
+                                echo "Du ".date("d/m/Y à H:i", strtotime($rec->ladate))." au ".date("d/m/Y",strtotime($rec->ladatefin));
+                            }else{
+                            echo "Le ".date("d/m/Y à H:i", strtotime($rec->ladate));
+                            }
+                            ?> - <?= $rec->titre ?></h3>
                         <p> <?= nl2br($rec->description) ?></p>
                         <div class="postmetadata">
                             <ul>

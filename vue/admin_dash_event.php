@@ -28,7 +28,8 @@
                     <table class="table table-striped">
                         <tr>
                             <th width="15%">Nom de l'évènement</th>
-                            <th width="10%">Date</th>
+                            <th width="10%">Début</th>
+                            <th width="10%">Fin</th>
                             <th>Description</th>
                             <th>Adresse</th>
                             <th></th>
@@ -41,6 +42,10 @@
                             <tr>
                                 <td><?= $event->titre ?></td>
                                 <td><?= date("d/m/Y à H:i",strtotime($event->ladate)) ?></td>
+                                <td><?php if (($event->ladatefin) != NULL){
+                                        echo date("d/m/Y",strtotime($event->ladatefin));
+                                    }
+                                         ?></td>
                                 <td><?= substr(nl2br($event->description), 0, 250) ?>...</td>
                                 <td><?= $event->lieu ?></td>
                                 <td><a href="?modif_evenement=<?= $event->id ?>"><img src="vue/img/modify.png" alt="modifier" title="modifier"/></a></td>

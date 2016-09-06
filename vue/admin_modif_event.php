@@ -31,6 +31,9 @@
                                 <div class="form-group"><label>Date</label>
                                     <input type="text" id="datetimepicker" name="ladate" value="<?= $affiche_event->ladate ?>" required/>
                                 </div>
+                                <div class="form-group"><label>Date de fin</label>
+                                    <input type="text" id="datetimepicker" name="ladatefin" value="<?= $affiche_event->ladatefin ?>"/>
+                                </div>
 
                                 <div class="form-group"><label>Description de l'évènement</label>
                         <textarea class="form-control" name="ladesc" required><?= $affiche_event->description ?>"</textarea></div>

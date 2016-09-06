@@ -1,5 +1,5 @@
 <?php
-$requete = $dbh->prepare("SELECT id, titre, ladate, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde, description, lieu FROM evenement ORDER BY ladate DESC;");
+$requete = $dbh->prepare("SELECT id, titre, ladate, ladatefin, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde, description, lieu FROM evenement ORDER BY ladate DESC;");
 $requete->execute();
 
 $affiche_event = $requete->fetchAll(PDO::FETCH_OBJ);
