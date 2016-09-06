@@ -1,12 +1,11 @@
 <?php
 
 
-
 if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
     $affiche_modif = true;
     $affiche_success = false;
 
-    $requete = $dbh->prepare("SELECT id, nom, description, imgsrc , imghref, vendu FROM creation ORDER BY id DESC;");
+    $requete = $dbh->prepare("SELECT id, nom, description, imgsrc , imghref, vendu FROM creation ORDER BY id ASC ;");
     $requete->execute();
 
     $affiche_creation= $requete->fetchAll(PDO::FETCH_OBJ);
@@ -18,23 +17,45 @@ if (empty($_POST['edition'])) { // si le formulaire d'édition est vide
 
 
 
+
     try {
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $dbh->beginTransaction();
 
 
-        foreach($_POST['vendu'] as $idvendu) {
-            $prepare = $dbh->prepare("
+
+        if(!empty($_POST['vendu'])) {
+            $acc= 1;
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dbh->beginTransaction();
+            //tant qu il y a des vendus on update les infos
+            foreach ($_POST['vendu'] as $idvendu) {
+
+                $prepare = $dbh->prepare("
         UPDATE creation
         SET vendu = :vendu
-        WHERE id=$idpartner");
+        WHERE id= :id");
 
-            $prepare->bindValue(":lenom", $lenom, PDO::PARAM_STR);
-            $prepare->bindValue(":url", $url, PDO::PARAM_STR);
+                $prepare->bindValue(":vendu", $acc, PDO::PARAM_INT);
+                $prepare->bindValue(":id", $idvendu, PDO::PARAM_INT);
+                $prepare->execute();
+            }
+
+            $dbh->commit();
+            $affiche_success = true;
+        }else{
+            $acc=0;
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dbh->beginTransaction();
+
+            $prepare = $dbh->prepare("
+        UPDATE creation
+        SET vendu = :vendu");
+
+            $prepare->bindValue(":vendu", $acc, PDO::PARAM_STR);
+
             $prepare->execute();
             $dbh->commit();
+            $affiche_success = true;
         }
-        $affiche_success = true;
 
     } catch (Exception $e) {
         $dbh->rollBack();
