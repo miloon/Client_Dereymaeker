@@ -7,7 +7,7 @@
 $date = date("Y-m-d H:i:s", time());
 
 // requête récupérant les évènements postérieurs à NOW
-$requetefuture = $dbh->prepare("SELECT ladate, titre, description, lieu, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde
+$requetefuture = $dbh->prepare("SELECT ladatefin, ladate, titre, description, lieu, DAY(ladate) AS jour, MONTH(ladate) AS mois, YEAR(ladate) AS annee, HOUR(ladate) AS heure, MINUTE(ladate) AS minute, SECOND(ladate) AS seconde
 FROM evenement
 WHERE ladate > LOCALTIMESTAMP()
 ORDER BY ladate ASC

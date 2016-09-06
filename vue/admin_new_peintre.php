@@ -22,11 +22,8 @@
                             <div class="form-group"><label>Titre</label>
                                 <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
                             </div>
-                                      
 
-                            <div class="form-group"> <label>Pour uploader la version large :</label><input class="btn btn-default" type="FILE" name="photo"/></div>
-
-                            
+                            <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>
                             
                             <input class="btn btn-success" name="inserer" type="submit" value="Insérer"/><br/>
 
