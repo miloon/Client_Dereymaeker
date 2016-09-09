@@ -29,36 +29,41 @@
                         ?>
                         <p><a href="?nouvelle_creation" type="button" class="btn btn-default">Nouvelle création à
                                 insérer</a></p>
-                        <?php
-                        foreach ($affiche_creation as $creat) {
-                            ?>
-                            <div>
-                                <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>'
-                                     title='<?= $creat->nom ?>' height="100" width="100"/>
-                                <img onmouseover="this.style.cursor='pointer';"
-                                     onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer"
-                                     title="supprimer" src="vue/img/delete.png"/>
-                            </div>
+                        <div class="row">
                             <?php
-                            //on checke la case vendu de ceux qui le sont
-                            $vendu = $creat->vendu;
-                            $vend = "";
+                            foreach ($affiche_creation as $creat) {
+                                ?>
+                                <div class="col-md-4 col-lg-3 admin-tofs">
+                                    <img src='vue/img/creation/<?= $creat->imgsrc ?>' alt='<?= $creat->id ?>'
+                                         title='<?= $creat->nom ?>' height="120"/>
+                                    <img onmouseover="this.style.cursor='pointer';"
+                                         onclick='confirmDelete("<?= $creat->nom ?>",<?= $creat->id ?>)' alt="supprimer"
+                                         title="supprimer" src="vue/img/delete.png"/><br/>
 
-                            if ($vendu == 1) {
-                                $vend = "checked";
-                            } elseif ($vendu == 0) {
-                                $vend = "";
+                                    <?php
+                                    //on checke la case vendu de ceux qui le sont
+                                    $vendu = $creat->vendu;
+                                    $vend = "";
+
+                                    if ($vendu == 1) {
+                                        $vend = "checked";
+                                    } elseif ($vendu == 0) {
+                                        $vend = "";
+                                    }
+                                    ?>
+                                    <form method="post">
+                                        <label>vendu</label>
+                                        <input type="checkbox" name="vendu[]" value="<?= $creat->id ?>" <?= $vend ?>/>
+                                </div>
+                                <?php
                             }
                             ?>
-                            <form method="post">
-                            <label>vendu</label>
-                            <input type="checkbox" name="vendu[]" value="<?= $creat->id ?>" <?= $vend ?>/>
-                            <?php
-                        }
-                        ?>
-                        <input type="submit" class="btn btn-success" name="edition"
-                               value="Modifier la galerie"/>
-                        </form>
+                        </div>
+                        <div class="row">
+                            <input type="submit" class="btn btn-success" name="edition"
+                                   value="Modifier la galerie"/>
+                            </form>
+                        </div>
                         <?php
                     }
                     if ($affiche_success) {
