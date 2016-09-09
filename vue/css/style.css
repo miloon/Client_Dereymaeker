@@ -299,11 +299,22 @@ margin-top:40px;
 	margin: 5px;
 }
 #references{
-	text-align: right;
+	text-align: center;
 }
 textarea{
 	min-height: 150px;
 }
 #menu{
 	padding-top: 70px;
+}
+.limit-height{
+	overflow: auto;
+	height: 400px;
+}
+#references .btn{
+	text-align: center;
+}
+#conseillere{
+	height: 28px;
+	font-size: 24px;
 }

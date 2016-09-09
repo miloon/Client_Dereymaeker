@@ -25,31 +25,32 @@ include_once "header.php"
             <div class="span12">
                 <h2>Services</h2>
                 <!-- Citation statique -->
-                <blockquote>« Vous n'aurez pas deux fois l'occasion de faire une première impression »<br/>- Coco Chanel
-                </blockquote>
-                <p>Le Conseil en Image est un outil merveilleux que je vous apprends à maitriser en toute facilité, afin de vous mettre en valeur avec harmonie. Il propose différentes analyses et conseils, faciles à appliquer au quotidien.</p>
+
                 <div class="row">
                     <div class="col-lg-12"></div>
                     <div class="span3" id="references">
 
                         <div class="btn-group-vertical btn-group-lg" role="group">
-                            <a class="btn btn-default" id="relooking" href="javascript:;"
-                               onclick="a();">Colorimétrie</a>
+                            <a class="btn btn-danger" id="conseillere" href="javascript:;"
+                               onclick="a();">Conseillère</a>
                             <a class="btn btn-default" id="colorimetrie" href="javascript:;"
-                               onclick="b();">Morphologie</a>
+                               onclick="b();">Colorimétrie</a>
                             <a class="btn btn-default" id="morphologie" href="javascript:;"
-                               onclick="c();">Style</a>
+                               onclick="c();">Morphologie</a>
                             <a class="btn btn-default" id="style" href="javascript:;"
-                               onclick="d();">Relooking</a>
-                            <a class="btn btn-default" id="dressing" href="javascript:;" onclick="e();">Dressing
-                                optimisé</a>
-                            <a class="btn btn-default" id="customisation" href="javascript:;" onclick="f();">Customisation
-                                personnalisée</a>
+                               onclick="d();">Style</a>
+                            <a class="btn btn-default" id="relooking" href="javascript:;"
+                               onclick="e();">Relooking</a>
+                            <a class="btn btn-default" id="dressing" href="javascript:;"
+                               onclick="f();">Dressing optimisé</a>
+                            <a class="btn btn-default" id="customisation" href="javascript:;"
+                               onclick="g();">Customisation personnalisée</a>
                             <a class="btn btn-default" id="shopping" href="javascript:;"
-                               onclick="g();">Accompagnement shopping</a>
-                            <a class="btn btn-default" id="automaquillage" href="javascript:;" onclick="h();">Auto-maquillage</a>
+                               onclick="h();">Accompagnement shopping</a>
+                            <a class="btn btn-default" id="automaquillage" href="javascript:;"
+                               onclick="i();">Auto-maquillage</a>
                             <a class="btn btn-default" id="decoration" href="javascript:;"
-                               onclick="i();">Décoration</a>
+                               onclick="j();">Décoration</a>
 
                         </div>
                     </div>
@@ -58,31 +59,35 @@ include_once "header.php"
                         </div>
                         <script>
                             function a() {
-                                document.getElementById('menu').innerHTML = '<p>La colorimétrie détermine les couleurs qui flattent votre teint.</p><blockquote>La plus belle couleur au monde est celle qui vous va bien – Coco Chanel</blockquote>';
+                                document.getElementById('menu').innerHTML = "<blockquote>Vous n'aurez pas deux fois l'occasion de faire une première impression.<br/>- Coco Chanel</blockquote><p>Le Conseil en Image est un outil merveilleux que je vous apprends à maitriser en toute facilité, afin de vous mettre en valeur avec harmonie. Il propose différentes analyses et conseils, faciles à appliquer au quotidien.</p>";
                             }
                             function b() {
-                                document.getElementById('menu').innerHTML = '<p>L’analyse morphologique identifie les coupes de vêtements, les coiffures, les forment de bijoux et accessoires qui valorisent votre silhouette.</p><blockquote>Les temps difficiles suscitent un désir instinctif pour l’authenticité – Coco Chanel</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>La plus belle couleur au monde est celle qui vous va bien<br/> – Coco Chanel</blockquote><p>La colorimétrie détermine les couleurs qui flattent votre teint.</p>';
                             }
                             function c() {
-                                document.getElementById('menu').innerHTML = '<p>L’analyse style définit le look qui est en adéquation avec votre personnalité, en respectant l’image que vous souhaitez donner de vous.</p><blockquote>Le style est une façon de dire qui tu es sans parler -  Rachel Zoe</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Les temps difficiles suscitent un désir instinctif pour l’authenticité<br/> – Coco Chanel</blockquote><p>L’analyse morphologique identifie les coupes de vêtements, les coiffures, les forment de bijoux et accessoires qui valorisent votre silhouette.</p>';
                             }
                             function d() {
-                                document.getElementById('menu').innerHTML = '<p>Le Relooking c’est choisir un look pour une période déterminée ou indéterminée.</p><blockquote>Prenez mes idées, j’en aurai d’autres – Coco Chanel</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Le style est une façon de dire qui tu es sans parler<br/> -  Rachel Zoe</blockquote><p>L’analyse style définit le look qui est en adéquation avec votre personnalité, en respectant l’image que vous souhaitez donner de vous.</p>';
                             }
                             function e() {
-                                document.getElementById('menu').innerHTML = '<p>Un dressing organisé vous offre une facilité et un gain de temps pour vous apprêter, en peaufinant votre toilette avec les accessoires adaptés.</p><blockquote>Si vous ne changez rien, rien ne changera – Franck Nicolas</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Prenez mes idées, j’en aurai d’autres<br/> – Coco Chanel</blockquote><p>Le Relooking c’est choisir un look pour une période déterminée ou indéterminée.</p>';
                             }
                             function f() {
-                                document.getElementById('menu').innerHTML = '<p>La customisation de vos vêtements et accessoires, vous permettent de garder les pièces que vous aimez, tels que vêtements, bijoux et accessoires abimés. Elle les adapte à votre style et à votre morphologie, tout en les modifiant selon le style désiré.</p><blockquote>Pour être irremplaçable, il faut être différent – Coco Chanel</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Si vous ne changez rien, rien ne changera<br/> – Franck Nicolas</blockquote><p>Un dressing organisé vous offre une facilité et un gain de temps pour vous apprêter, en peaufinant votre toilette avec les accessoires adaptés.</p>';
                             }
                             function g() {
-                                document.getElementById('menu').innerHTML = '<p>L’accompagnement shopping vous dirige objectivement lors de vos achats, afin de gagner du temps et de l’argent.</p><blockquote>Si une femme est mal habillée, on remarque sa robe, mais si elle est impeccablement vêtue, c’est elle que l’on remarque – Coco Chanel.</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Pour être irremplaçable, il faut être différent<br/> – Coco Chanel</blockquote><p>La customisation de vos vêtements et accessoires, vous permettent de garder les pièces que vous aimez, tels que vêtements, bijoux et accessoires abimés. Elle les adapte à votre style et à votre morphologie, tout en les modifiant selon le style désiré.</p>';
                             }
                             function h() {
-                                document.getElementById('menu').innerHTML = '<p>Le cours d’auto-maquillage vous apprend à réaliser une mise en beauté rapide,  efficace et naturelle pour tous les jours.</p><blockquote>Personne n’est jeune après quarante ans, mais on peut être irrésistible à tout âge – Coco Chanel</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Si une femme est mal habillée, on remarque sa robe, mais si elle est impeccablement vêtue, c’est elle que l’on remarque<br/> – Coco Chanel.</blockquote><p>L’accompagnement shopping vous dirige objectivement lors de vos achats, afin de gagner du temps et de l’argent.</p>';
                             }
                             function i() {
-                                document.getElementById('menu').innerHTML = '<p>La décoration de votre intérieur adapte les couleurs et le style qui vous reflète.</p><blockquote>Le but du design est de rendre l’ordinaire extraordinaire – auteur inconnu.</blockquote>';
+                                document.getElementById('menu').innerHTML = '<blockquote>Personne n’est jeune après quarante ans, mais on peut être irrésistible à tout âge<br/> – Coco Chanel</blockquote><p>Le cours d’auto-maquillage vous apprend à réaliser une mise en beauté rapide,  efficace et naturelle pour tous les jours.</p>';
+                            }
+
+                            function j() {
+                                document.getElementById('menu').innerHTML = '<blockquote>Le but du design est de rendre l’ordinaire extraordinaire<br/> – auteur inconnu.</blockquote><p>La décoration de votre intérieur adapte les couleurs et le style qui vous reflète.</p>';
                             }
 
                             window.onload = function () {
@@ -90,6 +95,7 @@ include_once "header.php"
                             };
                         </script>
                     </div>
+
                 </div>
             </div>
 
@@ -116,7 +122,7 @@ include_once "header.php"
                                     <div class="container">
                                         <div class="row">
 
-                                            <div class="col-md-8 col-md-offset-1">
+                                            <div class="limit-height col-md-8 col-md-offset-1">
                                                 <h3><?= $recbig->nom ?></h3>
                                                 <p><?= nl2br($recbig->texte) ?></p>
                                             </div>
@@ -128,7 +134,7 @@ include_once "header.php"
                                     <div class="container">
                                         <div class="row">
 
-                                            <div class="col-md-8 col-md-offset-1">
+                                            <div class="limit-height col-md-8 col-md-offset-1">
                                                 <h3><?= $recbig->nom ?></h3>
                                                 <p><?= nl2br($recbig->texte) ?></p>
                                             </div>
