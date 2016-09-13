@@ -23,20 +23,16 @@ class imageManager
         $auteur = $_SESSION['id'];
         // attribution des valeurs
         $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
-        $req->bindValue(2, $monImage->test(), PDO::PARAM_STR);
-        $req->bindValue(3, $monImage->test(), PDO::PARAM_STR);
+        $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
+        $req->bindValue(3, $monImage->recupURL(), PDO::PARAM_STR);
         $bon = $req->execute();
 
         if ($bon) {
                 $this->redimension($monImage->prendreUrlFichier(),$monImage->getChemin2());
 
         }else{
-            echo "erreure";
+            echo "erreur";
         }
-
-
-
-
     }
 
     public function redimension($source,$destination, $taille_max=600, $qualite=80)
