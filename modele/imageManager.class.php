@@ -20,9 +20,9 @@ class imageManager
     {
         // requête préparée
         $req = $this->dbh->prepare("INSERT INTO creation (nom,imghref,imgsrc) VALUES (?,?,?);");
-        $auteur = $_SESSION['id'];
+
         // attribution des valeurs
-        $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
+        $req->bindValue(1, $monImage->getTitre(), PDO::PARAM_STR);
         $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
         $req->bindValue(3, $monImage->recupURL(), PDO::PARAM_STR);
         $bon = $req->execute();
@@ -39,9 +39,9 @@ class imageManager
     {
         // requête préparée
         $req = $this->dbh->prepare("INSERT INTO peinture (nom,imghref,imgsrc) VALUES (?,?,?);");
-        $auteur = $_SESSION['id'];
+
         // attribution des valeurs
-        $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
+        $req->bindValue(1, $monImage->getTitre(), PDO::PARAM_STR);
         $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
         $req->bindValue(3, $monImage->recupURL(), PDO::PARAM_STR);
         $bon = $req->execute();
@@ -62,10 +62,10 @@ class imageManager
     {
         // requête préparée
         $req = $this->dbh->prepare("INSERT INTO partenaire (nom,logohref,logosrc) VALUES (?,?,?);");
-        $auteur = $_SESSION['id'];
+
         // attribution des valeurs
-        $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
-        $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
+        $req->bindValue(1, $monImage->getTitre(), PDO::PARAM_STR);
+        $req->bindValue(2, $monImage->getChemin3(), PDO::PARAM_STR);
         $req->bindValue(3, $monImage->recupURL(), PDO::PARAM_STR);
         $bon = $req->execute();
 

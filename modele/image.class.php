@@ -9,7 +9,7 @@
 class image
 {
     // attributs
-
+    protected $titre;
     protected $name;
     protected $tmp_name;
     protected $ext_valides;
@@ -17,11 +17,14 @@ class image
     protected $ext_fichier;
     protected $urlFichier;
     protected $chemin2;
+    protected $chemin3;
 
     // constructeur
-    public function __construct(Array $file, $chemin2, $chemin, Array $ext_valides = ['.jpg','.jpeg','.png'] )
+    public function __construct(Array $file, $titre, $chemin2, $chemin, $chemin3, Array $ext_valides = ['.jpg','.jpeg'] )
     {
+        $this->setTitre($titre);
         $this->setChemin2($chemin2);
+        $this->setChemin3($chemin3);
         $this->setChemin($chemin);
         $this->setName($file['name']);
         $this->setTmpName($file['tmp_name']);
@@ -123,5 +126,22 @@ class image
         $this->chemin2 = $chemin2;
     }
 
+    public function getChemin3()
+    {
+        return $this->chemin3;
+    }
+    public function setChemin3($chemin3)
+    {
+        $this->chemin3 = $chemin3;
+    }
+
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
 
 }

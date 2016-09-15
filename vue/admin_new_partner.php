@@ -16,16 +16,21 @@
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
                     <?php if ($affiche_insertion) {
-                        ?>
-                        <form class="well" action="" name="miam" method="POST">
 
-                            <div class="form-group"><label>Nom du partenaire</label>
-                                <input class="form-control" type="text" name="lenom" placeholder="Nom" required/>
+                        ?>
+                        <form class="well" enctype="multipart/form-data" action="" name="miam" method="POST">
+
+                            <div class="form-group"><label>Titre</label>
+                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
                             </div>
+
+
                             <div class="form-group"><label>lien</label>
                                 <input class="form-control" type="text" name="url" placeholder="lien partenaire"
                                        required/>
                             </div>
+
+                            <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>
 
                             <input class="btn btn-success" name="inserer" type="submit" value="Insérer"/><br/>
 
@@ -35,8 +40,8 @@
 
                     if ($affiche_success) {
                         ?>
-                        <h2>Félicitations ! Le partenaire a bien été ajouté !</h2>
-                        <p><a href="javascript:history.go(-2)">Retour</a></p>
+                        <h2>Félicitations ! Nouveau partenaire ajouté !</h2>
+                        <p><a class="btn btn-success btn-xs" href="javascript:history.go(-2)">Retour</a> - <a class="btn btn-success btn-xs" href="?nouveau_partner">Ajouter une nouveau partenaire</a></p>
                         <?php
                     } ?>
                 </div>
@@ -56,3 +61,5 @@
 
 </body>
 </html>
+
+
