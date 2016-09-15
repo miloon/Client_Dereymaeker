@@ -35,27 +35,17 @@ class imageManager
         }
     }
 
-    public function redimension($source,$destination, $taille_max=600, $qualite=80)
+    public function redimension($source,$destination, $hauteur_max=600, $qualite=80)
     {
         // on récupère des infos sur l'image d'origine (taille principalement)
         $taille_origine = getimagesize($source);
-        //var_dump($taille_origine);
         $largeur_ori = $taille_origine[0];
         $hauteur_ori = $taille_origine[1];
 
-        // si l'image est en paysage
-        if ($largeur_ori > $hauteur_ori) {
-            $ratio = $taille_max / $largeur_ori;
-            // image carrée ou en portrait
-        } else {
-            $ratio = $taille_max / $hauteur_ori;
-        }
-
-        // si l'image est plus grande que la limite imposée ($taille_max), on calcul la taille finale
-        if ($ratio < 1) {
-
-            $largeur_fin = round($largeur_ori * $ratio);
-            $hauteur_fin = round($hauteur_ori * $ratio);
+        // si l'image a une hauteur plus grande que 600
+        if ($hauteur_ori > $hauteur_max) {
+            $largeur_fin = ($hauteur_max * $largeur_ori) / $hauteur_ori;
+            $hauteur_fin = $hauteur_max;
         }else{
             $largeur_fin = $largeur_ori;
             $hauteur_fin = $hauteur_ori;
