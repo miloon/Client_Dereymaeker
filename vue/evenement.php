@@ -17,7 +17,7 @@ include_once "header.php"
     </div>
 
 
-    <div class="container">
+    <div class="container" id="logorappelbottom">
         <div class="row">
 
             <div class="span9">

@@ -2,18 +2,18 @@
 include_once "header.php"
 ?>
 <body>
-<div class="container">
+<div class="container" id="logorappel">
     <!--HEADER ROW-->
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>Connexion au panneau d'administration du site !</h1>
+                <h1>Connexion au <br>panneau d'administration <br>du site !</h1>
             </div>
         </div>
     </div>
     <!-- /HEADER ROW -->
     <div class="span12">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <form class="well" class="form" method="post" action="">
                 <input type="text" name="lelogin" placeholder="Mon identifiant" required><br/>
                 <input type="password" name="lepass" placeholder="Mon mot de passe" required><br/>
