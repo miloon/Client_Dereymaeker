@@ -5,7 +5,7 @@ include_once "header.php"
 <!--HEADER ROW-->
 <?php include 'vue/menu.php' ?>
 <!-- /HEADER ROW -->
-<div class="container">
+<div class="container" id="logorappel">
     <div class="row">
         <div class="span12">
             <div class="page-header">

@@ -15,7 +15,7 @@ include_once "header.php"
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="logorappelbottom">
         <div class="row">
             <div class="col-sm-12">
                 <div class="span8">
@@ -62,7 +62,7 @@ include_once "header.php"
                     ?>
                 </div>
                 <div class="span4">
-                    <h2>Mes disponibilités</h2>
+                    <h2>Disponibilités</h2>
                     <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> +32 478 200 872<br/>Joignable
                         du lundi au mercredi de 9h à 19h.</p>
                     <p>N° TVA : BE 0859.271.827</p>

@@ -147,9 +147,11 @@ Carousel
 /* Page Header
 ==========================*/
 
-.page-header{
+/*.page-header{
 	border-bottom: 1px solid #f5f5f5;
 }
+je le vire parce que sinon ça fait caca sur mon image.
+*/
 
 
 /*Media
@@ -326,4 +328,22 @@ textarea{
 #conseillere{
 	height: 28px;
 	font-size: 24px;
+}
+
+#logorappel{
+	background-image: url('../img/presentation/logopetit.jpg');
+	background-repeat: no-repeat;
+	background-position: top right;
+	z-index: 2;
+}
+#logorappelbottom{
+	background-image: url('../img/presentation/logopetit.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	z-index: 2;
+}
+#logorappelcenter{
+	background-image: url('../img/presentation/logopetit.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
 }

@@ -5,7 +5,6 @@ if(isset($_GET['deco'])){
     require_once "modele/connect.php";
     require_once "vue/connect.php";
 }elseif(!isset($_GET['section'])) {
-    include 'modele/accueil.php';
     include 'vue/accueil.php';
 }else{
     $section = $_GET['section'];
@@ -30,8 +29,10 @@ if(isset($_GET['deco'])){
             include 'modele/contact.php';
             include 'vue/contact.php';
             break;
+        case "mentions":
+            include 'vue/mentions.php';
+            break;
         default :
-            include 'modele/accueil.php';
             include 'vue/accueil.php';
 
     }
