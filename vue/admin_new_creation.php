@@ -33,7 +33,7 @@
 
                     if ($affiche_success) {
                         ?>
-                        <h2>Félicitations ! La photo de la peinture a bien été ajoutée !</h2>
+                        <h2>Félicitations ! La photo de la création a bien été ajoutée !</h2>
                         <p><a class="btn btn-success btn-xs" href="javascript:history.go(-2)">Retour</a> - <a class="btn btn-success btn-xs" href="?nouvelle_creation">Ajouter une nouvelle creation</a></p>
                         <?php
                     } ?>

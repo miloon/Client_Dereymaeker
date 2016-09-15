@@ -188,7 +188,7 @@ include_once "header.php"
                          alt='<?= $recbig->nom ?>'/><?php
                 } ?>
 
-                <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a>
+                <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a> |
 
 
                 <?php

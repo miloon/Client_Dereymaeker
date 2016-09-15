@@ -40,7 +40,7 @@ class image
         return $this->chemin.$this->urlFichier;
     }
 
-    public function test()
+    public function recupURL()
     {
         return $this->urlFichier;
     }
