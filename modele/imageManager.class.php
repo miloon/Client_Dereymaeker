@@ -20,7 +20,6 @@ class imageManager
     {
         // requête préparée
         $req = $this->dbh->prepare("INSERT INTO creation (nom,imghref,imgsrc) VALUES (?,?,?);");
-        $auteur = $_SESSION['id'];
         // attribution des valeurs
         $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
         $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
