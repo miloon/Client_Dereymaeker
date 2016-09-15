@@ -8,7 +8,7 @@ include_once "header.php"
 <!-- /HEADER ROW -->
 
 
-<div class="container">
+<div class="container" id="logorappel">
     <!--PAGE TITLE-->
     <div class="row">
         <div class="span12">
@@ -174,6 +174,7 @@ include_once "header.php"
     </div>
 </div>
 
+<hr>
 
 <div class="container">
     <div class="row">
@@ -185,14 +186,16 @@ include_once "header.php"
                     ?>
 
                     <?php if ($recbig->logosrc) { ?>
-                        <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><img style="max-width:150px;"
-                                                                                            class="img-responsive"
-                                                                                            src='vue/img/partenaire/<?= $recbig->logosrc ?>'
-                                                                                            alt='<?= $recbig->nom ?>'/></a>
+                        <a target="_blank" title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><img
+                                style="max-width:150px;" alt="<?= $recbig->nom ?>"
+                                class="img-responsive"
+                                src='vue/img/partenaire/<?= $recbig->logosrc ?>'
+                                alt='<?= $recbig->nom ?>'/></a>
                         <?php
                     } else { ?>
 
-                        <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a> |
+                        <a target="_blank" title="<?= $recbig->nom ?>"
+                           href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a> |
 
 
                         <?php

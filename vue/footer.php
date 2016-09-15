@@ -1,13 +1,19 @@
 </div>
+
 <footer>
     <div class="container">
-        <div class="span12">
-            <p>Sophie Dereymaeker<br/><small>Créatrice de styles</small>
-            </p>
+        <div class="row">
+            <div class="span6">Sophie Dereymaeker<br/>
+                <small>Créatrice de styles</small>
+            </div>
+            <div class="span6">
+                <div class="social pull-right">
+                    <small><a href="?section=mentions" title="mentions légales">Mentions Légales</a></small>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
-
 <!--/.Footer-->
 
 </body>
