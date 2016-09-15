@@ -16,7 +16,7 @@ class imageManager
     }
 
 
-    public function ajouterImage(image $monImage)
+    public function ajouterImageCreation(image $monImage)
     {
         // requête préparée
         $req = $this->dbh->prepare("INSERT INTO creation (nom,imghref,imgsrc) VALUES (?,?,?);");
@@ -34,6 +34,50 @@ class imageManager
             echo "erreur";
         }
     }
+
+    public function ajouterImagePeinture(image $monImage)
+    {
+        // requête préparée
+        $req = $this->dbh->prepare("INSERT INTO peinture (nom,imghref,imgsrc) VALUES (?,?,?);");
+        $auteur = $_SESSION['id'];
+        // attribution des valeurs
+        $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
+        $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
+        $req->bindValue(3, $monImage->recupURL(), PDO::PARAM_STR);
+        $bon = $req->execute();
+
+        if ($bon) {
+            $this->redimension($monImage->prendreUrlFichier(),$monImage->getChemin2());
+
+        }else{
+            echo "erreur";
+        }
+    }
+
+
+    /*--------------------------a faire -------------------------*/
+
+
+    public function ajouterImagePartner(image $monImage)
+    {
+        // requête préparée
+        $req = $this->dbh->prepare("INSERT INTO partenaire (nom,logohref,logosrc) VALUES (?,?,?);");
+        $auteur = $_SESSION['id'];
+        // attribution des valeurs
+        $req->bindValue(1, $monImage->getName(), PDO::PARAM_STR);
+        $req->bindValue(2, $monImage->recupURL(), PDO::PARAM_STR);
+        $req->bindValue(3, $monImage->recupURL(), PDO::PARAM_STR);
+        $bon = $req->execute();
+
+        if ($bon) {
+            $this->redimension($monImage->prendreUrlFichier(),$monImage->getChemin2());
+
+        }else{
+            echo "erreur";
+        }
+    }
+
+    /*-------------------------------------------------------------*/
 
     public function redimension($source,$destination, $hauteur_max=600, $qualite=80)
     {

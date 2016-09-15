@@ -12,7 +12,7 @@ if (empty($_POST['inserer'])) {
 } else { // le formulaire est envoyé
     $affiche_insertion = false;
     $objet_envoye = new image($_FILES['oeuvre'] ,$chemin2, $chemin);
-    $manager->ajouterImage($objet_envoye);
+    $manager->ajouterImageCreation($objet_envoye);
 
   if($manager) {
       $affiche_success = true;
