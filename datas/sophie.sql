@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 28 Juin 2016 à 15:51
+-- Généré le :  Ven 09 Septembre 2016 à 09:32
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -92,23 +92,21 @@ CREATE TABLE IF NOT EXISTS `evenement` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `titre` varchar(150) DEFAULT NULL,
   `ladate` timestamp NULL DEFAULT NULL,
+  `ladatefin` timestamp NULL DEFAULT NULL,
   `description` text,
   `lieu` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `evenement`
 --
 
-INSERT INTO `evenement` (`id`, `titre`, `ladate`, `description`, `lieu`) VALUES
-(1, 'Odio dignissimos ducimus', '2016-06-14 22:00:00', 'Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.', 'Chaussée de Charleroi 144, 1080 Bruxelles'),
-(2, 'Morbi faucibus nibh odio', '2016-06-23 22:00:00', 'Duis in venenatis quam. Nulla tristique vel sem et semper. Nam facilisis, quam at faucibus ullamcorper, libero eros pulvinar neque, vitae commodo lectus lacus id mauris. Aliquam erat volutpat. Donec at lacus vitae odio efficitur commodo bibendum ac diam. ', 'Chaussée d''Ixelles 15, 1050 Ixelles'),
-(3, 'Sed tempor pulvinar', '2016-05-31 22:00:00', 'Etiam ligula metus, aliquam at maximus vitae, pharetra a odio. In lobortis tincidunt nisi eget auctor. Phasellus et justo massa. Etiam non mi sit amet diam blandit elementum at eu lacus. Etiam odio urna, fringilla at tempus in, suscipit et nunc. Sed eros arcu, laoreet et dapibus quis, varius eu turpis. ', 'Rue de l''Eglise 15, 1520 Ville'),
-(4, 'The Rolling Stones\r\n', '2016-10-06 22:00:00', 'Empire Polo Club\r\n\r\nRolling Stone est un magazine bimensuel américain sur la pop culture mais à dominante musicale, créé à San Francisco en 1967 par Jann Wenner et par le critique de musique Ralph J. Gleason. Wenner était en 2008 l''éditeur du magazine.\r\n\r\nLe titre est aujourd''hui publié dans dix-huit pays, dont la Chine, l''Inde, ou la Russie. L''édition en langue française a été lancée par Lionel Rotcage, ancien journaliste à Libération ; le no 1 est daté de janvier-février 1988.', 'Indio, CA'),
-(5, 'Kalascima', '2016-08-22 22:00:00', 'Festival d''Art de Huy\r\n\r\nWorld music Alternative Indie Folk Psychedelic Trance Tarantella Band based in Salento Italy.', 'Place Verte, Huy, Belgium'),
-(6, 'Marlene Kuntz', '2016-07-01 22:00:00', 'Area Palaverde\r\n\r\nMarlene Kuntz began forming in 1987 consisting of Luca Bergia on drums and Riccardo Tesio on guitar. Franco Ballatore joined the band on bass guitar the following year and that winter they found a rehearsal room in Confreria. In 1989, Cristiano Godano joined the band playing guitar and writing songs. Alex Astegiano also came in as the singer. In May they played their first concert in Cuneo playing "1° 2° 3°", "La verità" and "Emozioni Nascoste". In February 1990, they recorded a 4 song demo including "La verità", "Trasudamerica", "1° 2° 3°" and "Capello lungo". In April they also recorded their first video, "Merry X-mas". After the concert on April 25 at Cortemilia, Alex left the band due to working pressure. Cristiano replaced him as a lead singer while continuing playing guitar. In July, the new line-up recorded the second demo with 4 songs: "Donna L", "Gioia che mi do", "Signor Niente" and "Merry X-mas".', 'Azzano Decimo, Italy'),
-(7, 'Red Hot Chili Peppers', '2016-07-21 22:00:00', 'Fuji Rock Festival\r\n\r\nRed Hot Chili Peppers (couramment abrégé en Red Hot ou RHCP) est un groupe de rock américain formé en 1983 à Los Angeles. Leur musique mêle principalement des éléments de rock et de funk, avec des influences punk, metal et de rap1.\r\n\r\nLes Red Hot Chili Peppers ont commencé à se faire connaître dans des clubs par des prestations très survoltées, avant d''enchaîner de nombreuses apparitions dans les festivals underground. Après la mort tragique du guitariste Hillel Slovak en 1988, ils ont commencé à écrire des textes plus profonds, accompagnés de mélodies plus complexes et recherchées.', 'Mukawa, Japan');
+INSERT INTO `evenement` (`id`, `titre`, `ladate`, `ladatefin`, `description`, `lieu`) VALUES
+(8, 'La guerre de la vache', '2016-08-10 16:00:30', '2016-08-20 22:00:00', 'L’atelier de la Batte, reçoit des artistes autour du thème de la vache. \r\nDany Kohl, Boris Mestchersky, Geraldine Delfosse,, Sophie Dereymaeker, Lilla Servello, Mady Balthazar, Nada Ursa, Agnes Gosselet, Michel Lambrecht, Anastasion Marquez et Kim Yung.\r\n\r\nVernissage le 10 Août dès 18h, et le 21 Août, à l’occasion de la clôture, une journée spéciale est organisée. Il s’agit d’un rallye sur la guerre de la vache, qui passera par les communes de Huy, Andenne, Gesves et Ohey.\r\nPour info : danykohl@outlook.com', '5, quai de la Batte 4500 Huy'),
+(9, 'Fête de Noël', '2016-12-25 13:03:18', NULL, 'Test d&#039;ajout d&#039;évent', '89 avenue du parc 1060 bruxelles'),
+(10, 'test de date', '2016-09-09 12:14:50', NULL, 'gjfgjghjk&quot;&quot;&quot;&quot;', 'jhgh'),
+(11, 'cvfgfgsdfgdfsgdf', '2016-09-01 12:20:42', '2016-10-30 13:20:42', 'fsdfg&quot;', 'fdsgf');
 
 -- --------------------------------------------------------
 
@@ -146,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `peinture` (
   `imgsrc` text,
   `vendu` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Contenu de la table `peinture`
@@ -160,7 +158,21 @@ INSERT INTO `peinture` (`id`, `nom`, `description`, `imghref`, `imgsrc`, `vendu`
 (5, 'dfsqdfq fdsqf', 'dqf qfddfsdfqe reffsdgfgfgfd  fdsfsq dfd ', 'img05.jpg', 'img05.jpg', 0),
 (6, 'fdsqjklfmsdqf ', 'dsqfsqfsdqf fsdfsd fsd dfdsd qAE RGFDGS  fdsdf', 'img06.jpg', 'img06.jpg', 0),
 (7, 'De Finibus Bonorum et Malorum', 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?', 'img07.jpg', 'img07.jpg', 0),
-(8, 'De Finibus Bonorum et Malorum', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. ', 'img08.jpg', 'img08.jpg', 0);
+(8, 'De Finibus Bonorum et Malorum', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. ', 'img08.jpg', 'img08.jpg', 0),
+(9, 'test', NULL, 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 0),
+(10, 'test', NULL, 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 0),
+(11, '42542', NULL, 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 'big_0fb59b4694a41a70f3c900baa0fb9e660eb02983.jpg', 0),
+(12, 'fdsg', NULL, 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 0),
+(13, 'fdsg', NULL, 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 'big_5d93f531d9d02341dda4584056996453e8875a56.jpg', 0),
+(14, 'fds', NULL, 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 0),
+(15, 'fds', NULL, 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 'big_1e1ac94700e0bce2bd72e8972273b5c4bb1be60f.jpg', 0),
+(16, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
+(17, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
+(18, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
+(19, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
+(20, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
+(21, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0),
+(22, 'fgfgfgf', NULL, 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 'big_1ab1ee7e9177a5c38b3e98ef371a7558b519dc63.jpg', 0);
 
 -- --------------------------------------------------------
 

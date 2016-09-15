@@ -4,7 +4,7 @@
  * AJOUTER LE SYSTEME DE MINIATURE
  * 
  * */
-$ext = array('.jpg', '.jpeg', '.gif', '.png');
+$ext = array('.jpg', '.jpeg');
 if (empty($_POST['inserer'])) {
     // création d'une variable pour afficher le formulaire
     $affiche_insertion = true;
@@ -35,22 +35,16 @@ if (empty($_POST['inserer'])) {
         $largeur_fin = $largeur_ori;
     }
 
-
+$nouvelles=0;
     switch ($taille_origine['mime']){
         case "image/jpeg":
-        case "image/pjpeg": // autre manière de nommer le jpg
+        case "image/pjpeg":
             $nouvelles = imagecreatefromjpeg($chemin.$_FILES['oeuvre']['name']);
-            break;
-        case "image/png":
-            $nouvelles = imagecreatefrompng($chemin.$_FILES['oeuvre']['name']);
-            break;
-        case "image/gif":
-            $nouvelles = imagecreatefromgif($chemin.$_FILES['oeuvre']['name']);
             break;
     }
 
     $cree_nouvelle = imagecreatetruecolor($largeur_fin,$hauteur_fin );
-
+var_dump($cree_nouvelle);
     imagecopyresampled($cree_nouvelle,$nouvelles ,0 ,0 ,0 ,0 ,$largeur_fin ,$hauteur_fin ,$largeur_ori ,$hauteur_ori);
 
     /**
@@ -59,20 +53,15 @@ if (empty($_POST['inserer'])) {
      *
      */
 
-   /* switch ($taille_origine['mime']){
-        case "image/jpeg":
-        case "image/pjpeg": // autre manière de nommer le jpg
+    imagedestroy($_FILES['oeuvre']['name']); 
 
+   switch ($taille_origine['mime']){
+        case "image/jpeg":
+        case "image/pjpeg":
             // création physique de l'image
             imagejpeg($cree_nouvelle,$chemin.$_FILES['oeuvre']['name'], 80);
             break;
-        case "image/png":
-            $nouvelles = imagecreatefrompng($chemin.$_FILES['oeuvre']['name']);
-            break;
-        case "image/gif":
-            $nouvelles = imagecreatefromgif($chemin.$_FILES['oeuvre']['name']);
-            break;
-    }*/
+    }
 
 
 

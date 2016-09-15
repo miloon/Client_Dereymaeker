@@ -16,6 +16,29 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
+
+
+                    <?php
+                    if (isset($message)) {
+                        echo "<p>" . $message . "</p>";
+                    }else{
+                        echo "<h2>Voici les évènements à venir :</h2>";
+                    }
+                    foreach ($affiche_eventf as $rec) {
+                        ?>
+                        <div class="blog-post">
+                            <p><?php if (($rec->ladatefin) != NULL) {
+                                    echo "Du " . date("d/m/Y", strtotime($rec->ladate)) . " au " . date("d/m/Y", strtotime($rec->ladatefin));
+                                } else {
+                                    echo "Le " . date("d/m/Y à H:i", strtotime($rec->ladate));
+                                }
+                                ?> - <?= $rec->titre ?></p>
+                        </div>
+                        <?php
+                    }
+                    ?>
+
+
                 </div>
             </div>
         </div>
