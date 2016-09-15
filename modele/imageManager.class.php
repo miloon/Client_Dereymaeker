@@ -55,7 +55,7 @@ class imageManager
     }
 
 
-    /*--------------------------a faire -------------------------*/
+
 
 
     public function ajouterImagePartner(image $monImage)
@@ -77,7 +77,6 @@ class imageManager
         }
     }
 
-    /*-------------------------------------------------------------*/
 
     public function redimension($source,$destination, $hauteur_max=600, $qualite=80)
     {

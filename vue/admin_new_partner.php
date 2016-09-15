@@ -15,6 +15,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
+                    <div class="alert alert-danger" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.</div>
                     <?php if ($affiche_insertion) {
 
                         ?>

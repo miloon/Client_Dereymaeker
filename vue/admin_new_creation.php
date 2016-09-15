@@ -15,12 +15,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
+                    <div class="alert alert-danger" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.</div>
                     <?php if ($affiche_insertion) {
                         ?>
                         <form class="well" enctype="multipart/form-data" action="" name="miam" method="POST">
 
                             <div class="form-group"><label>Titre</label>
-                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
+                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la création" required/>
                             </div>
 
                             <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>

@@ -179,22 +179,27 @@ include_once "header.php"
     <div class="row">
         <div class="span12" id='partenaire'>
             <h2>Partenaires</h2>
-            <?php
-            foreach ($affiche_partenaire as $recbig) {
-                ?>
-
-                <?php if ($recbig->logosrc) { ?>
-                    <img width="75px" class="img-responsive" src='<?= $recbig->logosrc ?>'
-                         alt='<?= $recbig->nom ?>'/><?php
-                } ?>
-
-                <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a> |
-
-
+            <div style="text-align: center">
                 <?php
-            }
-            ?>
+                foreach ($affiche_partenaire as $recbig) {
+                    ?>
 
+                    <?php if ($recbig->logosrc) { ?>
+                        <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><img style="max-width:150px;"
+                                                                                            class="img-responsive"
+                                                                                            src='vue/img/partenaire/<?= $recbig->logosrc ?>'
+                                                                                            alt='<?= $recbig->nom ?>'/></a>
+                        <?php
+                    } else { ?>
+
+                        <a title="<?= $recbig->nom ?>" href="<?= $recbig->logohref ?>"><?= $recbig->nom ?></a> |
+
+
+                        <?php
+                    }
+                }
+                ?>
+            </div>
         </div>
     </div>
 </div>
