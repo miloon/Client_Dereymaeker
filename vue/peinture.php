@@ -20,10 +20,11 @@ include_once "header.php"
     <!--Carousel
     ==================================================-->
     <div class="row">
-        <p>Durant ses études artistiques, Sophie DEREYMAEKER s'est fort intéressée à la fabrication du papier, pour sa fibre malléable et transparente ainsi que pour ses nombreuses applications. Elle est séduite par la solidité du matériau sec. Elle s'intéresse également au vitrail pour sa transparence et sa luminosité colorée.</p>
-        <p>Dorénavant, la peinture est devenue une nécessité de vie pour Sophie.</p>
-        <p>On retrouve dans ses peintures une recherche de matières créées par un mélange de différents matériaux collés en superposition à la toile. Des jeux de transparences et de nuances d'un même ton lui permettent d'évoquer force, apaisement et fragilité. Ses toiles nous emmènent dans un autre monde de quiétude et nous invitent à la rêverie.</p>
+
         <div class="col-md-10 col-md-offset-1">
+            <p>Durant ses études artistiques, Sophie DEREYMAEKER s'est fort intéressée à la fabrication du papier, pour sa fibre malléable et transparente ainsi que pour ses nombreuses applications. Elle est séduite par la solidité du matériau sec. Elle s'intéresse également au vitrail pour sa transparence et sa luminosité colorée.</p>
+            <p>Dorénavant, la peinture est devenue une nécessité de vie pour Sophie.</p>
+            <p style="margin-bottom: 50px;">On retrouve dans ses peintures une recherche de matières créées par un mélange de différents matériaux collés en superposition à la toile. Des jeux de transparences et de nuances d'un même ton lui permettent d'évoquer force, apaisement et fragilité. Ses toiles nous emmènent dans un autre monde de quiétude et nous invitent à la rêverie.</p>
             <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
                 <div class='carousel-outer'>
                     <!-- Wrapper for slides -->

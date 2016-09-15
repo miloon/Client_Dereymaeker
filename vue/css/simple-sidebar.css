@@ -129,3 +129,11 @@
         margin-right: 0;
     }
 }
+/* Ajouts */
+.btn-admin{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.btn-admin p{
+    font-size: 200%;
+}
