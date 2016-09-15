@@ -15,7 +15,28 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><?= $titre ?></h1>
-                    <p>INSÉRER LES TRUCS ICI !!!</p>
+                    <?php if ($affiche_insertion) {
+                        ?>
+                        <form class="well" enctype="multipart/form-data" action="" name="miam" method="POST">
+
+                            <div class="form-group"><label>Titre</label>
+                                <input class="form-control" type="text" name="titrephoto" placeholder="Titre de la peinture" required/>
+                            </div>
+
+                            <div class="form-group"> <label>Ici, je choisis l'image que je veux importer :</label><input class="btn btn-default" type="FILE" name="oeuvre"/></div>
+
+                            <input class="btn btn-success" name="inserer" type="submit" value="Insérer"/><br/>
+
+                        </form>
+                        <?php
+                    }
+
+                    if ($affiche_success) {
+                        ?>
+                        <h2>Félicitations ! La photo de la création a bien été ajoutée !</h2>
+                        <p><a class="btn btn-success btn-xs" href="javascript:history.go(-2)">Retour</a> - <a class="btn btn-success btn-xs" href="?nouvelle_creation">Ajouter une nouvelle creation</a></p>
+                        <?php
+                    } ?>
                 </div>
             </div>
         </div>

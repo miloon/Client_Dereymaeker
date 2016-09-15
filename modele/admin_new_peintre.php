@@ -1,102 +1,19 @@
 <?php
-/*
- * 
- * AJOUTER LE SYSTEME DE MINIATURE
- * 
- * */
-$ext = array('.jpg', '.jpeg');
+require_once "modele/image.class.php";
+require_once "modele/imageManager.class.php";
+$manager = new imageManager($dbh);
+$chemin="vue/img/peinture/originales/";
+$chemin2="vue/img/peinture/";
 if (empty($_POST['inserer'])) {
-    // création d'une variable pour afficher le formulaire
     $affiche_insertion = true;
     $affiche_success = false;
 } else { // le formulaire est envoyé
     $affiche_insertion = false;
-    // on prend le dernier "." de la chaine comme séparateur, et on garde le contenu à droite du séparateur strrchr( $chaine, $separateur)
-    $ext_fichier = strrchr($_FILES['oeuvre']['name'], ".");
-    // on met l'extension en minuscule
-    $ext_fichier = strtolower($ext_fichier);
-    $imghref = $imgsrc = strtolower($_FILES['oeuvre']['name']);
-    $imgtitle = htmlspecialchars(strip_tags(trim($_POST['titrephoto'])), ENT_QUOTES);
-    $chemin = "vue/img/peinture/";
-
-    /*
-     * TEST
-     */
-
-    $taille_origine = getimagesize($chemin.$_FILES['oeuvre']['name']);
-    $largeur_ori = $taille_origine[0];
-    $hauteur_ori = $taille_origine[1];
-
-    if ($hauteur_ori > 600){
-        $largeur_fin = round(600*$largeur_ori/$hauteur_ori);
-        $hauteur_fin=600;
-    }else{
-        $hauteur_fin = $hauteur_ori;
-        $largeur_fin = $largeur_ori;
-    }
-
-$nouvelles=0;
-    switch ($taille_origine['mime']){
-        case "image/jpeg":
-        case "image/pjpeg":
-            $nouvelles = imagecreatefromjpeg($chemin.$_FILES['oeuvre']['name']);
-            break;
-    }
-
-    $cree_nouvelle = imagecreatetruecolor($largeur_fin,$hauteur_fin );
-var_dump($cree_nouvelle);
-    imagecopyresampled($cree_nouvelle,$nouvelles ,0 ,0 ,0 ,0 ,$largeur_fin ,$hauteur_fin ,$largeur_ori ,$hauteur_ori);
-
-    /**
-     *
-     * AVANT DE CREER LA MINATURE FAUDRAIT QUE JE SUPPRIME L'ORIGINALE HISTOIRE DE LAISSER SUR LE SERVEUR QUE L'IMAGE AUX BONNES DIMENSIONS.
-     *
-     */
-
-    imagedestroy($_FILES['oeuvre']['name']); 
-
-   switch ($taille_origine['mime']){
-        case "image/jpeg":
-        case "image/pjpeg":
-            // création physique de l'image
-            imagejpeg($cree_nouvelle,$chemin.$_FILES['oeuvre']['name'], 80);
-            break;
-    }
-
-
-
-    $vendu = 0;
-    try {
-        // DEBUT IMAGES
-        // on vérifie que l'extension soit valide grâce à notre tableau $ext (in_array(recherche, tableau)
-        if (in_array($ext_fichier, $ext) && in_array($ext_fichier, $ext)) {
-            // création d'un nom et remise de l'extension
-            $nouveau_nomg = strtolower($_FILES['oeuvre']['name']);
-            // on envoie le fichier temp vers le dossier choisi avec le nouveau nom
-            if (@move_uploaded_file($_FILES['oeuvre']['tmp_name'], $chemin . $nouveau_nomg)) {
-                $message = "<h2>L'upload s'est bien passé !</h2></p>";
-            } else {
-                $message = "Erreur lors de l'envoi de l'image";
-            }
-        } else {
-            echo "<h1>Format de l'image non pris en charge</h1>";
-            exit();
-        }
-        // FIN IMAGES
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $dbh->beginTransaction();
-        $prepare = $dbh->prepare("
-        INSERT INTO `peinture`( `nom`, `imghref`, `imgsrc`, `vendu`) VALUES (:nom,:imghref,:imgsrc,:vendu)
-        ");
-        $prepare->bindValue(":nom", $imgtitle, PDO::PARAM_STR);
-        $prepare->bindValue(":imghref", $imghref, PDO::PARAM_STR);
-        $prepare->bindValue(":imgsrc", $imgsrc, PDO::PARAM_STR);
-        $prepare->bindValue(":vendu", $vendu, PDO::PARAM_INT);
-        $prepare->execute();
-        $dbh->commit();
+    $objet_envoye = new image($_FILES['oeuvre'] ,$chemin2, $chemin);
+    $manager->ajouterImage($objet_envoye);
+    if($manager) {
         $affiche_success = true;
-    } catch (Exception $e) {
-        $dbh->rollBack();
-        echo "Erreur : " . $e->getMessage();
+    }else{
+        echo "erreur";
     }
 }

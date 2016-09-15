@@ -1,4 +1,5 @@
 <?php
+
 $titre = "Bonjour Sophie !";
 
 // requête récupérant les évènements postérieurs à NOW
