@@ -14,7 +14,7 @@ if (empty($_POST['inserer'])) {
     $affiche_insertion = false;
     $titre=$_POST['titrephoto'];
     $objet_envoye = new image($_FILES['oeuvre'] , $titre, $chemin2, $chemin,$chemin3);
-    var_dump($objet_envoye);
+    //var_dump($objet_envoye);
     $manager->ajouterImageCreation($objet_envoye);
 
   if($manager) {

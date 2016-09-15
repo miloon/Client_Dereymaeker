@@ -2,7 +2,7 @@
 <footer>
     <div class="container">
         <div class="span12">
-            <p>Sophie Dereymaeker<br/><small>Créatrice de styles</small>
+            <p><a href="?connect">Sophie Dereymaeker</a><br/><small>Créatrice de styles</small>
             </p>
         </div>
     </div>

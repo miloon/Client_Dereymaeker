@@ -75,8 +75,8 @@ class image
 
     // création du nouveau nom
     protected function creeNom(){
-
-        $sortie= mt_rand(1000,9999);
+        $sortie=date("YmdHis");
+        $sortie.= mt_rand(1000,9999);
         $sortie.= $this->ext_fichier;
         return $sortie;
 
