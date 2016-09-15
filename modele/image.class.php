@@ -9,7 +9,7 @@
 class image
 {
     // attributs
-    
+
     protected $name;
     protected $tmp_name;
     protected $ext_valides;
