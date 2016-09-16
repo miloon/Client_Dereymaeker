@@ -24,6 +24,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
+                    <!--BOUTON A NE PAS SUPPRIMER-->
+                    <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                     <h1><?= $titre ?></h1>
                     <?php if ($affiche_modif) {
                         ?>
@@ -72,7 +74,8 @@
                         <p><a href="javascript:history.go(-1)">Retour</a></p>
                         <?php
                     } ?>
-
+                    <!--BOUTON A NE PAS SUPPRIMER-->
+                    <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                 </div>
             </div>
         </div>
@@ -87,6 +90,12 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="vue/js/bootstrap.min.js"></script>
-
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 </body>
 </html>
