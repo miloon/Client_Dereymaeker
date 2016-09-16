@@ -24,6 +24,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
+                    <!--BOUTON A NE PAS SUPPRIMER-->
+                    <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                     <h1><?= $titre ?></h1>
                     <p><a href="?nouveau_partner" type="button" class="btn btn-default">Nouveau partenaire à
                             insérer</a></p>
@@ -64,6 +66,12 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="vue/js/bootstrap.min.js"></script>
-
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 </body>
 </html>
