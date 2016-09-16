@@ -11,27 +11,27 @@ include_once "header.php"
             <p id="logoaccueil"><img src="vue/img/presentation/logo1.jpg" alt="Sophie Dereymaeker" align="center"/></p>
             <ul id="accueil" class="thumbnails">
                 <li class="span4">
-                    <div class="thumbnail">
+                    <div class="thumbnail test">
                         <a href="?section=conseil"><img alt="" src="vue/img/presentation/conseil.jpg"/></a>
-                        <div class="caption">
-                            <strong>Conseillère en image</strong>
+                        <div class="textbox">
+                            <div class="text"><p style="padding-top: 10px;">Conseillère en image</p></div>
                         </div>
                     </div>
                 </li>
                 <li class="span4">
-                    <div class="thumbnail">
+                    <div class="thumbnail test">
                         <a href="?section=creation"><img alt="300x200"
                                                          src="vue/img/presentation/handmadecraft.jpg"/></a>
-                        <div class="caption">
-                            <strong>Créatrice</strong>
+                        <div class="textbox">
+                            <div class="text"><p style="padding-top: 10px;">Créatrice</p></div>
                         </div>
                     </div>
                 </li>
                 <li class="span4">
-                    <div class="thumbnail">
+                    <div class="thumbnail test">
                         <a href="?section=peinture"><img alt="300x200" src="vue/img/presentation/peinture.jpg"/></a>
-                        <div class="caption">
-                            <strong>Artiste peintre</strong>
+                        <div class="textbox">
+                            <div class="text"><p style="padding-top: 10px;">Artiste peintre</p></div>
                         </div>
                     </div>
                 </li>

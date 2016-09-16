@@ -39,12 +39,12 @@ include_once "header.php"
                             <?php if ($i == 1): ?>
                                 <div class='item active'>
                                     <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?><?=$vendu?></h3>
+                                    <h3 id="vendumodif"><?= $recbig->nom ?><?=$vendu?></h3>
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
                                     <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
-                                    <h3><?= $recbig->nom ?><?=$vendu?></h3>
+                                    <h3 id="vendumodif"><?= $recbig->nom ?><?=$vendu?></h3>
                                 </div>
                             <?php endif; ?>
 
