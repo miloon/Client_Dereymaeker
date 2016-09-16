@@ -23,6 +23,7 @@ include_once "header.php"
     <div class="container">
         <div class="row">
             <div class="span12">
+                <blockquote style="margin-top:20px;">Vous n'aurez pas deux fois l'occasion de faire une première impression.<br/>- Coco Chanel</blockquote><p style="margin-bottom: 30px;">Le Conseil en Image est un outil merveilleux que je vous apprends à maitriser en toute facilité, afin de vous mettre en valeur avec harmonie. Il propose différentes analyses et conseils, faciles à appliquer au quotidien.</p>
                 <h2>Services</h2>
                 <!-- Citation statique -->
 
@@ -31,8 +32,6 @@ include_once "header.php"
                     <div class="span3" id="references">
 
                         <div class="btn-group-vertical btn-group-lg" role="group">
-                            <a class="btn btn-danger" id="conseillere" href="javascript:;"
-                               onclick="a();">Conseillère</a>
                             <a class="btn btn-default" id="colorimetrie" href="javascript:;"
                                onclick="b();">Colorimétrie</a>
                             <a class="btn btn-default" id="morphologie" href="javascript:;"
@@ -58,9 +57,6 @@ include_once "header.php"
                         <div id="menu">
                         </div>
                         <script>
-                            function a() {
-                                document.getElementById('menu').innerHTML = "<blockquote>Vous n'aurez pas deux fois l'occasion de faire une première impression.<br/>- Coco Chanel</blockquote><p>Le Conseil en Image est un outil merveilleux que je vous apprends à maitriser en toute facilité, afin de vous mettre en valeur avec harmonie. Il propose différentes analyses et conseils, faciles à appliquer au quotidien.</p>";
-                            }
                             function b() {
                                 document.getElementById('menu').innerHTML = '<blockquote>La plus belle couleur au monde est celle qui vous va bien<br/> – Coco Chanel</blockquote><p>La colorimétrie détermine les couleurs qui flattent votre teint.</p>';
                             }
@@ -91,7 +87,7 @@ include_once "header.php"
                             }
 
                             window.onload = function () {
-                                a();
+                                b();
                             };
                         </script>
                     </div>
