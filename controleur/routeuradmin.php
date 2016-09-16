@@ -35,14 +35,6 @@ if (empty($_GET)) {
     $idevent = (int)$_GET['modif_evenement'];
     require_once 'modele/admin_modif_event.php';
     require_once 'vue/admin_modif_event.php';
-} elseif (isset($_GET['modif_creation'])) {
-    $idcreation = (int)$_GET['modif_creation'];
-    require_once 'modele/admin_modif_creation.php';
-    require_once 'vue/admin_modif_creation.php';
-} elseif (isset($_GET['modif_peinture'])) {
-    $idpeinture = (int)$_GET['modif_peinture'];
-    require_once 'modele/admin_modif_peintre.php';
-    require_once 'vue/admin_modif_peintre.php';
 } elseif (isset($_GET['modif_partner'])) {
     $idpartner = (int)$_GET['modif_partner'];
     require_once 'modele/admin_modif_partner.php';

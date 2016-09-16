@@ -14,6 +14,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
+                    <!--BOUTON A NE PAS SUPPRIMER-->
+                    <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
                     <h1><?= $titre ?></h1>
                     <div class="alert alert-danger" role="alert"><strong>Attention</strong> : c'est mieux d'insérer une image qui a l'extension .jpg ou .jpeg. <br/>Les formats .gif ou .png ne sont pas supportés sur cette administration.</div>
                     <?php if ($affiche_insertion) {
@@ -52,6 +54,12 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="vue/js/bootstrap.min.js"></script>
-
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
 </body>
 </html>
