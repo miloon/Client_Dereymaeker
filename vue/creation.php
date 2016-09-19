@@ -18,9 +18,16 @@ include_once "header.php"
     ==================================================-->
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <img class="img-responsive img-polaroid tof" src="vue/img/tof-creatrice.jpg" alt="Sophie Dereymaeker créatrice">
-            <p>Sophie Dereymaeker est une créatrice passionnée. Elle s'inspire, pour ses créations de bijoux et d'accessoires, de la forme et de la matière en soi du matériaux qui la séduit.</p>
-            <p>Customisatrice, elle est à l'écoute de vos envies, et traduit votre demande en une pièce unique sur mesure.</p>
+            <img class="img-responsive img-polaroid tof" src="vue/img/tof-creatrice.jpg"
+                 alt="Sophie Dereymaeker créatrice">
+            <p>Sophie Dereymaeker est une créatrice passionnée. Elle s'inspire, pour ses créations de bijoux et
+                d'accessoires, de la forme et de la matière en soi du matériaux qui la séduit.</p>
+            <p>Customisatrice, elle est à l'écoute de vos envies, et traduit votre demande en une pièce unique sur
+                mesure.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
             <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
                 <div class='carousel-outer'>
                     <!-- Wrapper for slides -->
@@ -31,22 +38,24 @@ include_once "header.php"
                         $i = 1;
                         foreach ($affiche_creation as $recbig) {
 
-                            if($recbig->vendu){
+                            if ($recbig->vendu) {
                                 $vendu = " <small>[vendu !]</small>";
-                            }else{
-                                $vendu ="";
+                            } else {
+                                $vendu = "";
                             }
 
                             ?>
                             <?php if ($i == 1): ?>
                                 <div class='item active'>
-                                    <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
-                                    <h3 id="vendumodif"><?= $recbig->nom ?><?=$vendu?></h3>
+                                    <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'
+                                         title='<?= $recbig->nom ?>'/>
+                                    <h3 id="vendumodif"><?= $recbig->nom ?><?= $vendu ?></h3>
                                 </div>
                             <?php else: ?>
                                 <div class='item'>
-                                    <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>' title='<?= $recbig->nom ?>'/>
-                                    <h3 id="vendumodif"><?= $recbig->nom ?><?=$vendu?></h3>
+                                    <img src='vue/img/creation/<?= $recbig->imgsrc ?>' alt='<?= $recbig->nom ?>'
+                                         title='<?= $recbig->nom ?>'/>
+                                    <h3 id="vendumodif"><?= $recbig->nom ?><?= $vendu ?></h3>
                                 </div>
                             <?php endif; ?>
 
