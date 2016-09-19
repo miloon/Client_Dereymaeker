@@ -18,7 +18,22 @@
                 <div class="col-sm-8">
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
-                    <h1><?= $titre ?></h1>
+                    <h1 id="titre-admin"><?= $titre ?></h1>
+                    </div>
+                <div class="col-sm-4">
+                    <p>
+                        <figure class="social pull-right figure">
+                            <a href="mailto:webdevcf2m@gmail.com?Subject=Sophie%20demande%20de%20l%20aide">
+                                <img class="figure-img img-fluid img-rounded" src="vue/img/contactenous.jpg"
+                                     alt="contacte-nous"/>
+                            </a>
+                            <figcaption class="figure-caption"><a href="mailto:webdevcf2m@gmail.com?Subject=Sophie%20demande%20de%20l%20aide">Contacte-nous par e-mail</a></figcaption>
+                        </figure>
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="info-admin">
+                <div class="col-lg-6" >
                     <?php
                     if (isset($message)) {
                         echo "<p>" . $message . "</p>";
@@ -33,49 +48,37 @@
                                     } else {
                                         echo "Le " . date("d/m/Y à H:i", strtotime($rec->ladate));
                                     }
-                                    ?> - <?= $rec->titre ?></span><br/><?= $rec->lieu ?></p><hr>
+                                    ?> - <h3><?= $rec->titre ?></h3>
+                                </span><br/><?= $rec->lieu ?></p><hr>
                         </div>
                         <?php
                     }
                     ?>
-                    </div>
-                <div class="col-sm-4">
-                    <p>
-                        <figure class="social pull-right figure">
-                            <a href="mailto:webdevcf2m@gmail.com?Subject=Sophie%20demande%20de%20l%20aide">
-                                <img class="figure-img img-fluid img-rounded" src="vue/img/contactenous.jpg"
-                                     alt="contacte-nous"/>
-                            </a>
-                            <figcaption class="figure-caption"><a href="mailto:webdevcf2m@gmail.com?Subject=Sophie%20demande%20de%20l%20aide">Contacte-nous par e-mail</a></figcaption>
-                        </figure>
-                    </p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 btn-admin">
-                    <button href="?nouvelle_creation" type="button" class="btn btn-success btn-admin">
-                        <p class="glyphicon glyphicon-pencil" aria-hidden="true"></p><br> Ajouter une création
-                    </button>
-                    <button href="?nouvelle_peinture" type="button" class="btn btn-primary btn-admin">
-                        <p class="glyphicon glyphicon-picture" aria-hidden="true"></p><br> Ajouter une peinture
-                    </button>
-                    <button href="?nouvel_evenement" type="button" class="btn btn-info btn-admin">
-                        <p class="glyphicon glyphicon-calendar" aria-hidden="true"></p><br> Ajouter un évènement
-                    </button>
-                    <button href="?nouveau_temoignage" type="button" class="btn btn-warning btn-admin">
-                        <p class="glyphicon glyphicon-comment" aria-hidden="true"></p><br> Ajouter un témoignage
-                    </button>
-                    <button href="?nouveau_partner" type="button" class="btn btn-danger btn-admin">
-                        <p class="glyphicon glyphicon-briefcase" aria-hidden="true"></p><br> Ajouter un partenaire
-                    </button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <h3>Instructions et aide (si besoin)</h3>
                     <p>à remplir</p>
                     <!--BOUTON A NE PAS SUPPRIMER-->
                     <a href="#menu-toggle" class="visible-xs btn btn-default" id="menu-toggle">Accéder au menu</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 btn-admin" id="bouton-admin">
+                    <a href="?nouvelle_creation" type="button" class="btn btn-success btn-admin">
+                        <p class="glyphicon glyphicon-pencil" aria-hidden="true"></p><br> Ajouter une création
+                    </a>
+                    <a href="?nouvelle_peinture" type="button" class="btn btn-primary btn-admin">
+                        <p class="glyphicon glyphicon-picture" aria-hidden="true"></p><br> Ajouter une peinture
+                    </a>
+                    <a href="?nouvel_evenement" type="button" class="btn btn-info btn-admin">
+                        <p class="glyphicon glyphicon-calendar" aria-hidden="true"></p><br> Ajouter un évènement
+                    </a>
+                    <a href="?nouveau_temoignage" type="button" class="btn btn-warning btn-admin">
+                        <p class="glyphicon glyphicon-comment" aria-hidden="true"></p><br> Ajouter un témoignage
+                    </a>
+                    <a href="?nouveau_partner" type="button" class="btn btn-danger btn-admin">
+                        <p class="glyphicon glyphicon-briefcase" aria-hidden="true"></p><br> Ajouter un partenaire
+                    </a>
                 </div>
             </div>
         </div>

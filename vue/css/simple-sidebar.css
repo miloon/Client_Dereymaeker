@@ -133,7 +133,21 @@
 .btn-admin{
     padding-bottom: 40px;
     padding-top: 40px;
+    margin-right: 10px;
+    margin-top: 10%;
+
 }
 .btn-admin p{
     font-size: 200%;
+}
+
+#bouton-admin{
+    margin-top: auto;
+}
+#titre-admin{
+    margin-top: 10%;
+    font-size: 50px;
+}
+#info-admin{
+    margin-top: 10%;
 }
