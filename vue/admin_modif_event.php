@@ -34,7 +34,7 @@
                                     <input type="text" id="datetimepicker" name="ladate" value="<?= $affiche_event->ladate ?>" required/>
                                 </div>
                                 <div class="form-group"><label>Date de fin</label>
-                                    <input type="text" id="datetimepicker" name="ladatefin" value="<?= $affiche_event->ladatefin ?>"/>
+                                    <input type="text" id="datetimepicker2" name="ladatefin" value="<?= $affiche_event->ladatefin ?>"/>
                                 </div>
 
                                 <div class="form-group"><label>Description de l'évènement</label>
@@ -70,6 +70,10 @@
 <script>
     jQuery.datetimepicker.setLocale('fr');
     jQuery('#datetimepicker').datetimepicker({
+        format: 'Y-m-d H:i:s'
+    });
+    jQuery.datetimepicker.setLocale('fr');
+    jQuery('#datetimepicker2').datetimepicker({
         format: 'Y-m-d H:i:s'
     });
 </script>
