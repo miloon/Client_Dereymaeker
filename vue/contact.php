@@ -18,7 +18,8 @@ include_once "header.php"
     <div class="container" id="logorappelbottom">
         <div class="row">
             <div class="col-sm-12">
-                <div class="span8">
+                <div class="span2 hidden-xs hidden-sm"><img src="vue/img/contact.jpg" alt="sophie dereymaeker"></div>
+                <div class="span6">
                     <?php
 
 
