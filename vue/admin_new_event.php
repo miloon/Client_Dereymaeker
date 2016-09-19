@@ -32,7 +32,7 @@
                                 <input type="text" id="datetimepicker" name="ladate" required/>
                             </div>
                             <div class="form-group"><label>Date de fin (si nécessaire)</label>
-                                <input type="text" id="datetimepicker" name="ladatefin" />
+                                <input type="text" id="datetimepicker2" name="ladatefin" />
                             </div>
 
                             <div class="form-group"><label>Description de l'évènement</label>
@@ -67,6 +67,10 @@
 <script>
     jQuery.datetimepicker.setLocale('fr');
     jQuery('#datetimepicker').datetimepicker({
+        format: 'Y-m-d H:i:s'
+    });
+    jQuery.datetimepicker.setLocale('fr');
+    jQuery('#datetimepicker2').datetimepicker({
         format: 'Y-m-d H:i:s'
     });
 </script>
