@@ -23,10 +23,18 @@ include_once "header.php"
     <div class="container">
         <div class="row">
             <div class="span12">
-                <blockquote style="margin-top:20px;">Vous n'aurez pas deux fois l'occasion de faire une première impression.<br/>- Coco Chanel</blockquote><p style="margin-bottom: 30px;">Le Conseil en Image est un outil merveilleux que je vous apprends à maitriser en toute facilité, afin de vous mettre en valeur avec harmonie. Il propose différentes analyses et conseils, faciles à appliquer au quotidien.</p>
-                <h2>Services</h2>
-                <!-- Citation statique -->
+                <img class="img-responsive img-polaroid tof" src="vue/img/tof-conseillere.jpg"
+                     alt="Sophie Dereymaeker conseillère">
 
+                <blockquote style="margin-top:50px;">Vous n'aurez pas deux fois l'occasion de faire une première
+                    impression.<br/>- Coco Chanel
+                </blockquote>
+                <p style="margin-bottom: 30px;">Le Conseil en Image est un outil merveilleux que je vous apprends à
+                    maitriser en toute facilité, afin de vous mettre en valeur avec harmonie. Il propose différentes
+                    analyses et conseils, faciles à appliquer au quotidien.</p>
+            </div>
+            <div class="span12">
+                <h2>Services</h2>
                 <div class="row">
                     <div class="col-lg-12"></div>
                     <div class="span3" id="references">
