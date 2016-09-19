@@ -53,7 +53,7 @@ include_once "header.php"
         <div class="row">
             <div class="col-lg-9 offset1">
                 <div class="media">
-                    <img class="img-responsive pull-left media-object" src="vue/img/presentation/sophie1.jpg"/>
+                    <img class="img-responsive pull-left media-object" src="vue/img/presentation/img-presentation.jpg"/>
                     <div class="media-body">
                         <p>Sophie commence à 18 ans à customiser et détourner ses vêtements et accessoires, dans le but
                             de se démarquer de la norme sociale. Elle aurait aimé étudier le stylisme mais, ses parents

@@ -10,7 +10,6 @@ include_once "header.php"
         <div class="span12">
             <div class="page-header">
                 <h1>Créations</h1>
-
             </div>
         </div>
     </div>
@@ -19,6 +18,7 @@ include_once "header.php"
     ==================================================-->
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+            <img class="img-responsive img-polaroid tof" src="vue/img/tof-creatrice.jpg" alt="Sophie Dereymaeker créatrice">
             <p>Sophie Dereymaeker est une créatrice passionnée. Elle s'inspire, pour ses créations de bijoux et d'accessoires, de la forme et de la matière en soi du matériaux qui la séduit.</p>
             <p>Customisatrice, elle est à l'écoute de vos envies, et traduit votre demande en une pièce unique sur mesure.</p>
             <div id='carousel-custom' class='carousel slide' data-ride='carousel'>
