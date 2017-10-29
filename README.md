@@ -15,7 +15,7 @@ Octobre 2016 : Remise du site
 ### Contributeurs
 
 - [Dalyome](https://github.com/Dalyome) - chef de projet
-- [Miloon](https://github.com/miloon) - Contact client
+- [Mae](https://github.com/webmae) - Contact client
 - [Hayat](https://github.com/hayat22)
 - [Panda](https://github.com/Pan303)
 
